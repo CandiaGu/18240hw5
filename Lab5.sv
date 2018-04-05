@@ -33,6 +33,7 @@ module Lab5
 endmodule: Lab5
 
 
+
 module loadMasterPattern
   (input [2:0] LoadShape, 
    input [1:0] ShapeLocation,
@@ -65,7 +66,33 @@ module loadMasterPattern
   end
     
 
+
+
 endmodule: loadMasterPattern
+
+module guessChecking
+
+
+endmodule: guessChecking
+
+
+module checkForZnarly
+  (input logic [11:0] masterPattern, Guess,
+  output logic [3:0] Znarly);
+
+  logic [2:0] g3, g2, g1, g0;
+  logic [2:0] o3, o2, o1, o0;
+  
+  sliceInput masterSlice (masterPattern,o3, o2, o1, o0);
+  sliceInput guessSlice (Guess, g3, g2, g1, g0);
+
+  MagComp #(3) slice3 (g3, o3, , Znarly[3], );
+  MagComp #(3) slice2 (g2, o2, , Znarly[2], );
+  MagComp #(3) slice1 (g1, o1, , Znarly[1], );
+  MagComp #(3) slice0 (g0, o0, , Znarly[0], );
+
+
+endmodule: checkForZnarly
 
 module checkForZood
   (input [11:0] masterPattern, guess,
@@ -87,7 +114,6 @@ module checkForZood
     if(!loadingShape)
       {c3, c2, c1, c0} = 12'b0;
     else
-
       {c3, c2, c1, c0} = Zood;
       c3 = (!c3) ? ((g3==m3) || (g2==m3) || (g1==m3)|| (g0==m3)) : c3;  
       c2 = (!c2) ? ((g3==m2) || (g2==m2) || (g1==m2)|| (g0==m2)) : c2; 
