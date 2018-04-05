@@ -1,0 +1,22 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -sverilog -full64
+
+all :		_VCSgd_NwmJD_1.db \
+	_VCSgd_9Lhfed_1.db \
+	_VCSgd_X33YAc_1.db \
+
+
+
+_VCSgd_NwmJD_1.db :	Lab5.sv 
+		${VLOGAN}  ${VLOGAN_OPT} Lab5.sv
+
+
+_VCSgd_9Lhfed_1.db :	library.sv 
+		${VLOGAN}  ${VLOGAN_OPT} library.sv
+
+
+_VCSgd_X33YAc_1.db :	Lab5TestBench.sv 
+		${VLOGAN}  ${VLOGAN_OPT} Lab5TestBench.sv
+
+

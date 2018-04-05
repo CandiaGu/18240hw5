@@ -1,67 +1,17 @@
 {
-    "Subtracter": [
-        "Subtracter",
-        "pcAkE",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
         "module"
     ],
-    "dFlipFlop": [
-        "dFlipFlop",
-        "fhqgw",
+    "testChecks": [
+        "testChecks",
+        "sa4Qd",
         "module"
     ],
     "...MASTER...": [
         "SIM",
         "amcQw",
-        "module"
-    ],
-    "Mux2to1": [
-        "Mux2to1",
-        "wxUbx",
-        "module"
-    ],
-    "Decoder": [
-        "Decoder",
-        "t8TcA",
-        "module"
-    ],
-    "testBench": [
-        "testBench",
-        "tk8zt",
-        "module"
-    ],
-    "MagComp": [
-        "MagComp",
-        "vaLRj",
-        "module"
-    ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
-        "module"
-    ],
-    "Multiplexer": [
-        "Multiplexer",
-        "UxyT3",
-        "module"
-    ],
-    "counter": [
-        "counter",
-        "MQn6b",
-        "module"
-    ],
-    "shift_register": [
-        "shift_register",
-        "JPGqC",
-        "module"
-    ],
-    "Lab5": [
-        "Lab5",
-        "KkqfR",
         "module"
     ]
 }
