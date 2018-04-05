@@ -65,7 +65,8 @@ module Register
 	 output logic [WIDTH-1:0] Q);
 
 
-	always_ff @ (posedge clock, posedge clear)
+	always_ff @ (posedge clock, posedge clear) begin
+		$display("en: %b, clear: %b", en, clear);
 
 		if(en)
 			if(clear)
@@ -73,6 +74,7 @@ module Register
 			else
 				Q <= D;
 			
+		end
 endmodule: Register
 
 module counter

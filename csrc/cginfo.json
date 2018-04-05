@@ -1,132 +1,133 @@
 {
-    "LVLData": [
-        "SIM"
-    ],
-    "PEModules": [],
+    "CompileStatus": "Successful",
+    "CurCompileUdps": {},
+    "stat": {
+        "nMops": 1135
+    },
     "MlibObjs": {},
     "PrevCompiledModules": {
+        "testBench": {
+            "tk8zt_d": {
+                "mod": "testBench",
+                "bytes": 21432,
+                "mode": 4,
+                "out": "tk8zt_d.o",
+                "archive": "archive.43/_52071_archive_1.a"
+            }
+        },
         "Multiplexer": {
             "UxyT3_d": {
-                "bytes": 6470,
                 "mod": "Multiplexer",
+                "bytes": 6470,
+                "out": "UxyT3_d.o",
                 "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "UxyT3_d.o"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 11842,
-                "mod": "...MASTER...",
-                "out": "amcQw_d.o",
-                "mode": 4,
-                "archive": "archive.29/_43721_archive_1.a"
-            }
-        },
-        "Decoder": {
-            "t8TcA_d": {
-                "bytes": 7887,
-                "mod": "Decoder",
-                "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "t8TcA_d.o"
+                "archive": "archive.43/_prev_archive_1.a"
             }
         },
         "Mux2to1": {
             "wxUbx_d": {
-                "bytes": 6924,
                 "mod": "Mux2to1",
+                "bytes": 6924,
+                "out": "wxUbx_d.o",
                 "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "wxUbx_d.o"
-            }
-        },
-        "testBench": {
-            "tk8zt_d": {
-                "bytes": 21650,
-                "mod": "testBench",
-                "out": "tk8zt_d.o",
-                "mode": 4,
-                "archive": "archive.29/_43721_archive_1.a"
-            }
-        },
-        "MagComp": {
-            "vaLRj_d": {
-                "bytes": 6930,
-                "mod": "MagComp",
-                "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "vaLRj_d.o"
-            }
-        },
-        "Lab5": {
-            "KkqfR_d": {
-                "bytes": 19800,
-                "mod": "Lab5",
-                "mode": 4,
-                "archive": "archive.29/_43721_archive_1.a",
-                "out": "KkqfR_d.o"
+                "archive": "archive.43/_prev_archive_1.a"
             }
         },
         "Adder": {
             "xUt1z_d": {
-                "bytes": 8467,
                 "mod": "Adder",
+                "bytes": 8467,
+                "out": "xUt1z_d.o",
                 "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "xUt1z_d.o"
+                "archive": "archive.43/_prev_archive_1.a"
+            }
+        },
+        "MagComp": {
+            "vaLRj_d": {
+                "mod": "MagComp",
+                "bytes": 6930,
+                "out": "vaLRj_d.o",
+                "mode": 4,
+                "archive": "archive.43/_prev_archive_1.a"
             }
         },
         "dFlipFlop": {
             "fhqgw_d": {
-                "bytes": 7159,
                 "mod": "dFlipFlop",
+                "bytes": 7159,
+                "out": "fhqgw_d.o",
                 "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "fhqgw_d.o"
-            }
-        },
-        "Subtracter": {
-            "pcAkE_d": {
-                "bytes": 6711,
-                "mod": "Subtracter",
-                "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "pcAkE_d.o"
-            }
-        },
-        "std": {
-            "reYIK_d": {
-                "bytes": 29004,
-                "mod": "std",
-                "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "reYIK_d.o"
-            }
-        },
-        "counter": {
-            "MQn6b_d": {
-                "bytes": 8709,
-                "mod": "counter",
-                "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "MQn6b_d.o"
+                "archive": "archive.43/_prev_archive_1.a"
             }
         },
         "shift_register": {
             "JPGqC_d": {
-                "bytes": 7714,
                 "mod": "shift_register",
+                "bytes": 7714,
+                "out": "JPGqC_d.o",
                 "mode": 4,
-                "archive": "archive.29/_prev_archive_1.a",
-                "out": "JPGqC_d.o"
+                "archive": "archive.43/_prev_archive_1.a"
+            }
+        },
+        "Decoder": {
+            "t8TcA_d": {
+                "mod": "Decoder",
+                "bytes": 7887,
+                "out": "t8TcA_d.o",
+                "mode": 4,
+                "archive": "archive.43/_prev_archive_1.a"
+            }
+        },
+        "std": {
+            "reYIK_d": {
+                "mod": "std",
+                "bytes": 29004,
+                "out": "reYIK_d.o",
+                "mode": 4,
+                "archive": "archive.43/_prev_archive_1.a"
+            }
+        },
+        "counter": {
+            "MQn6b_d": {
+                "mod": "counter",
+                "bytes": 8709,
+                "out": "MQn6b_d.o",
+                "mode": 4,
+                "archive": "archive.43/_prev_archive_1.a"
+            }
+        },
+        "Lab5": {
+            "KkqfR_d": {
+                "mod": "Lab5",
+                "bytes": 19800,
+                "out": "KkqfR_d.o",
+                "mode": 4,
+                "archive": "archive.43/_prev_archive_1.a"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "mod": "...MASTER...",
+                "bytes": 11842,
+                "mode": 4,
+                "out": "amcQw_d.o",
+                "archive": "archive.43/_52071_archive_1.a"
+            }
+        },
+        "Subtracter": {
+            "pcAkE_d": {
+                "mod": "Subtracter",
+                "bytes": 6711,
+                "out": "pcAkE_d.o",
+                "mode": 4,
+                "archive": "archive.43/_prev_archive_1.a"
             }
         }
     },
     "NameTable": {
-        "Subtracter": [
-            "Subtracter",
-            "pcAkE",
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
             "module"
         ],
         "std": [
@@ -139,29 +140,19 @@
             "fhqgw",
             "module"
         ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
-        ],
-        "Mux2to1": [
-            "Mux2to1",
-            "wxUbx",
-            "module"
-        ],
         "Decoder": [
             "Decoder",
             "t8TcA",
             "module"
         ],
-        "testBench": [
-            "testBench",
-            "tk8zt",
-            "module"
-        ],
         "MagComp": [
             "MagComp",
             "vaLRj",
+            "module"
+        ],
+        "testBench": [
+            "testBench",
+            "tk8zt",
             "module"
         ],
         "Adder": [
@@ -174,47 +165,55 @@
             "UxyT3",
             "module"
         ],
+        "Mux2to1": [
+            "Mux2to1",
+            "wxUbx",
+            "module"
+        ],
         "counter": [
             "counter",
             "MQn6b",
             "module"
         ],
-        "shift_register": [
-            "shift_register",
-            "JPGqC",
+        "Subtracter": [
+            "Subtracter",
+            "pcAkE",
             "module"
         ],
         "Lab5": [
             "Lab5",
             "KkqfR",
             "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
         ]
     },
     "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
-    "CurCompileModules": [
-        "...MASTER...",
-        "Lab5",
-        "testBench"
-    ],
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 62076
+        "bytes": 65054
     },
-    "CompileProcesses": [
-        "cgproc.43721.json"
+    "LVLData": [
+        "SIM"
+    ],
+    "CurCompileModules": [
+        "...MASTER...",
+        "testBench"
     ],
     "Misc": {
-        "csrc_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/csrc",
         "cwd": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5",
-        "csrc": "csrc",
+        "archive_dir": "archive.43",
+        "default_output_dir": "csrc",
         "daidir": "simv.daidir",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir",
-        "archive_dir": "archive.29",
-        "default_output_dir": "csrc"
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir"
     },
-    "stat": {
-        "nMops": 2413
-    },
-    "CompileStatus": "Successful"
+    "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.52071.json"
+    ]
 }

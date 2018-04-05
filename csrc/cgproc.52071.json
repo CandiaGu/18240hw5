@@ -1,0 +1,52 @@
+{
+    "CompUnits": {
+        "amcQw_d": {
+            "bytes": 11842,
+            "mod": "...MASTER...",
+            "mode": 4,
+            "out": "amcQw_d.o",
+            "archive": "archive.43/_52071_archive_1.a"
+        },
+        "tk8zt_d": {
+            "bytes": 22410,
+            "mod": "testBench",
+            "mode": 4,
+            "out": "tk8zt_d.o",
+            "archive": "archive.43/_52071_archive_1.a"
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "shift_register": {},
+        "std": {},
+        "dFlipFlop": {},
+        "Decoder": {},
+        "MagComp": {},
+        "testBench": {
+            "Compiled": "Yes",
+            "Compiled Times": 13
+        },
+        "Adder": {},
+        "Multiplexer": {},
+        "Mux2to1": {},
+        "counter": {},
+        "Subtracter": {},
+        "Lab5": {}
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.43/_52071_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11842
+                ],
+                [
+                    "tk8zt_d.o",
+                    22410
+                ]
+            ],
+            "size": 34252
+        }
+    ]
+}

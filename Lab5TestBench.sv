@@ -26,13 +26,20 @@ module testLoadMasterPattern();
 
     initial begin
 
-    	$monitor("Loadshape %b into %b location -> masterPattern: %b ", LoadShape, ShapeLocation, masterPattern);
+    	$monitor("Loadshape %b into %b location -> masterPattern: %b | loadingShape: %b startGame: %b masterLoaded: %b ", 
+    		LoadShape, ShapeLocation, masterPattern, loadingShape, startGame, masterLoaded);
     	
 		@(posedge clock);
 		@(posedge clock);
     	LoadShape = 3'b001;
     	ShapeLocation = 2'b00;
+    	startGame = 1;
+    	loadingShape = 1;
     	@(posedge clock);
+    	startGame = 0;
+		@(posedge clock);
+		@(posedge clock);
+
 		@(posedge clock);
 		@(posedge clock);
 		@(posedge clock);

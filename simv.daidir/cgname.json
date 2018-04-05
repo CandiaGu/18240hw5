@@ -1,7 +1,7 @@
 {
-    "Subtracter": [
-        "Subtracter",
-        "pcAkE",
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
         "module"
     ],
     "std": [
@@ -14,29 +14,19 @@
         "fhqgw",
         "module"
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
-        "module"
-    ],
-    "Mux2to1": [
-        "Mux2to1",
-        "wxUbx",
-        "module"
-    ],
     "Decoder": [
         "Decoder",
         "t8TcA",
         "module"
     ],
-    "testBench": [
-        "testBench",
-        "tk8zt",
-        "module"
-    ],
     "MagComp": [
         "MagComp",
         "vaLRj",
+        "module"
+    ],
+    "testBench": [
+        "testBench",
+        "tk8zt",
         "module"
     ],
     "Adder": [
@@ -49,19 +39,29 @@
         "UxyT3",
         "module"
     ],
+    "Mux2to1": [
+        "Mux2to1",
+        "wxUbx",
+        "module"
+    ],
     "counter": [
         "counter",
         "MQn6b",
         "module"
     ],
-    "shift_register": [
-        "shift_register",
-        "JPGqC",
+    "Subtracter": [
+        "Subtracter",
+        "pcAkE",
         "module"
     ],
     "Lab5": [
         "Lab5",
         "KkqfR",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ]
 }

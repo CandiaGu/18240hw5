@@ -51,17 +51,25 @@ module loadMasterPattern
 
   assign masterLoaded = (o3 != 0) && (o2 != 0) && (o1 != 0) && (o0 != 0);
 
-  always_comb
-    if(loadingShape)
-      unique case(ShapeLocation)
-        2'b11 : inputMaster[11:9] = (o3 == 0) ? LoadShape: 3'b0;
-        2'b10 : inputMaster[8:6] = (o2 == 0) ? LoadShape: 3'b0;
-        2'b01 : inputMaster[5:3] = (o1 == 0) ? LoadShape: 3'b0;
-        2'b00 : inputMaster[2:0] = (o0 == 0) ? LoadShape: 3'b0;
-      endcase
+  always_comb begin
+    $display("%b, %b, %b, %b, masterPattern: %b, inputMaster: %b", o3, o2, o1, o0, masterPattern, inputMaster);
+    if(startGame)
+      inputMaster = 12'b0;
+    else
+      if(loadingShape)
+        unique case(ShapeLocation)
+          2'b11 : inputMaster[11:9] = (o3 == 3'b0) ? LoadShape: 3'b0;
+          2'b10 : inputMaster[8:6] = (o2 == 3'b0) ? LoadShape: 3'b0;
+          2'b01 : inputMaster[5:3] = (o1 == 3'b0) ? LoadShape: 3'b0;
+          2'b00 : inputMaster[2:0] = (o0 == 3'b0) ? LoadShape: 3'b0;
+        endcase
+  end
     
 
 endmodule: loadMasterPattern
+
+module checkForZnarly
+  
 
 module sliceInput
   (input [11:0] in,
