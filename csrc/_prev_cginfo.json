@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "PEModules": [],
     "MlibObjs": {},
     "PrevCompiledModules": {
@@ -126,10 +127,47 @@
                 "mod": "dFlipFlop",
                 "out": "fhqgw_d.o",
                 "mode": 4
+=======
+    "MlibObjs": {},
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "archive": "archive.33/_prev_archive_1.a",
+                "mod": "std",
+                "bytes": 29004,
+                "mode": 4,
+                "out": "reYIK_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "archive": "archive.33/_150077_archive_1.a",
+                "mod": "...MASTER...",
+                "bytes": 7336,
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "testChecks": {
+            "sa4Qd_d": {
+                "archive": "archive.33/_150077_archive_1.a",
+                "mod": "testChecks",
+                "bytes": 17617,
+                "mode": 4,
+                "out": "sa4Qd_d.o"
+>>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
             }
         }
     },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 63375
+    },
+    "LVLData": [
+        "SIM"
+    ],
     "NameTable": {
+<<<<<<< HEAD
         "Decoder": [
             "Decoder",
             "t8TcA",
@@ -193,6 +231,16 @@
         "testCheckForZood": [
             "testCheckForZood",
             "eaZPw",
+=======
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "testChecks": [
+            "testChecks",
+            "sa4Qd",
+>>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
             "module"
         ],
         "...MASTER...": [
@@ -201,6 +249,7 @@
             "module"
         ]
     },
+<<<<<<< HEAD
     "CurCompileModules": [
         "...MASTER...",
         "testCheckForZood"
@@ -225,6 +274,29 @@
         "daidir": "simv.daidir",
         "default_output_dir": "csrc",
         "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir"
+=======
+    "CompileStrategy": "fullobj",
+    "CurCompileUdps": {},
+    "CurCompileModules": [
+        "...MASTER...",
+        "testChecks"
+    ],
+    "PEModules": [],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "csrc": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
+        "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
+        "archive_dir": "archive.33"
+    },
+    "CompileProcesses": [
+        "cgproc.150077.json"
+    ],
+    "stat": {
+        "nMops": 1074
+>>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
     },
     "stat": {
         "nMops": 1637

@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "testChecks": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "archive": "archive.34/_151008_archive_1.a",
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 7336,
+            "mode": 4
+        },
+        "sa4Qd_d": {
+            "archive": "archive.34/_151008_archive_1.a",
+            "mod": "testChecks",
+            "out": "sa4Qd_d.o",
+            "bytes": 19671,
+            "mode": 4
+        }
+    },
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "sa4Qd_d.o",
+                    19671
+                ]
+            ],
+            "archive": "archive.34/_151008_archive_1.a",
+            "size": 27007
+        }
+    ]
+}

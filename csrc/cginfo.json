@@ -1,5 +1,18 @@
 {
+<<<<<<< HEAD
     "CompileStatus": "Successful",
+=======
+    "CompileStrategy": "fullobj",
+    "Misc": {
+        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
+        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
+        "archive_dir": "archive.34",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc"
+    },
+>>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
     "MlibObjs": {},
     "CompileStrategy": "fullobj",
     "NameTable": {
@@ -75,6 +88,7 @@
         ]
     },
     "PrevCompiledModules": {
+<<<<<<< HEAD
         "Multiplexer": {
             "UxyT3_d": {
                 "bytes": 6470,
@@ -181,10 +195,20 @@
                 "mode": 4,
                 "archive": "archive.65/_prev_archive_1.a",
                 "out": "KkqfR_d.o"
+=======
+        "std": {
+            "reYIK_d": {
+                "bytes": 29004,
+                "archive": "archive.34/_prev_archive_1.a",
+                "mod": "std",
+                "mode": 4,
+                "out": "reYIK_d.o"
+>>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
             }
         },
         "...MASTER...": {
             "amcQw_d": {
+<<<<<<< HEAD
                 "bytes": 12016,
                 "mod": "...MASTER...",
                 "out": "amcQw_d.o",
@@ -230,4 +254,60 @@
     "stat": {
         "nMops": 1663
     }
+=======
+                "bytes": 7336,
+                "archive": "archive.34/_151008_archive_1.a",
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "testChecks": {
+            "sa4Qd_d": {
+                "bytes": 19443,
+                "archive": "archive.34/_151008_archive_1.a",
+                "mod": "testChecks",
+                "out": "sa4Qd_d.o",
+                "mode": 4
+            }
+        }
+    },
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "testChecks": [
+            "testChecks",
+            "sa4Qd",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ]
+    },
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 63375
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "testChecks"
+    ],
+    "PEModules": [],
+    "stat": {
+        "nMops": 1084
+    },
+    "CompileProcesses": [
+        "cgproc.151008.json"
+    ],
+    "CompileStatus": "Successful"
+>>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
 }
