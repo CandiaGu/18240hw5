@@ -30,9 +30,6 @@ module Lab5
   // loadMasterPattern mast ();
 
 
-
-
-
 endmodule: Lab5
 
 
@@ -56,20 +53,54 @@ module loadMasterPattern
     if(startGame)
       inputMaster = 12'b0;
     else
-      if(loadingShape)
+      if(loadingShape) begin
+        inputMaster = masterPattern;
         unique case(ShapeLocation)
-          2'b11 : inputMaster[11:9] = (o3 == 3'b0) ? LoadShape: 3'b0;
-          2'b10 : inputMaster[8:6] = (o2 == 3'b0) ? LoadShape: 3'b0;
-          2'b01 : inputMaster[5:3] = (o1 == 3'b0) ? LoadShape: 3'b0;
-          2'b00 : inputMaster[2:0] = (o0 == 3'b0) ? LoadShape: 3'b0;
+          2'b11 : inputMaster[11:9] = (o3 == 3'b0) ? LoadShape : inputMaster[11:9];
+          2'b10 : inputMaster[8:6] = (o2 == 3'b0) ? LoadShape : inputMaster[8:6];
+          2'b01 : inputMaster[5:3] = (o1 == 3'b0) ? LoadShape : inputMaster[5:3];
+          2'b00 : inputMaster[2:0] = (o0 == 3'b0) ? LoadShape : inputMaster[2:0];
         endcase
+      end
   end
     
 
 endmodule: loadMasterPattern
 
-module checkForZnarly
-  
+module checkForZood
+  (input [11:0] masterPattern, guess,
+   input  clock, loadingShape,
+   output [3:0] Zood);
+
+  logic [2:0] m3, m2, m1, m0;
+  logic [2:0] g3, g2, g1, g0;
+
+  sliceInput slice (masterPattern, m3, m2, m1, m0);
+  sliceInput slice2 (guess, g3, g2, g1, g0);
+
+  logic c3, c2, c1, c0;
+
+  Register #(4) checkedZood({c3, c2, c1, c0}, 1'b1, 1'b0 , clock, Zood);
+
+  always_comb begin
+    $display("zood : %b", Zood);
+    if(!loadingShape)
+      {c3, c2, c1, c0} = 12'b0;
+    else
+
+      {c3, c2, c1, c0} = Zood;
+      c3 = (!c3) ? ((g3==m3) || (g2==m3) || (g1==m3)|| (g0==m3)) : c3;  
+      c2 = (!c2) ? ((g3==m2) || (g2==m2) || (g1==m2)|| (g0==m2)) : c2; 
+      c1 = (!c1) ? ((g3==m1) || (g2==m1) || (g1==m1)|| (g0==m1)) : c1; 
+      c0 = (!c0) ? ((g3==m0) || (g2==m0) || (g1==m0)|| (g0==m0)) : c0; 
+      $display("zood2 : %b", {c3, c2, c1, c0});
+
+  end
+
+
+
+
+endmodule: checkForZood
 
 module sliceInput
   (input [11:0] in,

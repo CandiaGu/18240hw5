@@ -1,9 +1,4 @@
 {
-    "shift_register": [
-        "shift_register",
-        "JPGqC",
-        "module"
-    ],
     "std": [
         "std",
         "reYIK",
@@ -14,24 +9,9 @@
         "fhqgw",
         "module"
     ],
-    "Decoder": [
-        "Decoder",
-        "t8TcA",
-        "module"
-    ],
-    "MagComp": [
-        "MagComp",
-        "vaLRj",
-        "module"
-    ],
-    "testBench": [
-        "testBench",
-        "tk8zt",
-        "module"
-    ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
+    "counter": [
+        "counter",
+        "MQn6b",
         "module"
     ],
     "Multiplexer": [
@@ -39,14 +19,29 @@
         "UxyT3",
         "module"
     ],
+    "MagComp": [
+        "MagComp",
+        "vaLRj",
+        "module"
+    ],
+    "Adder": [
+        "Adder",
+        "xUt1z",
+        "module"
+    ],
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
+        "module"
+    ],
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
+        "module"
+    ],
     "Mux2to1": [
         "Mux2to1",
         "wxUbx",
-        "module"
-    ],
-    "counter": [
-        "counter",
-        "MQn6b",
         "module"
     ],
     "Subtracter": [
@@ -57,6 +52,16 @@
     "Lab5": [
         "Lab5",
         "KkqfR",
+        "module"
+    ],
+    "loadMasterPattern": [
+        "loadMasterPattern",
+        "hgjFF",
+        "module"
+    ],
+    "testCheckForZood": [
+        "testCheckForZood",
+        "eaZPw",
         "module"
     ],
     "...MASTER...": [

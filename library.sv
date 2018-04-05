@@ -59,7 +59,7 @@ module Decoder
 endmodule: Decoder
 
 module Register
-	# (parameter WIDTH = 30)
+	# (parameter WIDTH = 12)
 	(input logic [WIDTH-1:0] D,
 	 input logic en, clear, clock,
 	 output logic [WIDTH-1:0] Q);
