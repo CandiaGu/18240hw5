@@ -1,0 +1,66 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.29/_43721_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11842
+                ],
+                [
+                    "KkqfR_d.o",
+                    19800
+                ],
+                [
+                    "tk8zt_d.o",
+                    21602
+                ]
+            ],
+            "size": 53244
+        }
+    ],
+    "Modules": {
+        "...MASTER...": {},
+        "Mux2to1": {},
+        "Decoder": {},
+        "testBench": {
+            "Compiled Times": 2,
+            "Compiled": "Yes"
+        },
+        "MagComp": {},
+        "Subtracter": {},
+        "std": {},
+        "dFlipFlop": {},
+        "Adder": {},
+        "Multiplexer": {},
+        "counter": {},
+        "shift_register": {},
+        "Lab5": {
+            "Compiled Times": 1,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 11842,
+            "mode": 4,
+            "archive": "archive.29/_43721_archive_1.a"
+        },
+        "KkqfR_d": {
+            "mod": "Lab5",
+            "out": "KkqfR_d.o",
+            "bytes": 19800,
+            "mode": 4,
+            "archive": "archive.29/_43721_archive_1.a"
+        },
+        "tk8zt_d": {
+            "mod": "testBench",
+            "out": "tk8zt_d.o",
+            "bytes": 21602,
+            "mode": 4,
+            "archive": "archive.29/_43721_archive_1.a"
+        }
+    }
+}
