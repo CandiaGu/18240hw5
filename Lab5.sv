@@ -35,7 +35,7 @@ module Lab5
   logic circle, triangle, pent;
 
 
-  CoinAccept mydesign(CoinValue, CoinInserted, drop, reset, clock);
+  myCoinFSM mydesign(CoinValue, CoinInserted, drop, reset, clock);
 
   gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 1'b0, clock, NumGames);//en => drop
   counter # (4) roundCounter (4'd0, 1'b1, (ongoingGame && doneGrading && !loadingShape), 1'b0, StartGame, clock, RoundNumber);

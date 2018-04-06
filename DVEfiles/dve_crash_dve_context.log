@@ -1,0 +1,15 @@
+=======================DVE Context and Call Stack=========================
+=======================DVE Context and Call Stack=========================
+
+An unexpected termination has occurred in /usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exeCommand line: Hostname ece012.ece.local.cmu.edu
+/usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exe 
+-full64Tcl="synopsys::run "  
+-ucliplatform=amd64Tcl="gui_sim_continue "  
+-toolargsTcl="gui_eval_and_log_cmd gui_sim_continue  "  
+"Tcl="gui_simulator_start_continue_command " -ucligui -toolexe ./simv  -pid 159936
+"Command line:  /usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exe-toolin  -full64/tmp/vcs_20180406202056_159935_cdgu..stdin  -ucliplatform=amd64-toolout  -toolargs/tmp/vcs_20180406202056_159935_cdgu..stdout 
+"-ucligui -toolexe ./simv  -pid 160625
+--- Stack trace follows:
+" -toolin /tmp/vcs_20180406202252_160624_cdgu..stdin -toolout /tmp/vcs_20180406202252_160624_cdgu..stdout
+
+--- Stack trace follows:

@@ -26,8 +26,8 @@ module myCoinFSM(
 					  wstate4 = 4'b1100, wstate5 = 4'b1101, wstate6 = 4'b1110,
 					  wstate7 = 4'b1111} state, nextState;
 
-	always @(posedge clock)
-    	if (reset_N == 0)       
+	always @(posedge clock, negedge reset_N)
+    	if (reset_N == 0)
     	  	state <= state0;      
     	else       
     		state <= nextState;
