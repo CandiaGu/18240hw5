@@ -4,9 +4,65 @@
         "reYIK",
         "module"
     ],
+<<<<<<< HEAD
+    "Multiplexer": [
+        "Multiplexer",
+        "UxyT3",
+        "module"
+    ],
+    "Decoder": [
+        "Decoder",
+        "t8TcA",
+        "module"
+    ],
+    "dFlipFlop": [
+        "dFlipFlop",
+        "fhqgw",
+        "module"
+    ],
+    "Adder": [
+        "Adder",
+        "xUt1z",
+        "module"
+    ],
+    "Mux2to1": [
+        "Mux2to1",
+        "wxUbx",
+        "module"
+    ],
+    "counter": [
+        "counter",
+        "MQn6b",
+        "module"
+    ],
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
+        "module"
+    ],
+    "Subtracter": [
+        "Subtracter",
+        "pcAkE",
+        "module"
+    ],
+    "testCheckGuessing": [
+        "testCheckGuessing",
+        "tbPRi",
+        "module"
+    ],
+    "Lab5": [
+        "Lab5",
+        "KkqfR",
+        "module"
+    ],
+    "loadMasterPattern": [
+        "loadMasterPattern",
+        "hgjFF",
+=======
     "testGradeFSM": [
         "testGradeFSM",
         "I7Z2G",
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
         "module"
     ],
     "...MASTER...": [

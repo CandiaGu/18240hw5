@@ -1,0 +1,53 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "Multiplexer": {},
+        "counter": {},
+        "dFlipFlop": {},
+        "MagComp": {},
+        "Adder": {},
+        "Decoder": {},
+        "shift_register": {},
+        "Mux2to1": {},
+        "Subtracter": {},
+        "Lab5": {},
+        "loadMasterPattern": {},
+        "testCheckForZood": {
+            "Compiled Times": 11,
+            "Compiled": "Yes"
+        }
+    },
+    "CompUnits": {
+        "eaZPw_d": {
+            "mod": "testCheckForZood",
+            "out": "eaZPw_d.o",
+            "bytes": 24730,
+            "mode": 4,
+            "archive": "archive.65/_67718_archive_1.a"
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 12016,
+            "mode": 4,
+            "archive": "archive.65/_67718_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.65/_67718_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    12016
+                ],
+                [
+                    "eaZPw_d.o",
+                    24730
+                ]
+            ],
+            "size": 36746
+        }
+    ]
+}

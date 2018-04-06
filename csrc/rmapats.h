@@ -1910,6 +1910,36 @@ static inline U asm_bsf (U in)
 #ifdef __cplusplus
 extern "C" {
 #endif
+void  hsM_0_0 (UB  * pcode, scalar  val);
+void  hsM_1_0 (UB  * pcode, scalar  val);
+void  hsM_2_0 (UB  * pcode, scalar  val);
+void  hsM_3_0 (UB  * pcode, scalar  val);
+void  hsM_4_0 (UB  * pcode, scalar  val);
+void  hsM_5_0 (UB  * pcode, scalar  val);
+void  hsM_6_0 (UB  * pcode, scalar  val);
+void  hsM_7_0 (UB  * pcode, scalar  val);
+void  hsM_8_0 (UB  * pcode, scalar  val);
+void  hsM_9_0 (UB  * pcode, scalar  val);
+void  hsM_10_0 (UB  * pcode, scalar  val);
+void  hsM_11_0 (UB  * pcode, scalar  val);
+void  hsM_12_0 (UB  * pcode, scalar  val);
+void  hsM_13_0 (UB  * pcode, scalar  val);
+void  hsM_14_0 (UB  * pcode, scalar  val);
+void  hsM_15_0 (UB  * pcode, scalar  val);
+void  hsM_16_0 (UB  * pcode, vec32  * I858, U  I794);
+void  hsM_16_5 (UB  * pcode, U  I794);
+void  hsM_17_0 (UB  * pcode, scalar  val);
+void  hsM_17_5 (UB  * pcode, UB  val);
+void  hsM_18_0 (UB  * pcode, scalar  val);
+void  hsM_18_5 (UB  * pcode, UB  val);
+void  hsM_19_0 (UB  * pcode, scalar  val);
+void  hsM_19_5 (UB  * pcode, UB  val);
+void  hsM_20_0 (UB  * pcode, vec32  * I858, U  I794);
+void  hsM_21_0 (UB  * pcode, scalar  val);
+void  hsM_22_0 (UB  * pcode, scalar  val);
+void  hsM_22_5 (UB  * pcode, UB  val);
+void  hsM_23_0 (UB  * pcode, scalar  val);
+void  hsM_23_5 (UB  * pcode, UB  val);
 void  hsG_0 (struct dummyq_struct * I1008, EBLK  * I1009, U  I714);
 #ifdef __cplusplus
 }

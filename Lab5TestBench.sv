@@ -1,153 +1,195 @@
 `default_nettype none
 
-module testBench();
 
-  //testSplit split ();
+// module testCheckGuessing();
 
-  testLoadMasterPattern();
+// logic ongoingGame, areRoundsLeft, loadingShape, clock, doneGrading;
+// logic [11:0] guess, masterPattern;
 
-endmodule: testBench
+// logic [3:0] ZnarlyCount, ZoodCount;
+// logic GameWon;
 
-module testLoadMasterPattern();
+// guessChecking check(.*);
+
+// initial begin
+// 	clock = 0;
+// 	forever #5 clock = ~clock;
+
+// end
+
+// initial begin
+
+// 	$monitor("guess: %b, master: %b, Znarly: %b, Zood: %b, GameWon: %b", guess, masterPattern, ZnarlyCount, ZoodCount, GameWon);
+// 	ongoingGame = 1;
+// 	areRoundsLeft = 1;
+// 	loadingShape = 0;
+// 	doneGrading = 0;
+// 	guess = 12'b001001010010;
+// 	masterPattern = 12'b101110100001;
+
+// 	@(posedge clock);
+// 	@(posedge clock);
+// 	masterPattern = 12'b101110100001;
+// 	guess = 12'b011011100100;//OODD /Znarly
+// 	@(posedge clock);
+// 	guess = 12'b101101010010;//IICC /Znarly
+// 	@(posedge clock);
+// 	guess = 12'b101011001110;//IOTZ /Znarly 2 - Zood
+// 	@(posedge clock);
+// 	guess = 12'b001101110100;//TIZD / 4 - Zood
+// 	@(posedge clock);
+// 	guess = 12'b101110100001;//IZDT / 4 - Zood
+// 	@(posedge clock);
 
 
-    logic [2:0] LoadShape; 
-    logic [1:0] ShapeLocation;
-    logic loadingShape, startGame, clock;
-    logic [11:0] masterPattern; logic masterLoaded;
+
+// 	$finish;
+
+// end
+
+// endmodule: testCheckGuessing
+
+// module testCheckForZood();
 
 
-    loadMasterPattern loadMaster(LoadShape, ShapeLocation, loadingShape, startGame, clock, masterPattern, masterLoaded);
+// logic [11:0] masterPattern, guess;
+// logic clock;
+// logic [3:0] Zood;
+// logic check;
 
-    initial begin
-    	clock = 0;
-    	forever #5 clock = ~clock;
-    end
+// checkForZood checkZood(masterPattern, guess, clock, Zood);
 
-    initial begin
+// initial begin
+// 	clock = 0;
+// 	forever #5 clock = ~clock;
 
-    	$monitor("Loadshape %b into %b location -> masterPattern: %b ", LoadShape, ShapeLocation, masterPattern);
+// end
+
+// initial begin
+
+// 	$monitor("masterPattern %b guess %b => zood %b | check : %b", masterPattern, guess, Zood, check);
+	
+// 	@(posedge clock);
+// 	@(posedge clock);
+// 	masterPattern = 12'b101110100001;
+// 	guess = 12'b011011100100;//OODD /Znarly
+// 	@(posedge clock);
+// 	guess = 12'b101101010010;//IICC /Znarly
+// 	@(posedge clock);
+// 	guess = 12'b101011001110;//IOTZ /Znarly 2 - Zood
+// 	@(posedge clock);
+// 	guess = 12'b001101110100;//TIZD / 4 - Zood
+// 	@(posedge clock);
+
+
+// 	$finish;
+
+
+// end
+
+// endmodule: testCheckForZood
+// module testLoadMasterPattern();
+
+
+//     logic [2:0] LoadShape; 
+//     logic [1:0] ShapeLocation;
+//     logic loadingShape, startGame, clock;
+//     logic [11:0] masterPattern; logic masterLoaded;
+
+
+//     loadMasterPattern loadMaster(LoadShape, ShapeLocation, loadingShape, startGame, clock, masterPattern, masterLoaded);
+
+//     initial begin
+//     	clock = 0;
+//     	forever #5 clock = ~clock;
+//     end
+
+//     initial begin
+
+//     	$monitor("Loadshape %b into %b location -> masterPattern: %b | loadingShape: %b startGame: %b masterLoaded: %b ", 
+//     		LoadShape, ShapeLocation, masterPattern, loadingShape, startGame, masterLoaded);
     	
-		@(posedge clock);
-		@(posedge clock);
-    	LoadShape = 3'b001;
-    	ShapeLocation = 2'b00;
-    	@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
+// 		@(posedge clock);
+// 		@(posedge clock);
+//     	LoadShape = 3'b001;
+//     	ShapeLocation = 2'b00;
+//     	startGame = 1;
+//     	loadingShape = 1;
+//     	@(posedge clock);
+//     	startGame = 0;
+// 		@(posedge clock);
+// 		LoadShape = 3'b001;
+//     	ShapeLocation = 2'b01;
+// 		@(posedge clock);
+// 		LoadShape = 3'b001;
+//     	ShapeLocation = 2'b10;
+// 		@(posedge clock);
+// 		LoadShape = 3'b001;
+//     	ShapeLocation = 2'b11;
+// 		@(posedge clock);
+// 		LoadShape = 3'b010;
+//     	ShapeLocation = 2'b00;
+// 		@(posedge clock);
+// 		LoadShape = 3'b100;
+//     	ShapeLocation = 2'b00;
 
-		$finish;
-
-
-    end
-
-
-endmodule: testLoadMasterPattern
-
-module testChecks;
-
-  logic [11:0] masterPattern, Guess;
-  logic [3:0] Znarly;
-
-  testCheckForZnarly znarlyTester (.*);
-  checkForZnarly znarlyBox (.*);
-
-endmodule: testChecks;
-
-module testCheckForZnarly
-  (output logic [11:0] masterPattern, Guess,
-  input logic [3:0] Znarly);
-  
-  initial begin
-	$monitor("Master: %b, Guess: %b, Znarly: %b", masterPattern, Guess, Znarly);
-
-	masterPattern = 12'b000000000000;
-	Guess = 12'b000000000000;
-
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010011100; 
-
-	$display("testing 3 znarlys");
-	//test 3 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011010011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001110011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010001100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010011101;
-
-	$display("testing 2 znarlys");
-	//test 2 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011011011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101110011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010001101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b100010011101;
-
-	$display("testing 1 znarlys");
-	//test 1 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011011100100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101100011101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011010100101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001110001001;
-
-	$display("testing 0 znarlys");
-	//test 0 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011011100101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101101011101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011001100101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101110001001;
-
-	$finish;
-  end
-
-endmodule: testCheckForZnarly
+// 		$finish;
 
 
-module testGameFSM;
-  logic reset, clock;
-  logic startGame, loadShapeNow, allShapesLoaded, gameWon;
-  logic [4:0] NumGames, RoundNumber, counter;
-  logic ongoingGame, loadingShape;
+//     end
+
+
+// endmodule: testLoadMasterPattern
+
+
+
+// module testGameFSM;
+//   logic reset, clock;
+//   logic startGame, loadShapeNow, allShapesLoaded, gameWon;
+//   logic [4:0] NumGames, RoundNumber, counter;
+//   logic ongoingGame, loadingShape;
  
-  gameFSM game(.*);
+//   gameFSM game(.*);
 
-  initial begin
-    clock = 0;
-    forever #5 clock = ~clock;
-  end
+//   initial begin
+//     clock = 0;
+//     forever #5 clock = ~clock;
+//   end
 
-  initial begin
-	$monitor("%s, reset %b, startGame: %b, loadShapeNow: %b, allShapesLoaded: %b, gameWon: %b, NumGames: %d, RoundNumber: %d",
-    game.state.name, reset, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber);
-	reset <= 1;
-	startGame <= 0; loadShapeNow <= 0; allShapesLoaded <= 0; gameWon <= 0;
-	NumGames <= 5'd0; RoundNumber <= 5'd0;
-	@(posedge clock);
-	reset <= 0;
+//   initial begin
+// 	$monitor("%s, reset %b, startGame: %b, loadShapeNow: %b, allShapesLoaded: %b, gameWon: %b, NumGames: %d, RoundNumber: %d",
+//     game.state.name, reset, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber);
+// 	reset <= 1;
+// 	startGame <= 0; loadShapeNow <= 0; allShapesLoaded <= 0; gameWon <= 0;
+// 	NumGames <= 5'd0; RoundNumber <= 5'd0;
+// 	@(posedge clock);
+// 	reset <= 0;
 
-	//make sure that state doesn't change when NumGames < 1;
-	@(posedge clock);
-	startGame <= 1;
-    @(posedge clock);
-	//make sure state changes when NumGames > 0 and startGame = 1;
-	startGame <= 0; NumGames <= 5'd1;
-	@(posedge clock);
-	startGame <= 1;
-	//change state to StartingGame and then to LoadShape
-	@(posedge clock);
-	loadShapeNow <= 1;
-	//change state to LoadShape and then to Guess
-	@(posedge clock);
-	allShapesLoaded <= 1;
-	@(posedge clock);
-	//change state to Guess and increment RoundNumber until hitting WaitGame
-	for(counter = 5'd0; counter < 5'd10; counter++)
-	RoundNumber <= counter;
-	@(posedge clock);
-	startGame <= 0;
-	@(posedge clock);
-  	$finish;
-  end
+// 	//make sure that state doesn't change when NumGames < 1;
+// 	@(posedge clock);
+// 	startGame <= 1;
+//     @(posedge clock);
+// 	//make sure state changes when NumGames > 0 and startGame = 1;
+// 	startGame <= 0; NumGames <= 5'd1;
+// 	@(posedge clock);
+// 	startGame <= 1;
+// 	//change state to StartingGame and then to LoadShape
+// 	@(posedge clock);
+// 	loadShapeNow <= 1;
+// 	//change state to LoadShape and then to Guess
+// 	@(posedge clock);
+// 	allShapesLoaded <= 1;
+// 	@(posedge clock);
+// 	//change state to Guess and increment RoundNumber until hitting WaitGame
+// 	for(counter = 5'd0; counter < 5'd10; counter++)
+// 	RoundNumber <= counter;
+// 	@(posedge clock);
+// 	startGame <= 0;
+// 	@(posedge clock);
+//   	$finish;
+//   end
 
-endmodule: testGameFSM
+// endmodule: testGameFSM
 
 module testGradeFSM;
 
