@@ -1,0 +1,42 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "testGradeFSM": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "bytes": 7336,
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "archive": "archive.42/_181299_archive_1.a"
+        },
+        "I7Z2G_d": {
+            "mode": 4,
+            "bytes": 19257,
+            "mod": "testGradeFSM",
+            "out": "I7Z2G_d.o",
+            "archive": "archive.42/_181299_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.42/_181299_archive_1.a",
+            "size": 26593,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7336
+                ],
+                [
+                    "I7Z2G_d.o",
+                    19257
+                ]
+            ]
+        }
+    ]
+}

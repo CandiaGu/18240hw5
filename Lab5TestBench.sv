@@ -101,6 +101,89 @@ module testCheckForZnarly
 endmodule: testCheckForZnarly
 
 
+module testGameFSM;
+  logic reset, clock;
+  logic startGame, loadShapeNow, allShapesLoaded, gameWon;
+  logic [4:0] NumGames, RoundNumber, counter;
+  logic ongoingGame, loadingShape;
+ 
+  gameFSM game(.*);
+
+  initial begin
+    clock = 0;
+    forever #5 clock = ~clock;
+  end
+
+  initial begin
+	$monitor("%s, reset %b, startGame: %b, loadShapeNow: %b, allShapesLoaded: %b, gameWon: %b, NumGames: %d, RoundNumber: %d",
+    game.state.name, reset, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber);
+	reset <= 1;
+	startGame <= 0; loadShapeNow <= 0; allShapesLoaded <= 0; gameWon <= 0;
+	NumGames <= 5'd0; RoundNumber <= 5'd0;
+	@(posedge clock);
+	reset <= 0;
+
+	//make sure that state doesn't change when NumGames < 1;
+	@(posedge clock);
+	startGame <= 1;
+    @(posedge clock);
+	//make sure state changes when NumGames > 0 and startGame = 1;
+	startGame <= 0; NumGames <= 5'd1;
+	@(posedge clock);
+	startGame <= 1;
+	//change state to StartingGame and then to LoadShape
+	@(posedge clock);
+	loadShapeNow <= 1;
+	//change state to LoadShape and then to Guess
+	@(posedge clock);
+	allShapesLoaded <= 1;
+	@(posedge clock);
+	//change state to Guess and increment RoundNumber until hitting WaitGame
+	for(counter = 5'd0; counter < 5'd10; counter++)
+	RoundNumber <= counter;
+	@(posedge clock);
+	startGame <= 0;
+	@(posedge clock);
+  	$finish;
+  end
+
+endmodule: testGameFSM
+
+module testGradeFSM;
+
+ logic reset, clock, gradeIt, doneGrading;
+
+  gradeFSM grade(.*);
+
+  initial begin
+    clock = 0;
+    forever #5 clock = ~clock;
+  end
+
+  initial begin
+	$monitor("%s, reset %b, gradeIt %b, doneGrading %b",
+    grade.state.name, reset, gradeIt, doneGrading);
+	reset <= 1;
+	gradeIt <= 0;
+	@(posedge clock);
+	reset <= 0;
+	@(posedge clock);
+	@(posedge clock);
+	gradeIt <= 1;
+	@(posedge clock);
+	@(posedge clock);
+	gradeIt <= 0;
+	@(posedge clock);
+	@(posedge clock);
+	gradeIt <= 1;
+	@(posedge clock);
+	@(posedge clock);
+
+	$finish;
+  end
+
+endmodule: testGradeFSM
+
 // module testSplit();
 
 

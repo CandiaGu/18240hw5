@@ -3,6 +3,6 @@
 # to it will be overwritten the next time VCS is run.
 echo "Unified Use model is not supported"
 exit -1
-vcs '-q' '-nc' '-sverilog' '-sverilog' '-nc' 'testChecks' "-Xrebuild" "-makedepends=Makefile.Msimdepends"
+vcs '-q' '-nc' '-sverilog' '-sverilog' '-nc' 'testGradeFSM' "-Xrebuild" "-makedepends=Makefile.Msimdepends"
 gmake -f Makefile.Msimdepends
-vcs '-q' '-nc' '-sverilog' '-sverilog' '-nc' 'testChecks'  -static_dbgen_only -daidir=$1 2>&1
+vcs '-q' '-nc' '-sverilog' '-sverilog' '-nc' 'testGradeFSM'  -static_dbgen_only -daidir=$1 2>&1

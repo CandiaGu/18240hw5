@@ -1,50 +1,51 @@
 {
     "MlibObjs": {},
+    "stat": {
+        "nMops": 878
+    },
     "PrevCompiledModules": {
+        "testGameFSM": {
+            "DJfie_d": {
+                "mod": "testGameFSM",
+                "bytes": 22634,
+                "out": "DJfie_d.o",
+                "mode": 4,
+                "archive": "archive.41/_180214_archive_1.a"
+            }
+        },
         "std": {
             "reYIK_d": {
-                "archive": "archive.33/_prev_archive_1.a",
                 "mod": "std",
                 "bytes": 29004,
                 "mode": 4,
+                "archive": "archive.41/_prev_archive_1.a",
                 "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "archive": "archive.33/_150077_archive_1.a",
                 "mod": "...MASTER...",
                 "bytes": 7336,
                 "out": "amcQw_d.o",
-                "mode": 4
-            }
-        },
-        "testChecks": {
-            "sa4Qd_d": {
-                "archive": "archive.33/_150077_archive_1.a",
-                "mod": "testChecks",
-                "bytes": 17617,
                 "mode": 4,
-                "out": "sa4Qd_d.o"
+                "archive": "archive.41/_180214_archive_1.a"
             }
         }
     },
+    "CompileStrategy": "fullobj",
     "SIMBData": {
         "out": "amcQwB.o",
-        "bytes": 63375
+        "bytes": 64579
     },
-    "LVLData": [
-        "SIM"
-    ],
     "NameTable": {
+        "testGameFSM": [
+            "testGameFSM",
+            "DJfie",
+            "module"
+        ],
         "std": [
             "std",
             "reYIK",
-            "module"
-        ],
-        "testChecks": [
-            "testChecks",
-            "sa4Qd",
             "module"
         ],
         "...MASTER...": [
@@ -53,27 +54,26 @@
             "module"
         ]
     },
-    "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
-        "testChecks"
+        "testGameFSM"
     ],
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "CompileStatus": "Successful",
     "PEModules": [],
-    "Misc": {
-        "default_output_dir": "csrc",
-        "csrc": "csrc",
-        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
-        "daidir": "simv.daidir",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
-        "archive_dir": "archive.33"
-    },
     "CompileProcesses": [
-        "cgproc.150077.json"
+        "cgproc.180214.json"
     ],
-    "stat": {
-        "nMops": 1074
-    },
-    "CompileStatus": "Successful"
+    "Misc": {
+        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.41",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
+        "default_output_dir": "csrc"
+    }
 }
