@@ -1,11 +1,5 @@
 0 
-32
-+cli+4
-+itf+/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
-+memcbk
-+vcsd
-+vpi
-+vpi
+24
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -19,27 +13,35 @@
 -Mobjects= /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
 -Mout=simv
 -Msaverestoreobj=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
--Msyslibs=-ldl -lm
+-Msyslibs=-ldl
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
--Xcbug=0x1
--debug=3
 -gen_obj
+-nc
 -picarchive
+-q
 -sverilog
 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/bin/vcs1
 Lab5.sv
-Lab5TestBench.sv
-lab4.sv
 library.sv
-52
-sysc_uni_pwd=/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5
+72
+sysc_uni_pwd=/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5
 no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
 https_proxy=http://proximus.ece.cmu.edu:3128/
 http_proxy=http://proximus.ece.cmu.edu:3128/
 ftp_proxy=http://proximus.ece.cmu.edu:3128/
-XDG_SESSION_ID=24707
-XDG_RUNTIME_DIR=/run/user/2984
+XMODIFIERS=@im=ibus
+XDG_VTNR=5
+XDG_SESSION_TYPE=x11
+XDG_SESSION_ID=488
+XDG_SESSION_DESKTOP=gnome-classic
+XDG_SEAT=seat0
+XDG_RUNTIME_DIR=/run/user/3448
+XDG_MENU_PREFIX=gnome-
+XDG_CURRENT_DESKTOP=GNOME-Classic:GNOME
+XAUTHORITY=/run/gdm/auth-for-svnathan-44Wgu9/database
+WINDOWPATH=1:3:4:4:5:5:5:6:5:5
+VTE_VERSION=4602
 VMR_MODE_FLAG=32
 VCS_TARGET_ARCH=amd64
 VCS_MX_HOME_INTERNAL=1
@@ -50,20 +52,21 @@ VCS_DEPTH=0
 VCS_ARG_ADDED_FOR_TMP=1
 VCS_ARCH_OVERRIDE=linux
 VCS_ARCH=amd64
+USERNAME=svnathan
 UNAME=/bin/uname
 TOOL_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
 SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
 SYNOPSYS=/usr/local/synopsys
-SSH_TTY=/dev/pts/7
-SSH_CONNECTION=128.237.205.150 60751 172.19.138.14 22
-SSH_CLIENT=128.237.205.150 60751 22
+SSH_AUTH_SOCK=/run/user/3448/keyring/ssh
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
-SELINUX_USE_CURRENT_RANGE=
-SELINUX_ROLE_REQUESTED=
-SELINUX_LEVEL_REQUESTED=
+SSH_AGENT_PID=24570
+SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/24541,unix/unix:/tmp/.ICE-unix/24541
 SCRNAME=vcs
 SCRIPT_NAME=vcs
+QUARTUS_64BIT=1
+QT_QPA_PLATFORMTHEME=qgnomeplatform
 QT_PLUGIN_PATH=/usr/lib64/kde4/plugins:/usr/lib/kde4/plugins
+QT_IM_MODULE=ibus
 QT_GRAPHICSSYSTEM_CHECKED=1
 QTLIB=/usr/lib64/qt-3.3/lib
 QTINC=/usr/lib64/qt-3.3/include
@@ -75,26 +78,32 @@ MODULEPATH=/usr/share/Modules/modulefiles:/etc/modulefiles
 LOADEDMODULES=
 LESSOPEN=||/usr/bin/lesspipe.sh %s
 LC_ALL=C
-KRB5CCNAME=KEYRING:persistent:2984
+KRB5CCNAME=KEYRING:persistent:3448
 KDEDIRS=/usr
 HTTP_PROXY=http://proximus.ece.cmu.edu:3128/
 HTTPS_PROXY=http://proximus.ece.cmu.edu:3128/
 HISTCONTROL=ignoredups
+GNOME_SHELL_SESSION_MODE=classic
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GJS_DEBUG_TOPICS=JS ERROR;JS LOG
+GJS_DEBUG_OUTPUT=stderr
+GDM_LANG=en_US.UTF-8
+GDMSESSION=gnome-classic
 FTP_PROXY=http://proximus.ece.cmu.edu:3128/
+DESKTOP_SESSION=gnome-classic
 DC_HOME=/usr/local/synopsys/synopsys-2007.03-SP5/linux/syn
+DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-reYqoyH2nn,guid=234d65aea4741882575c02dc5ac7dccc
 CVS_RSH=ssh
+COLORTERM=truecolor
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
-5
-1523047802 Lab5TestBench.sv
-1523047667 Lab5.sv
-1523042435 library.sv
-1523042062 lab4.sv
-1440743823 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
+2
+1523048395 Lab5.sv
+1523048076 library.sv
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1523047807 simv.daidir
+1523048403 simv.daidir

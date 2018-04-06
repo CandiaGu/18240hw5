@@ -1,0 +1,12 @@
+
+State Machine - |top|Lab5:labBox|gradeFSM:grade|state
+Name state.grading 
+state.notGraded 0 
+state.grading 1 
+
+State Machine - |top|Lab5:labBox|gameFSM:game|state
+Name state.Guess state.LoadShape state.StartingGame state.WaitGame 
+state.WaitGame 0 0 0 0 
+state.StartingGame 0 0 1 1 
+state.LoadShape 0 1 0 1 
+state.Guess 1 0 0 1 

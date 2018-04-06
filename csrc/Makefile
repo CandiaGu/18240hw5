@@ -47,7 +47,7 @@ CRT0=
 # C run time startup
 CRTN=
 # Machine specific libraries
-SYSLIBS=-ldl -lm  -lc -lpthread -ldl
+SYSLIBS=-ldl  -lc -lm -lpthread -ldl
 
 # Default defines
 SHELL=/bin/sh
@@ -92,11 +92,11 @@ clobber : clean
 	rm -f $(PRODUCT) $(PRODUCT_TIMESTAMP) 
 
 picclean :
-	rm -f _csrc*.so amd64_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
+	@rm -f _csrc*.so amd64_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
 
 $(PRODUCT_TIMESTAMP) : $(PRODUCT)
-	-if [ -x $(PRODUCT) ]; then chmod -x $(PRODUCT); fi
-	$(LD) $(CRT0) -o $(PRODUCT) $(STRIPFLAGS) $(PCLDFLAGS) $(PICLDFLAGS) $(LDFLAGS) $(OBJS)  $(LIBS)   $(RUNTIME) -Wl,-whole-archive $(VCSUCLI) -Wl,-no-whole-archive     $(LINK_TB) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS)   $(VCS_SAVE_RESTORE_OBJ) $(SYSLIBS) $(CRTN)
+	@-if [ -x $(PRODUCT) ]; then chmod -x $(PRODUCT); fi
+	@$(LD) $(CRT0) -o $(PRODUCT) $(STRIPFLAGS) $(PCLDFLAGS) $(PICLDFLAGS) $(LDFLAGS) $(OBJS)  $(LIBS)   $(RUNTIME) -Wl,-whole-archive $(VCSUCLI) -Wl,-no-whole-archive     $(LINK_TB) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS)   $(VCS_SAVE_RESTORE_OBJ) $(SYSLIBS) $(CRTN)
 	@rm -f csrc[0-9]*.o
 	@touch $(PRODUCT_TIMESTAMP)
 	@-if [ -d ./objs ]; then find ./objs -type d -empty -delete; fi
