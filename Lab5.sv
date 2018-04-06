@@ -13,24 +13,48 @@ module Lab5
   input logic reset, debug, clock);
 
 
-  logic ongoingGame, loadingShape;
+  logic ongoingGame, loadingShape, gradeIt, doneGrading;
   
-  gameFSM game(StartGame, RoundNumber, NumGames, clock, reset, ongoingGame, loadingShape);
- // gradeFSM grade();
+  gameFSM game(reset, clock, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
+  gradeFSM grade(reset, clock, gradeIt, doneGrading);
 
   logic drop; // whether game was paid for
   logic [3:0] credit; // leftover money (not used)
 
   myCoinFSM mydesign(CoinValue, drop, credit, CoinInserted, ~reset);
 
-  // counter gameCounter ();
+  gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 0, clock, NumGames);
+  counter # (4) roundCounter (4'd0, 1, (ongoingGame && doneGrading && !loadingShape), 0, startGame, clock, RoundNumber);
 
-  // counter roundCounter ();
+  loadMasterPattern loadMaster(LoadShape, ShapeLocation, loadingShape, startGame, clock, masterPattern, masterLoaded);
 
-  // loadMasterPattern mast ();
+  guessChecking guess (ongoingGame, RoundNumber < 8, loadingShape, clock, doneGrading, guess, masterPattern, ZnarlyCount, ZoodCount,GameWon);
+
 
 
 endmodule: Lab5
+
+
+module gameCounter
+  # (parameter WIDTH = 30)
+  (input logic [WIDTH-1 : 0] D,
+   input logic up, en, clear, load, clock,
+   output logic [$clog2(WIDTH)-1 : 0] Q);
+
+  always_ff @ (posedge clock, posedge clear)
+    if(en)
+      if(clear)
+        Q <= 0;
+      else 
+        if(load)
+          Q <= D;
+        else 
+          if(up)
+            if(Q < 7)
+              Q <= Q + 1;
+          else
+            Q <= (Q>0) ? Q-1 : 0;
+endmodule: counter
 
 
 
