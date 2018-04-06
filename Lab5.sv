@@ -23,9 +23,9 @@ module Lab5
 
   myCoinFSM mydesign(CoinValue, drop, credit, CoinInserted, ~reset);
 
-  // counter gameCounter ();
+  counter # (4) gameCounter (4'd0, !ongoingGame, drop, reset, 0, clock, NumGames);
 
-  // counter roundCounter ();
+  counter # (4) roundCounter (4'd0, 1, (ongoingGame && doneGrading && !loadingShape), 0, startGame, clock, roundNumber);
 
   // loadMasterPattern mast ();
 
