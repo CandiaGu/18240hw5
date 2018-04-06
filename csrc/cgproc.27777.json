@@ -1,0 +1,48 @@
+{
+    "Modules": {
+        "Multiplexer": {},
+        "Mux2to1": {},
+        "Decoder": {},
+        "...MASTER...": {},
+        "std": {},
+        "Lab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        },
+        "Subtracter": {},
+        "Adder": {},
+        "shift_register": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "mode": 4,
+            "bytes": 10602,
+            "archive": "archive.80/_27777_archive_1.a"
+        },
+        "KkqfR_d": {
+            "mod": "Lab5",
+            "out": "KkqfR_d.o",
+            "mode": 4,
+            "bytes": 49850,
+            "archive": "archive.80/_27777_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.80/_27777_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    10602
+                ],
+                [
+                    "KkqfR_d.o",
+                    49850
+                ]
+            ],
+            "size": 60452
+        }
+    ]
+}

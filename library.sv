@@ -82,7 +82,8 @@ module counter
 	 input logic up, en, clear, load, clock,
 	 output logic [WIDTH-1 : 0] Q);
 
-	always_ff @ (posedge clock, posedge clear)
+	always_ff @ (posedge clock)
+	begin
 		if(en)
 			if(clear)
 				Q <= 0;
@@ -94,6 +95,7 @@ module counter
 						Q <= Q + 1;
 					else
 						Q <= (Q>0) ? Q-1 : 0;
+	end
 
 endmodule: counter
 

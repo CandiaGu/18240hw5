@@ -21,6 +21,7 @@ module Lab5
   logic drop; // whether game was paid for
   logic [3:0] credit; // leftover money (not used)
   logic [11:0] masterPattern;
+  logic masterLoaded;
 
   assign masterPatternOut = masterPattern; //masterPatternOut will go to the VGA
   assign displayMasterPattern = ongoingGame; //connect displayMasterPattern out to ongoingGame logic
@@ -29,13 +30,13 @@ module Lab5
   assign loadGuess = GradeIt; //GradeIt tells the game to load a player's guess
   assign clearGame = StartGame; //Since StartGame refreshes the game, we can use it for the clearGame signal
     
-  gameFSM game(reset, clock, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
+  gameFSM game(reset, clock, StartGame, LoadShapeNow, masterLoaded, GameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
   gradeFSM grade(reset, clock, GradeIt, doneGrading);
 
   logic circle, triangle, pent;
 
 
-  CoinAccept mydesign(CoinValue, CoinInserted, drop, reset, clock);
+  myCoinFSM mydesign(CoinValue, drop,, reset, CoinInserted);
 
   gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 1'b0, clock, NumGames);//en => drop
   counter # (4) roundCounter (4'd0, 1'b1, (ongoingGame && doneGrading && !loadingShape), 1'b0, StartGame, clock, RoundNumber);
@@ -51,8 +52,9 @@ endmodule: Lab5
 module CoinAccept
   (input logic [1:0] CoinValue, input logic CoinInserted, output logic Drop, input logic reset, clock);
 
-  logic [4:0] in, total;
-  Register regist(in, CoinInserted, reset, clock, total);
+  logic [4:0] in, total; logic en;
+  Register #(5) regist(in, CoinInserted && !en, reset, clock, total);
+  Register #(1) regist2(CoinInserted,1'b1, reset, clock ,en);
 
   logic [3:0] value;
   always_comb begin
@@ -139,6 +141,8 @@ module loadMasterPattern
           2'b00 : inputMaster[2:0] = (o0 == 3'b0) ? LoadShape : inputMaster[2:0];
         endcase
       end
+		else
+			inputMaster = masterPattern;
   end
     
 
@@ -164,6 +168,8 @@ checkForZood checkForZood(masterPattern, guess, clock, fakeZood);
 always_comb begin
   if(en)
     GameWon = guess == masterPattern;
+	else
+	 GameWon = 0;
   Zood = fakeZood & ~(Znarly);
 end
 

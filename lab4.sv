@@ -13,7 +13,7 @@ endmodule: dFlipFlop
 
 
 module myCoinFSM(   
-	input  logic 	   circ, triangle, pent,   
+	input  logic  [1:0] CoinValue,   
 	output logic       drop,  
 	output logic [3:0] credit,  
 	input  logic       clock, reset_N);   
@@ -38,53 +38,53 @@ module myCoinFSM(
 
 	always_comb begin
 		case (state)
-			state0: if (circ) nextState = wstate1;
-					else if (triangle) nextState = wstate3;
-					else if (pent) nextState = wstate5;
+			state0: if (CoinValue == 2'b01) nextState = wstate1;
+					else if (CoinValue == 2'b10) nextState = wstate3;
+					else if (CoinValue == 2'b11) nextState = wstate5;
 					else nextState = wstate0;
-			state1: if (circ) nextState = wstate2;
-					else if (triangle) nextState = wstate4;
-					else if (pent) nextState = wstate6;
+			state1: if (CoinValue == 2'b01) nextState = wstate2;
+					else if (CoinValue == 2'b10) nextState = wstate4;
+					else if (CoinValue == 2'b11) nextState = wstate6;
 					else nextState = wstate1;
-			state2: if (circ) nextState = wstate3;
-					else if (triangle) nextState = wstate5;
-					else if (pent) nextState = wstate7;
+			state2: if (CoinValue == 2'b01) nextState = wstate3;
+					else if (CoinValue == 2'b10) nextState = wstate5;
+					else if (CoinValue == 2'b11) nextState = wstate7;
 					else nextState = wstate2;
-			state3: if (circ) nextState = wstate4;
-					else if (triangle) nextState = wstate6;
-					else if (pent) nextState = wstate4;
+			state3: if (CoinValue == 2'b01) nextState = wstate4;
+					else if (CoinValue == 2'b10) nextState = wstate6;
+					else if (CoinValue == 2'b11) nextState = wstate4;
 					else nextState = wstate3;
-			state4: if (circ) nextState = wstate1;
-					else if (triangle) nextState = wstate3;
-					else if (pent) nextState = wstate5;
+			state4: if (CoinValue == 2'b01) nextState = wstate1;
+					else if (CoinValue == 2'b10) nextState = wstate3;
+					else if (CoinValue == 2'b11) nextState = wstate5;
 					else nextState = wstate4;
-			state5: if (circ) nextState = wstate2;
-					else if (triangle) nextState = wstate4;
-					else if (pent) nextState = wstate6;
+			state5: if (CoinValue == 2'b01) nextState = wstate2;
+					else if (CoinValue == 2'b10) nextState = wstate4;
+					else if (CoinValue == 2'b11) nextState = wstate6;
 					else nextState = wstate5;
-			state6: if (circ) nextState = wstate3;
-					else if (triangle) nextState = wstate5;
-					else if (pent) nextState = wstate7;
+			state6: if (CoinValue == 2'b01) nextState = wstate3;
+					else if (CoinValue == 2'b10) nextState = wstate5;
+					else if (CoinValue == 2'b11) nextState = wstate7;
 					else nextState = wstate6;
-			state7: if (circ) nextState = wstate4;
-					else if (triangle) nextState = wstate6;
-					else if (pent) nextState = wstate4;
+			state7: if (CoinValue == 2'b01) nextState = wstate4;
+					else if (CoinValue == 2'b10) nextState = wstate6;
+					else if (CoinValue == 2'b11) nextState = wstate4;
 					else nextState = wstate7;
-			wstate0: if (~circ && ~triangle && ~pent) nextState = state0;
+			wstate0: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state0;
 				 else nextState = wstate0;
-			wstate1: if (~circ && ~triangle && ~pent) nextState = state1;
+			wstate1: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state1;
 				 else nextState = wstate1;
-			wstate2: if (~circ && ~triangle && ~pent) nextState = state2;
+			wstate2: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state2;
 				 else nextState = wstate2;
-			wstate3: if (~circ && ~triangle && ~pent) nextState = state3;
+			wstate3: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state3;
 				 else nextState = wstate3;
-			wstate4: if (~circ && ~triangle && ~pent) nextState = state4;
+			wstate4: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state4;
 				 else nextState = wstate4;
-			wstate5: if (~circ && ~triangle && ~pent) nextState = state5;
+			wstate5: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state5;
 				 else nextState = wstate5;
-			wstate6: if (~circ && ~triangle && ~pent) nextState = state6;
+			wstate6: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state6;
 				 else nextState = wstate6;
-			wstate7: if (~circ && ~triangle && ~pent) nextState = state7;
+			wstate7: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state7;
 				 else nextState = wstate7;
 
 		endcase
