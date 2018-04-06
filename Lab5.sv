@@ -10,16 +10,26 @@ module Lab5
   input logic LoadShapeNow,
   output logic [3:0] Znarly, Zood, RoundNumber, NumGames,
   output logic GameWon,
-  input logic reset, debug, clock);
+  input logic reset, clock,
+  output logic loadNumGames, loadGuess, loadZnarlyZood,
+  output logic clearGame, displayMasterPattern,
+  output logic [11:0] masterPatternOut);
 
 
-  logic ongoingGame, loadingShape, gradeIt, doneGrading;
-  
-  gameFSM game(reset, clock, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
-  gradeFSM grade(reset, clock, gradeIt, doneGrading);
-
+  logic ongoingGame, loadingShape, doneGrading;
   logic drop; // whether game was paid for
   logic [3:0] credit; // leftover money (not used)
+  logic [11:0] masterPattern;
+
+  assign masterPatternOut = masterPattern; //masterPatternOut will go to the VGA
+  assign displayMasterPattern = ongoingGame; //connect displayMasterPattern out to ongoingGame logic
+  assign loadNumGames = drop; //connect loadNumGames to the Enable signal of gameCounter
+  assign loadZnarlyZood = doneGrading; //connect loadZnarlyZood signal to the doneGrading signal from gradeFSM
+  assign loadGuess = GradeIt; //GradeIt tells the game to load a player's guess
+  assign clearGame = StartGame; //Since StartGame refreshes the game, we can use it for the clearGame signal
+    
+  gameFSM game(reset, clock, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
+  gradeFSM grade(reset, clock, GradeIt, doneGrading);
 
   myCoinFSM mydesign(CoinValue, drop, credit, CoinInserted, ~reset);
 
@@ -267,7 +277,7 @@ module gameFSM
 endmodule: gameFSM
 
 module gradeFSM
-  (input logic reset, clock, gradeIt,
+  (input logic reset, clock, GradeIt,
   output logic doneGrading);
 
   enum logic [1:0] {notGraded = 2'b10, grading = 2'b11} state, nextState;
@@ -280,13 +290,13 @@ module gradeFSM
   unique case(state)
     notGraded:
     begin
-      nextState = (gradeIt) ? grading : notGraded;
+      nextState = (GradeIt) ? grading : notGraded;
       doneGrading = 0;
     end 
     grading: 
     begin
-    nextState = (gradeIt) ? grading: notGraded;
-    doneGrading = (gradeIt) ? 0 : 1;
+    nextState = (GradeIt) ? grading: notGraded;
+    doneGrading = (GradeIt) ? 0 : 1;
     end
   endcase
 
