@@ -1,6 +1,7 @@
 {
     "CompileStatus": "Successful",
     "MlibObjs": {},
+<<<<<<< HEAD
     "LVLData": [
         "SIM"
     ],
@@ -75,10 +76,24 @@
                 "archive": "archive.35/_prev_archive_1.a",
                 "mod": "Subtracter",
                 "mode": 4
+=======
+    "stat": {
+        "nMops": 878
+    },
+    "PrevCompiledModules": {
+        "testGameFSM": {
+            "DJfie_d": {
+                "mod": "testGameFSM",
+                "bytes": 22634,
+                "out": "DJfie_d.o",
+                "mode": 4,
+                "archive": "archive.41/_180214_archive_1.a"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             }
         },
         "std": {
             "reYIK_d": {
+<<<<<<< HEAD
                 "bytes": 29004,
                 "out": "reYIK_d.o",
                 "archive": "archive.35/_prev_archive_1.a",
@@ -93,10 +108,18 @@
                 "archive": "archive.35/_prev_archive_1.a",
                 "mod": "counter",
                 "mode": 4
+=======
+                "mod": "std",
+                "bytes": 29004,
+                "mode": 4,
+                "archive": "archive.41/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             }
         },
         "...MASTER...": {
             "amcQw_d": {
+<<<<<<< HEAD
                 "bytes": 11684,
                 "archive": "archive.35/_90417_archive_1.a",
                 "out": "amcQw_d.o",
@@ -120,14 +143,32 @@
                 "archive": "archive.35/_prev_archive_1.a",
                 "mod": "dFlipFlop",
                 "mode": 4
+=======
+                "mod": "...MASTER...",
+                "bytes": 7336,
+                "out": "amcQw_d.o",
+                "mode": 4,
+                "archive": "archive.41/_180214_archive_1.a"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             }
         }
     },
     "CompileStrategy": "fullobj",
+<<<<<<< HEAD
     "NameTable": {
         "Subtracter": [
             "Subtracter",
             "pcAkE",
+=======
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 64579
+    },
+    "NameTable": {
+        "testGameFSM": [
+            "testGameFSM",
+            "DJfie",
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             "module"
         ],
         "std": [
@@ -135,6 +176,7 @@
             "reYIK",
             "module"
         ],
+<<<<<<< HEAD
         "dFlipFlop": [
             "dFlipFlop",
             "fhqgw",
@@ -185,12 +227,15 @@
             "hgjFF",
             "module"
         ],
+=======
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
         "...MASTER...": [
             "SIM",
             "amcQw",
             "module"
         ]
     },
+<<<<<<< HEAD
     "CurCompileUdps": {},
     "SIMBData": {
         "out": "amcQwB.o",
@@ -206,9 +251,23 @@
     },
     "CompileProcesses": [
         "cgproc.90417.json"
+=======
+    "CurCompileModules": [
+        "...MASTER...",
+        "testGameFSM"
     ],
+    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
+    ],
+    "CompileStatus": "Successful",
     "PEModules": [],
+    "CompileProcesses": [
+        "cgproc.180214.json"
+    ],
     "Misc": {
+<<<<<<< HEAD
         "cwd": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5",
         "csrc": "csrc",
         "default_output_dir": "csrc",
@@ -216,5 +275,14 @@
         "csrc_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/csrc",
         "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir",
         "archive_dir": "archive.35"
+=======
+        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
+        "csrc": "csrc",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.41",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
+        "default_output_dir": "csrc"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
     }
 }

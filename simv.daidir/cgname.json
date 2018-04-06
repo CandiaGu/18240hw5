@@ -4,6 +4,7 @@
         "reYIK",
         "module"
     ],
+<<<<<<< HEAD
     "Multiplexer": [
         "Multiplexer",
         "UxyT3",
@@ -57,6 +58,11 @@
     "loadMasterPattern": [
         "loadMasterPattern",
         "hgjFF",
+=======
+    "testGradeFSM": [
+        "testGradeFSM",
+        "I7Z2G",
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
         "module"
     ],
     "...MASTER...": [

@@ -202,57 +202,72 @@ module sliceInput
   
 endmodule: sliceInput
 
-module gameFSM
-  (input logic StartGame,
-  input logic [3:0] RoundNumber, NumGames,
-  input logic clock, reset, GameWon,
-  output logic ongoingGame); 
 
-  enum logic [1:0] {WaitGame = 2'b00, PlayGame = 2'b01} gameCS, gameNS;
+
+module gameFSM
+  (input logic reset, clock, 
+  input logic startGame, loadShapeNow, allShapesLoaded, gameWon,
+  input logic [4:0] NumGames, RoundNumber,
+  output logic ongoingGame, loadingShape);
+
+  enum logic [1:0] {WaitGame = 2'b00, StartingGame = 2'b01, LoadShape = 2'b10, Guess = 2'b11 } state, nextState;
 
   always_ff @(posedge clock)
-    if (reset) gameCS <= WaitGame;
-    else gameCS <= gameNS;
+    if (reset) state <= WaitGame;
+    else state <= nextState;
 
   always_comb
-	unique case(gameCS)
-	  WaitGame: gameNS = (NumGames > 0 && StartGame) ? PlayGame : WaitGame;
-    PlayGame: gameNS = (GameWon || RoundNumber >= 8) ? WaitGame : PlayGame;
-	endcase
+  unique case(state)
+    WaitGame: 
+    begin
+    nextState = (NumGames > 0 && startGame) ? StartingGame : WaitGame;
+    ongoingGame = (NumGames > 0 && startGame) ? 1: 0; loadingShape = 0;
+    end
+    StartingGame:
+    begin
+    nextState = (loadShapeNow) ? LoadShape : StartingGame;
+    ongoingGame = 1; loadingShape = (loadShapeNow) ? 1 : 0;
+    end
+    LoadShape:
+    begin
+    nextState = (allShapesLoaded) ? Guess : LoadShape;
+    ongoingGame = 1; loadingShape = (allShapesLoaded) ? 0 : 1;
+    end
+    Guess:
+    begin
+    nextState = (gameWon || RoundNumber >= 8) ?  WaitGame : Guess;
+    ongoingGame = (gameWon || RoundNumber >= 8) ? 0 : 1; loadingShape = 0;
+    end
+  endcase
 
-  always_comb
-	unique case(gameCS)
-	  WaitGame: ongoingGame = 0;
-	  PlayGame: ongoingGame = 1;
-	endcase
-	  
+    
 endmodule: gameFSM
 
+module gradeFSM
+  (input logic reset, clock, gradeIt,
+  output logic doneGrading);
 
-// module gradeFSM();
+  enum logic [1:0] {notGraded = 2'b10, grading = 2'b11} state, nextState;
 
-//   enum logic [1:0] {NotGraded = 2'b10 Grading = 2'b11} gradeCS, gradeNS;
+  always_ff @(posedge clock)
+  if (reset) state <= notGraded;
+    else state <= nextState;
 
-//   always_ff @(posedge clock)
-//     if (reset) gradeCS <= NotGraded;
-//     else begin gradeCS <= gradeNS;
+  always_comb
+  unique case(state)
+    notGraded:
+    begin
+      nextState = (gradeIt) ? grading : notGraded;
+      doneGrading = 0;
+    end 
+    grading: 
+    begin
+    nextState = (gradeIt) ? grading: notGraded;
+    doneGrading = (gradeIt) ? 0 : 1;
+    end
+  endcase
 
-//   always_comb
-// 	unique case(state)
-// 	  NotGraded:
-// 		begin
-// 		gradeNS = (gradeIt) ? Grading : NotGraded; 
-// 		doneGrading = 0;
-// 		end
-// 	  Grading:
-// 		begin
-// 		gradeNS = (gradeIt) ? Grading : NotGraded;
-// 		doneGrading = (gradeIt) ? 0 : 1;
-// 		end
-// 	endcase
-
-// endmodule: gradeFSM
-
+endmodule: gradeFSM
 
 
     

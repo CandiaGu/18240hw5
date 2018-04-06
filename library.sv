@@ -81,7 +81,7 @@ module counter
 	# (parameter WIDTH = 30)
 	(input logic [WIDTH-1 : 0] D,
 	 input logic up, en, clear, load, clock,
-	 output logic [$clog2(WIDTH)-1 : 0] Q);
+	 output logic [WIDTH-1 : 0] Q);
 
 	always_ff @ (posedge clock, posedge clear)
 		if(en)

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "MlibObjs": {},
     "CompileStrategy": "fullobj",
     "stat": {
@@ -13,6 +14,11 @@
         "default_output_dir": "csrc",
         "archive_dir": "archive.36"
     },
+=======
+    "CompileStatus": "Successful",
+    "PEModules": [],
+    "MlibObjs": {},
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
     "PrevCompiledModules": {
         "Multiplexer": {
             "UxyT3_d": {
@@ -34,6 +40,7 @@
         },
         "std": {
             "reYIK_d": {
+<<<<<<< HEAD
                 "out": "reYIK_d.o",
                 "archive": "archive.36/_prev_archive_1.a",
                 "mode": 4,
@@ -102,10 +109,18 @@
                 "mode": 4,
                 "mod": "counter",
                 "bytes": 8709
+=======
+                "mode": 4,
+                "mod": "std",
+                "bytes": 29004,
+                "archive": "archive.42/_prev_archive_1.a",
+                "out": "reYIK_d.o"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             }
         },
         "...MASTER...": {
             "amcQw_d": {
+<<<<<<< HEAD
                 "archive": "archive.36/_90965_archive_1.a",
                 "mode": 4,
                 "out": "amcQw_d.o",
@@ -129,20 +144,35 @@
                 "mode": 4,
                 "mod": "Subtracter",
                 "bytes": 6711
+=======
+                "mode": 4,
+                "mod": "...MASTER...",
+                "bytes": 7336,
+                "out": "amcQw_d.o",
+                "archive": "archive.42/_181299_archive_1.a"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             }
         }
     },
     "CurCompileUdps": {},
+<<<<<<< HEAD
     "LVLData": [
         "SIM"
     ],
     "PEModules": [],
+=======
+    "CurCompileModules": [
+        "...MASTER...",
+        "testGradeFSM"
+    ],
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
+<<<<<<< HEAD
         "Multiplexer": [
             "Multiplexer",
             "UxyT3",
@@ -196,6 +226,11 @@
         "loadMasterPattern": [
             "loadMasterPattern",
             "hgjFF",
+=======
+        "testGradeFSM": [
+            "testGradeFSM",
+            "I7Z2G",
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
             "module"
         ],
         "...MASTER...": [
@@ -204,6 +239,7 @@
             "module"
         ]
     },
+<<<<<<< HEAD
     "SIMBData": {
         "bytes": 66545,
         "out": "amcQwB.o"
@@ -215,6 +251,29 @@
     ],
     "CompileProcesses": [
         "cgproc.90965.json"
+=======
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 65207
+    },
+    "LVLData": [
+        "SIM"
     ],
-    "CompileStatus": "Successful"
+    "CompileProcesses": [
+        "cgproc.181299.json"
+>>>>>>> 8ece7437b5742c2eff2c203f46080533caff9f6b
+    ],
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
+        "daidir": "simv.daidir",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
+        "archive_dir": "archive.42"
+    },
+    "stat": {
+        "nMops": 556
+    }
 }
