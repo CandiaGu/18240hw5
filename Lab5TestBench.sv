@@ -1,14 +1,15 @@
 `default_nettype none
 
-module testCheckForZood();
 
+module testCheckGuessing();
 
-logic [11:0] masterPattern, guess;
-logic clock;
-logic [3:0] Zood;
-logic check;
+logic ongoingGame, areRoundsLeft, loadingShape, clock, doneGrading;
+logic [11:0] guess, masterPattern;
 
-checkForZood checkZood(masterPattern, guess, clock, check, Zood);
+logic [3:0] ZnarlyCount, ZoodCount;
+logic GameWon;
+
+guessChecking check(.*);
 
 initial begin
 	clock = 0;
@@ -18,41 +19,75 @@ end
 
 initial begin
 
-	$monitor("masterPattern %b guess %b => zood %b | check : %b", masterPattern, guess, Zood, check);
-	
+	$monitor("guess: %b, master: %b, Znarly: %b, Zood: %b, GameWon: %b", guess, masterPattern, ZnarlyCount, ZoodCount, GameWon);
+	ongoingGame = 1;
+	areRoundsLeft = 1;
+	loadingShape = 0;
+	doneGrading = 0;
+	guess = 12'b001001010010;
+	masterPattern = 12'b101110100001;
+
 	@(posedge clock);
 	@(posedge clock);
-	masterPattern = 12'b001001001001;
-	guess = 12'b001001001001;
-	check = 0;
+	masterPattern = 12'b101110100001;
+	guess = 12'b011011100100;//OODD /Znarly
 	@(posedge clock);
-	check = 1;
+	guess = 12'b101101010010;//IICC /Znarly
 	@(posedge clock);
+	guess = 12'b101011001110;//IOTZ /Znarly 2 - Zood
 	@(posedge clock);
-	masterPattern = 12'b011001001001;
-	guess = 12'b001001001001;
-	check = 1;
+	guess = 12'b001101110100;//TIZD / 4 - Zood
 	@(posedge clock);
-	check = 0;
+	guess = 12'b101110100001;//IZDT / 4 - Zood
 	@(posedge clock);
-	guess = 12'b001001001001;
-	check = 1;
-	@(posedge clock);
-	check = 0;
-	@(posedge clock);
-	guess = 12'b101101101101;
-	check = 0;
-	@(posedge clock);
-	check = 1;
-	@(posedge clock);
+
 
 
 	$finish;
 
-
 end
 
-endmodule: testCheckForZood
+endmodule: testCheckGuessing
+
+// module testCheckForZood();
+
+
+// logic [11:0] masterPattern, guess;
+// logic clock;
+// logic [3:0] Zood;
+// logic check;
+
+// checkForZood checkZood(masterPattern, guess, clock, Zood);
+
+// initial begin
+// 	clock = 0;
+// 	forever #5 clock = ~clock;
+
+// end
+
+// initial begin
+
+// 	$monitor("masterPattern %b guess %b => zood %b | check : %b", masterPattern, guess, Zood, check);
+	
+// 	@(posedge clock);
+// 	@(posedge clock);
+// 	masterPattern = 12'b101110100001;
+// 	guess = 12'b011011100100;//OODD /Znarly
+// 	@(posedge clock);
+// 	guess = 12'b101101010010;//IICC /Znarly
+// 	@(posedge clock);
+// 	guess = 12'b101011001110;//IOTZ /Znarly 2 - Zood
+// 	@(posedge clock);
+// 	guess = 12'b001101110100;//TIZD / 4 - Zood
+// 	@(posedge clock);
+
+
+// 	$finish;
+
+
+// end
+
+// endmodule: testCheckForZood
 // module testLoadMasterPattern();
 
 
@@ -106,60 +141,6 @@ endmodule: testCheckForZood
 
 // endmodule: testLoadMasterPattern
 
-module testChecks;
-
-  logic [11:0] masterPattern, Guess;
-  logic [3:0] Znarly;
-
-  testCheckForZnarly znarlyTester (.*);
-  checkForZnarly znarlyBox (.*);
-
-endmodule: testChecks;
-
-module testCheckForZnarly
-  (output logic [11:0] masterPattern, Guess,
-  input logic [3:0] Znarly);
-  
-  initial begin
-	$monitor("Master: %b, Guess: %b, Znarly: %b", masterPattern, Guess, Znarly);
-
-	masterPattern = 12'b000000000000;
-	Guess = 12'b000000000000;
-
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010011100; 
-
-	$display("testing 3 znarlys");
-	//test 3 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011010011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001110011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010001100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010011101;
-
-	$display("testing 2 znarlys");
-	//test 2 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011011011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101110011100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001010001101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b100010011101;
-
-	$display("testing 1 znarlys");
-	//test 1 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011011100100;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101100011101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011010100101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b001110001001;
-
-	$display("testing 0 znarlys");
-	//test 0 Znarly
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011011100101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101101011101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b011001100101;
-	#5 masterPattern = 12'b001010011100; Guess = 12'b101110001001;
-
-	$finish;
-  end
-
-endmodule: testCheckForZnarly
 
 
 // module testSplit();

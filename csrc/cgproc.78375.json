@@ -1,0 +1,68 @@
+{
+    "ObjArchives": [
+        {
+            "archive": "archive.17/_78375_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    12148
+                ],
+                [
+                    "KkqfR_d.o",
+                    19803
+                ],
+                [
+                    "hermI_d.o",
+                    14162
+                ]
+            ],
+            "size": 46113
+        }
+    ],
+    "Modules": {
+        "Decoder": {},
+        "Lab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "shift_register": {},
+        "...MASTER...": {},
+        "std": {},
+        "counter": {},
+        "testCheckForZood": {},
+        "checkForZood": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "Mux2to1": {},
+        "dFlipFlop": {},
+        "Adder": {},
+        "Multiplexer": {},
+        "Subtracter": {},
+        "guessChecking": {},
+        "loadMasterPattern": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "archive": "archive.17/_78375_archive_1.a",
+            "bytes": 12148,
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "mode": 4
+        },
+        "KkqfR_d": {
+            "archive": "archive.17/_78375_archive_1.a",
+            "bytes": 19803,
+            "mod": "Lab5",
+            "out": "KkqfR_d.o",
+            "mode": 4
+        },
+        "hermI_d": {
+            "archive": "archive.17/_78375_archive_1.a",
+            "bytes": 14162,
+            "mod": "checkForZood",
+            "out": "hermI_d.o",
+            "mode": 4
+        }
+    }
+}

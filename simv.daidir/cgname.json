@@ -4,30 +4,9 @@
         "reYIK",
         "module"
     ],
-    "testChecks": [
-        "testChecks",
-        "sa4Qd",
-        "module"
-    ],
-<<<<<<< HEAD
-    "counter": [
-        "counter",
-        "MQn6b",
-        "module"
-    ],
     "Multiplexer": [
         "Multiplexer",
         "UxyT3",
-        "module"
-    ],
-    "MagComp": [
-        "MagComp",
-        "vaLRj",
-        "module"
-    ],
-    "Adder": [
-        "Adder",
-        "xUt1z",
         "module"
     ],
     "Decoder": [
@@ -35,9 +14,14 @@
         "t8TcA",
         "module"
     ],
-    "shift_register": [
-        "shift_register",
-        "JPGqC",
+    "dFlipFlop": [
+        "dFlipFlop",
+        "fhqgw",
+        "module"
+    ],
+    "Adder": [
+        "Adder",
+        "xUt1z",
         "module"
     ],
     "Mux2to1": [
@@ -45,9 +29,24 @@
         "wxUbx",
         "module"
     ],
+    "counter": [
+        "counter",
+        "MQn6b",
+        "module"
+    ],
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
+        "module"
+    ],
     "Subtracter": [
         "Subtracter",
         "pcAkE",
+        "module"
+    ],
+    "testCheckGuessing": [
+        "testCheckGuessing",
+        "tbPRi",
         "module"
     ],
     "Lab5": [
@@ -60,13 +59,6 @@
         "hgjFF",
         "module"
     ],
-    "testCheckForZood": [
-        "testCheckForZood",
-        "eaZPw",
-        "module"
-    ],
-=======
->>>>>>> 289e6f206a8b9fdea0bf9b11dc783d5013938463
     "...MASTER...": [
         "SIM",
         "amcQw",

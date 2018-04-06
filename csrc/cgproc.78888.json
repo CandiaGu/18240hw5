@@ -1,0 +1,66 @@
+{
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "archive": "archive.18/_78888_archive_1.a",
+            "out": "amcQw_d.o",
+            "bytes": 11684,
+            "mode": 4
+        },
+        "KkqfR_d": {
+            "mod": "Lab5",
+            "archive": "archive.18/_78888_archive_1.a",
+            "out": "KkqfR_d.o",
+            "bytes": 19803,
+            "mode": 4
+        },
+        "tbPRi_d": {
+            "mod": "testCheckGuessing",
+            "archive": "archive.18/_78888_archive_1.a",
+            "out": "tbPRi_d.o",
+            "bytes": 25065,
+            "mode": 4
+        }
+    },
+    "Modules": {
+        "counter": {},
+        "loadMasterPattern": {},
+        "...MASTER...": {},
+        "Mux2to1": {},
+        "Multiplexer": {},
+        "std": {},
+        "dFlipFlop": {},
+        "Adder": {},
+        "Decoder": {},
+        "shift_register": {},
+        "Subtracter": {},
+        "testCheckGuessing": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "Lab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 2
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.18/_78888_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11684
+                ],
+                [
+                    "KkqfR_d.o",
+                    19803
+                ],
+                [
+                    "tbPRi_d.o",
+                    25065
+                ]
+            ],
+            "size": 56552
+        }
+    ]
+}

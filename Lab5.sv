@@ -71,10 +71,41 @@ module loadMasterPattern
 endmodule: loadMasterPattern
 
 module guessChecking
+(input logic ongoingGame, areRoundsLeft, loadingShape, clock, doneGrading,
+ input logic [11:0] guess, masterPattern,
+ output logic [3:0] ZnarlyCount, ZoodCount, 
+ output logic GameWon);
+
+logic en;
+logic [3:0] fakeZood;
+logic [3:0] Znarly, Zood;
+
+assign en = ongoingGame && areRoundsLeft && !loadingShape;
+
+checkForZnarly checkZnarly(masterPattern, guess, Znarly);
+checkForZood checkForZood(masterPattern, guess, clock, fakeZood);
+
+always_comb begin
+  if(en)
+    GameWon = guess == masterPattern;
+  Zood = fakeZood & ~(Znarly);
+end
+
+count4bits cnt1(Zood,ZoodCount);
+count4bits cnt2(Znarly,ZnarlyCount);
 
 
 endmodule: guessChecking
 
+
+module count4bits(
+  input logic [3:0] in,
+  output logic [3:0] out
+  );
+
+assign out = in[3] + in[2] + in[1] + in[0];
+
+endmodule: count4bits
 
 module checkForZnarly
   (input logic [11:0] masterPattern, Guess,
@@ -96,7 +127,7 @@ endmodule: checkForZnarly
 
 module checkForZood
   (input [11:0] masterPattern, guess,
-   input  clock, loadingShape,
+   input  clock,
    output [3:0] Zood);
 
   logic [2:0] m3, m2, m1, m0;
@@ -105,25 +136,60 @@ module checkForZood
   sliceInput slice (masterPattern, m3, m2, m1, m0);
   sliceInput slice2 (guess, g3, g2, g1, g0);
 
-  logic c3, c2, c1, c0;
+  //logic c3, c2, c1, c0;
 
-  Register #(4) checkedZood({c3, c2, c1, c0}, 1'b1, 1'b0 , clock, Zood);
+  //Register #(4) checkedZood({c3, c2, c1, c0}, 1'b1, 1'b0 , clock, Zood);
 
+
+  logic used3, used2, used1, used0;
+  logic usedm3, usedm2, usedm1, usedm0;
   always_comb begin
-    $display("zood : %b", Zood);
-    if(!loadingShape)
-      {c3, c2, c1, c0} = 12'b0;
-    else
-      {c3, c2, c1, c0} = Zood;
-      c3 = (!c3) ? ((g3==m3) || (g2==m3) || (g1==m3)|| (g0==m3)) : c3;  
-      c2 = (!c2) ? ((g3==m2) || (g2==m2) || (g1==m2)|| (g0==m2)) : c2; 
-      c1 = (!c1) ? ((g3==m1) || (g2==m1) || (g1==m1)|| (g0==m1)) : c1; 
-      c0 = (!c0) ? ((g3==m0) || (g2==m0) || (g1==m0)|| (g0==m0)) : c0; 
-      $display("zood2 : %b", {c3, c2, c1, c0});
+      {used3, used2, used1, used0} = 4'b0;
 
+      if(m3 == g3)
+        used3 = 1;
+      else if(m2 == g3)
+        used2 = 1;
+      else if(m1 == g3)
+        used1 = 1;
+      else if(m0 == g3)
+        used0 = 1;
+
+      if(m3 == g2 && !used3)
+        used3 = 1;
+      else if(m2 == g2 && !used2)
+        used2 = 1;
+      else if(m1 == g2 && !used1)
+        used1 = 1;
+      else if(m0 == g2 && !used0)
+        used0 = 1;
+
+      if(m3 == g1 && !used3)
+        used3 = 1;
+      else if(m2 == g1 && !used2)
+        used2 = 1;
+      else if(m1 == g1 && !used1)
+        used1 = 1;
+      else if(m0 == g1 && !used0)
+        used0 = 1;
+
+      if(m3 == g0 && !used3)
+        used3 = 1;
+      else if(m2 == g0 && !used2)
+        used2 = 1;
+      else if(m1 == g0 && !used1)
+        used1 = 1;
+      else if(m0 == g0 && !used0)
+        used0 = 1;
+
+      $display("zood2 : %b", {used3, used2, used1, used0});
+
+      
   end
 
 
+
+  assign Zood = {used3, used2, used1, used0};
 
 
 endmodule: checkForZood

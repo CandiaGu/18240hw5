@@ -1,6 +1,6 @@
 psSimBaseName                      	simv
 psLogFileName                      	NULL
-pDaiDir                            	/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir
+pDaiDir                            	/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir
 destPath                           	csrc/
 fSharedMaster                      	0
 hsMainFileCount                    	0
@@ -38,7 +38,7 @@ fSimprofileNew                     	0
 fHsimVhVlOpt                       	0
 fHsimMdbVhVlInputFuseOpt           	0
 fHsimMdbVhVlInoutFuseOpt           	0
-fHsimMdbVhVlCcnOpt                 	1
+fHsimMdbVhVlCcnOpt                 	0
 fHsimVlVhOpt                       	0
 fHsimVlVhVlOpt                     	0
 fHsimVlVhBfuseOpt                  	0
@@ -365,7 +365,7 @@ fHsimParallelElabVcs1              	0
 fpicArchive                        	1
 fCsrcInTmpDir                      	0
 fHsimInterconFE                    	1
-fHsimMxOpt                         	0
+fHsimMxOpt                         	1
 fHsimModpathFE                     	1
 fHsimOptMPDelayLoad                	0
 fHsimTransMPDelay                  	1
@@ -535,7 +535,7 @@ fHsimNewCgMPRt                     	0
 fHsimNewCgMPRetain                 	0
 fHsimNewCgTC                       	0
 fHsimCgRtlInfra                    	1
-fPossibleNullChecks                	1
+fPossibleNullChecks                	0
 fHsimProcessNoSplit                	1
 fHsimMdbInstDiag                   	0
 fHsimMdbOptInSchedDelta            	0
@@ -696,7 +696,7 @@ fHsimMdbcgLhsConcat                	0
 fHsimMdbcgSelectSplit              	0
 fHsimMdbcgProcessSelSplit          	0
 fHsimMdbcgEdgeop                   	0
-fHsimMdbcgMultiDelayControl        	0
+fHsimMdbcgMultiDelayControl        	1
 fHsimParGateEvalMode               	0
 fHsimDFuseVectors                  	0
 fHsimVpdOptExpVec                  	0
