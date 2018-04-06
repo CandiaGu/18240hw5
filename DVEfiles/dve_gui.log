@@ -1,0 +1,24 @@
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Apr  6 16:22 2018
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/inter.vpd' was opened successfully.
+RT Warning: No condition matches in 'unique case' statement.
+        "Lab5.sv", line 290, for testLab5.test.game, at time     0.
+zood2 : 0000
+RT Warning: No condition matches in 'unique case' statement.
+        "Lab5.sv", line 290, for testLab5.test.game, at time     0.
+RT Warning: No condition matches in 'unique case' statement.
+        "Lab5.sv", line 327, for testLab5.test.grade, at time     0.
+zood2 : 0000
+CoinValue:00, CoinInserted:0, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:xxxx 			      GameWon:x, reset: 0, debug:0 
+RT Warning: No condition matches in 'unique case' statement.
+        "Lab5.sv", line 290, for testLab5.test.game, at time     5.
+CoinValue:00, CoinInserted:0, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:0000 			      GameWon:x, reset: 1, debug:0 
+CoinValue:00, CoinInserted:0, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:0000 			      GameWon:x, reset: 0, debug:0 
+RT Warning: No condition matches in 'unique case' statement.
+        "Lab5.sv", line 327, for testLab5.test.grade, at time    25.
+CoinValue:11, CoinInserted:1, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:0000 			      GameWon:x, reset: 0, debug:0 
+CoinValue:11, CoinInserted:0, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:0000 			      GameWon:x, reset: 0, debug:0 
+CoinValue:11, CoinInserted:1, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:0000 			      GameWon:x, reset: 0, debug:0 
+CoinValue:11, CoinInserted:0, StartGame:0, Guess:000000000000, GradeIt:0, LoadShape:000, 			      ShapeLocation:00, LoadShapeNow:0, Znarly:xxxx, Zood:0000, RoundNumber:xxxx, NumGames:0000 			      GameWon:x, reset: 0, debug:0 

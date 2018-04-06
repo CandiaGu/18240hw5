@@ -13,46 +13,90 @@ module Lab5
   input logic reset, debug, clock);
 
 
-  logic ongoingGame, loadingShape, gradeIt, doneGrading;
+  logic ongoingGame, loadingShape, gradeIt, doneGrading, masterLoaded;
   
-  gameFSM game(reset, clock, startGame, loadShapeNow, allShapesLoaded, gameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
+  gameFSM game(reset, clock, StartGame, LoadShapeNow, masterLoaded, GameWon, NumGames, RoundNumber, ongoingGame, loadingShape);
   gradeFSM grade(reset, clock, gradeIt, doneGrading);
 
   logic drop; // whether game was paid for
   logic [3:0] credit; // leftover money (not used)
+  logic [11:0] masterPattern;
 
-  myCoinFSM mydesign(CoinValue, drop, credit, CoinInserted, ~reset);
+  logic circle, triangle, pent;
 
-  gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 0, clock, NumGames);
-  counter # (4) roundCounter (4'd0, 1, (ongoingGame && doneGrading && !loadingShape), 0, startGame, clock, RoundNumber);
 
-  loadMasterPattern loadMaster(LoadShape, ShapeLocation, loadingShape, startGame, clock, masterPattern, masterLoaded);
+  CoinAccept mydesign(CoinValue, CoinInserted, drop, reset, clock);
 
-  guessChecking guess (ongoingGame, RoundNumber < 8, loadingShape, clock, doneGrading, guess, masterPattern, ZnarlyCount, ZoodCount,GameWon);
+  gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 1'b0, clock, NumGames);//en => drop
+  counter # (4) roundCounter (4'd0, 1'b1, (ongoingGame && doneGrading && !loadingShape), 1'b0, StartGame, clock, RoundNumber);
+
+  loadMasterPattern loadMaster(LoadShape, ShapeLocation, loadingShape, StartGame, clock, masterPattern, masterLoaded);
+
+  // Register guessReg (Guess, ongoingGame, !ongoingGame, clock, storedGuess)
+
+  guessChecking guessCheck (ongoingGame, RoundNumber < 8, loadingShape, clock, doneGrading, Guess, masterPattern, Znarly, Zood,GameWon);
 
 endmodule: Lab5
 
+module CoinAccept
+  (input logic [1:0] CoinValue, input logic CoinInserted, output logic Drop, input logic reset, clock);
+
+  logic [4:0] in, total;
+  Register regist(in, CoinInserted, reset, clock, total);
+
+  logic [3:0] value;
+  always_comb begin
+    $monitor("CoinValue %b, CoinInserted %b, Drop %b reset %b input %b", value, CoinInserted, Drop, reset, in);
+    unique case (CoinValue)
+      2'b01: value = 3'b001;
+      2'b10: value = 3'b011;
+      2'b11: value = 3'b101;
+      default: value = 3'b000;
+    endcase 
+
+    if(reset) begin
+      in = 4'b0;
+      Drop = 0;
+    end
+    else begin
+      in = total + value;
+      if (in >= 4 ) begin
+       Drop = 1;
+       in = in - 4;
+      end
+      else
+       Drop = 0;
+    end
+
+  end
+
+endmodule: CoinAccept
 
 module gameCounter
   # (parameter WIDTH = 30)
   (input logic [WIDTH-1 : 0] D,
    input logic up, en, clear, load, clock,
-   output logic [$clog2(WIDTH)-1 : 0] Q);
+   output logic [WIDTH-1 : 0] Q);
 
-  always_ff @ (posedge clock, posedge clear)
-    if(en)
-      if(clear)
+  always_ff @ (posedge clock, posedge clear) begin
+    //$monitor("D: %b, up: %b, en: %b, clear: %b, load: %b, Q: %b", D, up, en, clear, load, Q);
+    if(clear)
         Q <= 0;
-      else 
+    else
+    if(en)
         if(load)
           Q <= D;
         else 
           if(up)
             if(Q < 7)
               Q <= Q + 1;
+            else
+              Q <= 7;
           else
             Q <= (Q>0) ? Q-1 : 0;
-endmodule: counter
+
+  end
+endmodule: gameCounter
 
 
 
@@ -72,7 +116,7 @@ module loadMasterPattern
   assign masterLoaded = (o3 != 0) && (o2 != 0) && (o1 != 0) && (o0 != 0);
 
   always_comb begin
-    $display("%b, %b, %b, %b, masterPattern: %b, inputMaster: %b", o3, o2, o1, o0, masterPattern, inputMaster);
+    //$display("%b, %b, %b, %b, masterPattern: %b, inputMaster: %b", o3, o2, o1, o0, masterPattern, inputMaster);
     if(startGame)
       inputMaster = 12'b0;
     else
@@ -230,7 +274,7 @@ endmodule: sliceInput
 module gameFSM
   (input logic reset, clock, 
   input logic startGame, loadShapeNow, allShapesLoaded, gameWon,
-  input logic [4:0] NumGames, RoundNumber,
+  input logic [3:0] NumGames, RoundNumber,
   output logic ongoingGame, loadingShape);
 
   enum logic [1:0] {WaitGame = 2'b00, StartingGame = 2'b01, LoadShape = 2'b10, Guess = 2'b11 } state, nextState;

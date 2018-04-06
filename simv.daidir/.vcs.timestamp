@@ -1,5 +1,11 @@
 0 
-24
+32
++cli+4
++itf+/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
++memcbk
++vcsd
++vpi
++vpi
 -Mamsrun=
 -Masflags=
 -Mcc=gcc
@@ -13,9 +19,11 @@
 -Mobjects= /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
 -Mout=simv
 -Msaverestoreobj=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcs_save_restore_new.o
--Msyslibs=-ldl
+-Msyslibs=-ldl -lm
 -Mvcsaceobjs=
 -Mxcflags= -pipe -fPIC -I/usr/local/synopsys/vcs-mx_vJ-2014.12/include
+-Xcbug=0x1
+-debug=3
 -gen_obj
 -picarchive
 -sverilog
@@ -30,7 +38,7 @@ no_proxy=localhost,127.0.0.1,.cmu.edu,.cmu.local
 https_proxy=http://proximus.ece.cmu.edu:3128/
 http_proxy=http://proximus.ece.cmu.edu:3128/
 ftp_proxy=http://proximus.ece.cmu.edu:3128/
-XDG_SESSION_ID=24450
+XDG_SESSION_ID=24707
 XDG_RUNTIME_DIR=/run/user/2984
 VMR_MODE_FLAG=32
 VCS_TARGET_ARCH=amd64
@@ -46,9 +54,9 @@ UNAME=/bin/uname
 TOOL_HOME=/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64
 SYN_DIR=/usr/local/synopsys/synopsys-2007.03-SP5
 SYNOPSYS=/usr/local/synopsys
-SSH_TTY=/dev/pts/8
-SSH_CONNECTION=128.237.112.184 58475 172.19.138.14 22
-SSH_CLIENT=128.237.112.184 58475 22
+SSH_TTY=/dev/pts/7
+SSH_CONNECTION=128.237.205.150 60751 172.19.138.14 22
+SSH_CLIENT=128.237.205.150 60751 22
 SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
 SELINUX_USE_CURRENT_RANGE=
 SELINUX_ROLE_REQUESTED=
@@ -78,14 +86,15 @@ CVS_RSH=ssh
 BASH_FUNC_module()=() {  eval `/usr/bin/modulecmd bash $*`_}
 AKLOG=/usr/bin/aklog
 0
-4
-1522982086 Lab5TestBench.sv
-1522982082 Lab5.sv
-1522967039 library.sv
-1522953017 lab4.sv
+5
+1523047802 Lab5TestBench.sv
+1523047667 Lab5.sv
+1523042435 library.sv
+1523042062 lab4.sv
+1440743823 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
 4
 0 
 1440744113 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1522982090 simv.daidir
+1523047807 simv.daidir

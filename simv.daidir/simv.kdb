@@ -1,0 +1,9 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5
+SystemC=FALSE
+UUM=FALSE
+KDB=FALSE
+USE_NOVAS_HOME=FALSE
+TOP=dFlipFlop myCoinFSM Adder Multiplexer Mux2to1 Decoder shift_register Subtracter testLab5 

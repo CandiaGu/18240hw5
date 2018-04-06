@@ -1,6 +1,222 @@
 `default_nettype none
 
 
+// module testCoinAcceptor();
+
+
+// 	logic [1:0] CoinValue; 
+// 	logic CoinInserted, Drop, reset, clock;
+
+// 	CoinAccept accept(CoinValue, CoinInserted, Drop, reset, clock);
+
+
+
+// 	initial begin
+// 		clock = 0;
+// 		forever #5 clock = ~clock;
+// 	end 
+
+// 	initial begin
+// 		$monitor("CoinValue:%b, CoinInserted:%b, Drop: %b, reset: %b, total: %b, in: %b", CoinValue, CoinInserted, Drop, reset, accept.total, accept.in);
+// 		//initialize values
+// 		CoinValue = 2'b0; CoinInserted = 1'b0;
+// 		reset = 1'b0;
+
+// 		@(posedge clock);
+// 		reset <= 1;
+
+// 		@(posedge clock);
+// 		reset <= 0; //reset game
+// 		@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		CoinValue = 2'b11;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 				@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+
+// 		@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		@(posedge clock);
+// 		CoinValue = 2'b01;
+// 		CoinInserted = 1;
+// 		@(posedge clock);
+// 		CoinInserted = 0;
+
+// 		@(posedge clock);
+// 		@(posedge clock);
+
+
+// 		$finish;
+
+// 	end
+
+// endmodule
+
+module testLab5();
+
+
+  logic [1:0] CoinValue;
+  logic CoinInserted, StartGame;
+  logic [11:0] Guess;
+  logic GradeIt;
+  logic [2:0] LoadShape;
+  logic [1:0] ShapeLocation;
+  logic LoadShapeNow;
+  
+  logic [3:0] Znarly, Zood, RoundNumber, NumGames;
+  logic GameWon;
+
+  logic reset, debug, clock;
+
+  Lab5 test(.*);
+
+	initial begin
+		clock = 0;
+		forever #5 clock = ~clock;
+
+	end 
+
+	initial begin
+
+		$monitor("CoinValue:%b, CoinInserted:%b, StartGame:%b, Guess:%b, GradeIt:%b, LoadShape:%b, \
+			      ShapeLocation:%b, LoadShapeNow:%b, Znarly:%b, Zood:%b, RoundNumber:%b, NumGames:%b \
+			      GameWon:%b, reset: %b, debug:%b ", CoinValue, CoinInserted, StartGame, Guess, GradeIt,
+			      LoadShape, ShapeLocation, LoadShapeNow, Znarly, Zood, RoundNumber, NumGames, GameWon,
+			      reset, debug);
+
+		$monitor("",);
+		//initialize values
+		CoinValue = 2'b0; CoinInserted = 1'b0;
+		StartGame = 1'b0; Guess = 12'b0; GradeIt = 1'b0;
+		LoadShape = 1'b0; ShapeLocation = 2'b0; LoadShapeNow = 1'b0;
+		reset = 1'b0; debug = 1'b0;
+
+		@(posedge clock);
+		reset <= 1;
+
+		@(posedge clock);
+		reset <= 0; //reset game
+
+		@(posedge clock);
+		CoinValue = 2'b10;
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+		@(posedge clock);
+		CoinInserted = 1;
+		@(posedge clock);
+		CoinInserted = 0;
+
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+		// @(posedge clock);
+		// CoinValue = 2'b11;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+		// @(posedge clock);
+		// @(posedge clock);
+		// CoinValue = 2'b11;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+		// @(posedge clock);
+		// CoinValue = 2'b11;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+		// @(posedge clock);
+
+		// CoinValue = 2'b01;
+		// CoinInserted = 1;
+
+		$finish;
+
+
+
+
+	end
+
+
+ endmodule
+
 // module testCheckGuessing();
 
 // logic ongoingGame, areRoundsLeft, loadingShape, clock, doneGrading;
@@ -191,40 +407,40 @@
 
 // endmodule: testGameFSM
 
-module testGradeFSM;
+// module testGradeFSM;
 
- logic reset, clock, gradeIt, doneGrading;
+//  logic reset, clock, gradeIt, doneGrading;
 
-  gradeFSM grade(.*);
+//   gradeFSM grade(.*);
 
-  initial begin
-    clock = 0;
-    forever #5 clock = ~clock;
-  end
+//   initial begin
+//     clock = 0;
+//     forever #5 clock = ~clock;
+//   end
 
-  initial begin
-	$monitor("%s, reset %b, gradeIt %b, doneGrading %b",
-    grade.state.name, reset, gradeIt, doneGrading);
-	reset <= 1;
-	gradeIt <= 0;
-	@(posedge clock);
-	reset <= 0;
-	@(posedge clock);
-	@(posedge clock);
-	gradeIt <= 1;
-	@(posedge clock);
-	@(posedge clock);
-	gradeIt <= 0;
-	@(posedge clock);
-	@(posedge clock);
-	gradeIt <= 1;
-	@(posedge clock);
-	@(posedge clock);
+//   initial begin
+// 	$monitor("%s, reset %b, gradeIt %b, doneGrading %b",
+//     grade.state.name, reset, gradeIt, doneGrading);
+// 	reset <= 1;
+// 	gradeIt <= 0;
+// 	@(posedge clock);
+// 	reset <= 0;
+// 	@(posedge clock);
+// 	@(posedge clock);
+// 	gradeIt <= 1;
+// 	@(posedge clock);
+// 	@(posedge clock);
+// 	gradeIt <= 0;
+// 	@(posedge clock);
+// 	@(posedge clock);
+// 	gradeIt <= 1;
+// 	@(posedge clock);
+// 	@(posedge clock);
 
-	$finish;
-  end
+// 	$finish;
+//   end
 
-endmodule: testGradeFSM
+// endmodule: testGradeFSM
 
 // module testSplit();
 

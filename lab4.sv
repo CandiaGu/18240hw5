@@ -13,23 +13,24 @@ endmodule: dFlipFlop
 
 
 module myCoinFSM(   
-	input  logic [1:0] coin,   
+	input  logic 	   circ, triangle, pent,   
 	output logic       drop,  
 	output logic [3:0] credit,  
 	input  logic       clock, reset_N);   
 
-	// interconnect wires.  Add more if needed   
-	enum logic [2:0] {state0 = 3'b000, state1 = 3'b001, state2 = 3'b010,
-					  state3 = 3'b011, state4 = 3'b100, state5 = 3'b101,
-					  state6 = 3'b110, state7 = 3'b111} state, nextState;
+	// interconnect wires.  Add more if needed
+	enum logic [3:0] {state0 = 4'b0000, state1 = 4'b0001, state2 = 4'b0010,
+					  state3 = 4'b0011, state4 = 4'b0100, state5 = 4'b0101,
+					  state6 = 4'b0110, state7 = 4'b0111, wstate0 = 4'b1000,
+					  wstate1 = 4'b1001, wstate2 = 4'b1010, wstate3 = 4'b1011,
+					  wstate4 = 4'b1100, wstate5 = 4'b1101, wstate6 = 4'b1110,
+					  wstate7 = 4'b1111} state, nextState;
 
 	always @(posedge clock)
     	if (reset_N == 0)       
     	  	state <= state0;      
     	else       
     		state <= nextState;
-    		// if (drop == 1) // set drop to 1 only for one clock cycle
-    		// 	drop = 0;
 
 	// Next state logic goes here: combinational logic that   
 	// drives next state (d0, etc) based upon input coin and   
@@ -37,38 +38,55 @@ module myCoinFSM(
 
 	always_comb begin
 		case (state)
-			state0: if (coin == 2'b00) nextState = state0;
-					else if (coin == 2'b01) nextState = state1;
-					else if (coin == 2'b10) nextState = state3;
-					else nextState = state5;
-			state1: if (coin == 2'b00) nextState = state1;
-					else if (coin == 2'b01) nextState = state2;
-					else if (coin == 2'b10) nextState = state4;
-					else nextState = state6;
-			state2: if (coin == 2'b00) nextState = state2;
-					else if (coin == 2'b01) nextState = state3;
-					else if (coin == 2'b10) nextState = state5;
-					else nextState = state7;
-			state3: if (coin == 2'b00) nextState = state3;
-					else if (coin == 2'b01) nextState = state4;
-					else if (coin == 2'b10) nextState = state6;
-					else nextState = state4;
-			state4: if (coin == 2'b00) nextState = state4;
-					else if (coin == 2'b01) nextState = state1;
-					else if (coin == 2'b10) nextState = state3;
-					else nextState = state5;
-			state5: if (coin == 2'b00) nextState = state5;
-					else if (coin == 2'b01) nextState = state2;
-					else if (coin == 2'b10) nextState = state4;
-					else nextState = state6;
-			state6: if (coin == 2'b00) nextState = state6;
-					else if (coin == 2'b01) nextState = state3;
-					else if (coin == 2'b10) nextState = state5;
-					else nextState = state7;
-			state7: if (coin == 2'b00) nextState = state7;
-					else if (coin == 2'b01) nextState = state4;
-					else if (coin == 2'b10) nextState = state6;
-					else nextState = state4;
+			state0: if (circ) nextState = wstate1;
+					else if (triangle) nextState = wstate3;
+					else if (pent) nextState = wstate5;
+					else nextState = wstate0;
+			state1: if (circ) nextState = wstate2;
+					else if (triangle) nextState = wstate4;
+					else if (pent) nextState = wstate6;
+					else nextState = wstate1;
+			state2: if (circ) nextState = wstate3;
+					else if (triangle) nextState = wstate5;
+					else if (pent) nextState = wstate7;
+					else nextState = wstate2;
+			state3: if (circ) nextState = wstate4;
+					else if (triangle) nextState = wstate6;
+					else if (pent) nextState = wstate4;
+					else nextState = wstate3;
+			state4: if (circ) nextState = wstate1;
+					else if (triangle) nextState = wstate3;
+					else if (pent) nextState = wstate5;
+					else nextState = wstate4;
+			state5: if (circ) nextState = wstate2;
+					else if (triangle) nextState = wstate4;
+					else if (pent) nextState = wstate6;
+					else nextState = wstate5;
+			state6: if (circ) nextState = wstate3;
+					else if (triangle) nextState = wstate5;
+					else if (pent) nextState = wstate7;
+					else nextState = wstate6;
+			state7: if (circ) nextState = wstate4;
+					else if (triangle) nextState = wstate6;
+					else if (pent) nextState = wstate4;
+					else nextState = wstate7;
+			wstate0: if (~circ && ~triangle && ~pent) nextState = state0;
+				 else nextState = wstate0;
+			wstate1: if (~circ && ~triangle && ~pent) nextState = state1;
+				 else nextState = wstate1;
+			wstate2: if (~circ && ~triangle && ~pent) nextState = state2;
+				 else nextState = wstate2;
+			wstate3: if (~circ && ~triangle && ~pent) nextState = state3;
+				 else nextState = wstate3;
+			wstate4: if (~circ && ~triangle && ~pent) nextState = state4;
+				 else nextState = wstate4;
+			wstate5: if (~circ && ~triangle && ~pent) nextState = state5;
+				 else nextState = wstate5;
+			wstate6: if (~circ && ~triangle && ~pent) nextState = state6;
+				 else nextState = wstate6;
+			wstate7: if (~circ && ~triangle && ~pent) nextState = state7;
+				 else nextState = wstate7;
+
 		endcase
 	end
 
@@ -76,6 +94,7 @@ module myCoinFSM(
 	// drives drop and credit based upon current state (q0, etc).   
 	always_comb 
 	begin
+		//$monitor("credit: %b, drop; %b", credit, drop);
 		credit[0] = state[0];
 		credit[1] = state[1];
 		credit[2] = 0; 

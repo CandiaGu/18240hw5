@@ -1,0 +1,50 @@
+{
+    "Modules": {
+        "Subtracter": {},
+        "Decoder": {},
+        "...MASTER...": {},
+        "std": {},
+        "Multiplexer": {},
+        "dFlipFlop": {},
+        "myCoinFSM": {},
+        "Mux2to1": {},
+        "Adder": {},
+        "shift_register": {},
+        "testLab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 10467,
+            "mode": 4,
+            "archive": "archive.78/_169596_archive_1.a"
+        },
+        "RB1yB_d": {
+            "mod": "testLab5",
+            "out": "RB1yB_d.o",
+            "bytes": 128266,
+            "mode": 4,
+            "archive": "archive.78/_169596_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.78/_169596_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    10467
+                ],
+                [
+                    "RB1yB_d.o",
+                    128266
+                ]
+            ],
+            "size": 138733
+        }
+    ]
+}

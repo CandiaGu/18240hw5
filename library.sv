@@ -66,13 +66,12 @@ module Register
 
 
 	always_ff @ (posedge clock, posedge clear) begin
-		$display("en: %b, clear: %b", en, clear);
 
+		if(clear)
+			Q <= 0;
+		else
 		if(en)
-			if(clear)
-				Q <= 0;
-			else
-				Q <= D;
+			Q <= D;
 			
 		end
 endmodule: Register
