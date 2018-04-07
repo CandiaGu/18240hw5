@@ -37,7 +37,7 @@ module Lab5
 
 
 
-  myCoinFSM mydesign(CoinValue, drop,, CoinInserted, ~reset );
+  myCoinFSM mydesign(CoinValue, drop,clock, ~reset, CoinInserted );
 
 
   gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 1'b0, clock, NumGames);//en => drop
@@ -51,40 +51,40 @@ module Lab5
 
 endmodule: Lab5
 
-module CoinAccept
-  (input logic [1:0] CoinValue, input logic CoinInserted, output logic Drop, input logic reset, clock);
+// module CoinAccept
+//   (input logic [1:0] CoinValue, input logic CoinInserted, output logic Drop, input logic reset, clock);
 
-  logic [4:0] in, total; logic en;
-  Register #(5) regist(in, CoinInserted && !en, reset, clock, total);
-  Register #(1) regist2(CoinInserted,1'b1, reset, clock ,en);
+//   logic [4:0] in, total; logic en;
+//   Register #(5) regist(in, CoinInserted && !en, reset, clock, total);
+//   Register #(1) regist2(CoinInserted,1'b1, reset, clock ,en);
 
-  logic [3:0] value;
-  always_comb begin
-    //$monitor("CoinValue %b, CoinInserted %b, Drop %b reset %b input %b", value, CoinInserted, Drop, reset, in);
-    unique case (CoinValue)
-      2'b01: value = 3'b001;
-      2'b10: value = 3'b011;
-      2'b11: value = 3'b101;
-      default: value = 3'b000;
-    endcase 
+//   logic [3:0] value;
+//   always_comb begin
+//     //$monitor("CoinValue %b, CoinInserted %b, Drop %b reset %b input %b", value, CoinInserted, Drop, reset, in);
+//     unique case (CoinValue)
+//       2'b01: value = 3'b001;
+//       2'b10: value = 3'b011;
+//       2'b11: value = 3'b101;
+//       default: value = 3'b000;
+//     endcase 
 
-    if(reset) begin
-      in = 4'b0;
-      Drop = 0;
-    end
-    else begin
-      in = total + value;
-      if (in >= 4 ) begin
-       Drop = 1;
-       in = in - 4;
-      end
-      else
-       Drop = 0;
-    end
+//     if(reset) begin
+//       in = 4'b0;
+//       Drop = 0;
+//     end
+//     else begin
+//       in = total + value;
+//       if (in >= 4 ) begin
+//        Drop = 1;
+//        in = in - 4;
+//       end
+//       else
+//        Drop = 0;
+//     end
 
-  end
+//   end
 
-endmodule: CoinAccept
+// endmodule: CoinAccept
 
 module gameCounter
   # (parameter WIDTH = 30)
@@ -266,8 +266,6 @@ module checkForZood
         used1 = 1;
       else if(m0 == g0 && !used0)
         used0 = 1;
-
-      $display("zood2 : %b", {used3, used2, used1, used0});
 
       
   end
