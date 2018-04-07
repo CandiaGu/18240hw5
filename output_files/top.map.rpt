@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Fri Apr  6 18:27:37 2018
+Sat Apr  7 01:11:45 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -19,97 +19,96 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: Lab5:labBox|gameCounter:gameCount
- 15. Parameter Settings for User Entity Instance: Lab5:labBox|counter:roundCounter
- 16. Parameter Settings for User Entity Instance: Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt
- 17. Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3
- 18. Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice2
- 19. Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice1
- 20. Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice0
- 21. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter
- 22. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|vga:vgaCounter|simple_counter:col_counter
- 23. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|registerAZ:numGamesReg
- 24. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|range_check:gameFieldX
- 25. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|range_check:gameFieldY
- 26. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer
- 27. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX0
- 28. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY0
- 29. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX1
- 30. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY1
- 31. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX2
- 32. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY2
- 33. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX3
- 34. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY3
- 35. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX4
- 36. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY4
- 37. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX5
- 38. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY5
- 39. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX6
- 40. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY6
- 41. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer
- 42. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckX
- 43. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckY
- 44. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:topStick
- 45. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:bottomStick
- 46. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:leftStick
- 47. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:rightStick
- 48. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer
- 49. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX0
- 50. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY0
- 51. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX1
- 52. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY1
- 53. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX2
- 54. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY2
- 55. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX3
- 56. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY3
- 57. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_divide:Div1
- 58. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_divide:Div0
+ 14. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_20
+ 15. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_21
+ 16. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_22
+ 17. Parameter Settings for User Entity Instance: Lab5:labBox|gameCounter:gameCount
+ 18. Parameter Settings for User Entity Instance: Lab5:labBox|counter:roundCounter
+ 19. Parameter Settings for User Entity Instance: Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt
+ 20. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter
+ 21. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|vga:vgaCounter|simple_counter:col_counter
+ 22. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|registerAZ:numGamesReg
+ 23. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|range_check:gameFieldX
+ 24. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|range_check:gameFieldY
+ 25. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer
+ 26. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX0
+ 27. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY0
+ 28. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX1
+ 29. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY1
+ 30. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX2
+ 31. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY2
+ 32. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX3
+ 33. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY3
+ 34. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX4
+ 35. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY4
+ 36. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX5
+ 37. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY5
+ 38. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX6
+ 39. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY6
+ 40. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer
+ 41. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckX
+ 42. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckY
+ 43. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:topStick
+ 44. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:bottomStick
+ 45. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:leftStick
+ 46. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:rightStick
+ 47. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer
+ 48. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX0
+ 49. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY0
+ 50. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX1
+ 51. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY1
+ 52. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX2
+ 53. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY2
+ 54. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX3
+ 55. Parameter Settings for User Entity Instance: mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY3
+ 56. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_divide:Div1
+ 57. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_divide:Div0
+ 58. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult2
  59. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult3
- 60. Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult2
- 61. lpm_mult Parameter Settings by Entity Instance
- 62. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY3"
- 63. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX3"
- 64. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY2"
- 65. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX2"
- 66. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY1"
- 67. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX1"
- 68. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY0"
- 69. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX0"
- 70. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer"
- 71. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:rightStick"
- 72. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:leftStick"
- 73. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:bottomStick"
- 74. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:topStick"
- 75. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckY"
- 76. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckX"
- 77. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY6"
- 78. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX6"
- 79. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY5"
- 80. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX5"
- 81. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY4"
- 82. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX4"
- 83. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY3"
- 84. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX3"
- 85. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY2"
- 86. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX2"
- 87. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY1"
- 88. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX1"
- 89. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY0"
- 90. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX0"
- 91. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer"
- 92. Port Connectivity Checks: "mastermindVGA:comb_143|range_check:gameFieldY"
- 93. Port Connectivity Checks: "mastermindVGA:comb_143|range_check:gameFieldX"
- 94. Port Connectivity Checks: "mastermindVGA:comb_143|vga:vgaCounter|simple_counter:col_counter"
- 95. Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice0"
- 96. Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice1"
- 97. Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice2"
- 98. Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3"
- 99. Port Connectivity Checks: "Lab5:labBox|counter:roundCounter"
-100. Port Connectivity Checks: "Lab5:labBox|gameCounter:gameCount"
-101. Port Connectivity Checks: "Lab5:labBox|myCoinFSM:mydesign"
-102. Elapsed Time Per Partition
-103. Analysis & Synthesis Messages
-104. Analysis & Synthesis Suppressed Messages
+ 60. lpm_mult Parameter Settings by Entity Instance
+ 61. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY3"
+ 62. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX3"
+ 63. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY2"
+ 64. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX2"
+ 65. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY1"
+ 66. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX1"
+ 67. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY0"
+ 68. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX0"
+ 69. Port Connectivity Checks: "mastermindVGA:comb_143|drawZnarlyZood:zzDrawer"
+ 70. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:rightStick"
+ 71. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:leftStick"
+ 72. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:bottomStick"
+ 73. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:topStick"
+ 74. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckY"
+ 75. Port Connectivity Checks: "mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckX"
+ 76. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY6"
+ 77. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX6"
+ 78. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY5"
+ 79. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX5"
+ 80. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY4"
+ 81. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX4"
+ 82. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY3"
+ 83. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX3"
+ 84. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY2"
+ 85. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX2"
+ 86. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY1"
+ 87. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX1"
+ 88. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckY0"
+ 89. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX0"
+ 90. Port Connectivity Checks: "mastermindVGA:comb_143|drawNumber:numDrawer"
+ 91. Port Connectivity Checks: "mastermindVGA:comb_143|range_check:gameFieldY"
+ 92. Port Connectivity Checks: "mastermindVGA:comb_143|range_check:gameFieldX"
+ 93. Port Connectivity Checks: "mastermindVGA:comb_143|vga:vgaCounter|simple_counter:col_counter"
+ 94. Port Connectivity Checks: "mastermindVGA:comb_143"
+ 95. Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood"
+ 96. Port Connectivity Checks: "Lab5:labBox|counter:roundCounter"
+ 97. Port Connectivity Checks: "Lab5:labBox|gameCounter:gameCount"
+ 98. Port Connectivity Checks: "Lab5:labBox|change:comb_22"
+ 99. Port Connectivity Checks: "Lab5:labBox|change:comb_20"
+100. Port Connectivity Checks: "Lab5:labBox"
+101. Elapsed Time Per Partition
+102. Analysis & Synthesis Messages
+103. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -135,15 +134,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +------------------------------------+-------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr  6 18:27:37 2018     ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr  7 01:11:45 2018     ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; top                                       ;
 ; Top-level Entity Name              ; top                                       ;
 ; Family                             ; Cyclone IV E                              ;
-; Total logic elements               ; 1,226                                     ;
-;     Total combinational functions  ; 1,052                                     ;
-;     Dedicated logic registers      ; 233                                       ;
-; Total registers                    ; 233                                       ;
+; Total logic elements               ; 1,197                                     ;
+;     Total combinational functions  ; 996                                       ;
+;     Dedicated logic registers      ; 245                                       ;
+; Total registers                    ; 245                                       ;
 ; Total pins                         ; 82                                        ;
 ; Total virtual pins                 ; 0                                         ;
 ; Total memory bits                  ; 0                                         ;
@@ -261,21 +260,21 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                             ; Library ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
-; lab4.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/lab4.sv                        ;         ;
-; Lab5.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/Lab5.sv                        ;         ;
-; library.sv                       ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/library.sv                     ;         ;
-; mastermindVGA.sv                 ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/mastermindVGA.sv               ;         ;
-; top.sv                           ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/top.sv                         ;         ;
-; BCDtoSevenSegment.sv             ; yes             ; Auto-Found SystemVerilog HDL File  ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/BCDtoSevenSegment.sv           ;         ;
+; lab4.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/lab4.sv                                ;         ;
+; Lab5.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/Lab5.sv                                ;         ;
+; library.sv                       ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/library.sv                             ;         ;
+; mastermindVGA.sv                 ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/mastermindVGA.sv                       ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/top.sv                                 ;         ;
+; BCDtoSevenSegment.sv             ; yes             ; Auto-Found SystemVerilog HDL File  ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/BCDtoSevenSegment.sv                   ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal121.inc                   ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/aglobal121.inc      ;         ;
-; db/lpm_divide_uim.tdf            ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/lpm_divide_uim.tdf          ;         ;
-; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/sign_div_unsign_mlh.tdf     ;         ;
-; db/alt_u_div_07f.tdf             ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/alt_u_div_07f.tdf           ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/add_sub_7pc.tdf             ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/add_sub_8pc.tdf             ;         ;
+; db/lpm_divide_uim.tdf            ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/lpm_divide_uim.tdf                  ;         ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/sign_div_unsign_mlh.tdf             ;         ;
+; db/alt_u_div_07f.tdf             ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/alt_u_div_07f.tdf                   ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/add_sub_7pc.tdf                     ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/add_sub_8pc.tdf                     ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
@@ -300,27 +299,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,226 ;
+; Estimated Total logic elements              ; 1,197 ;
 ;                                             ;       ;
-; Total combinational functions               ; 1052  ;
+; Total combinational functions               ; 996   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 349   ;
-;     -- 3 input functions                    ; 303   ;
-;     -- <=2 input functions                  ; 400   ;
+;     -- 4 input functions                    ; 320   ;
+;     -- 3 input functions                    ; 306   ;
+;     -- <=2 input functions                  ; 370   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 604   ;
+;     -- normal mode                          ; 548   ;
 ;     -- arithmetic mode                      ; 448   ;
 ;                                             ;       ;
-; Total registers                             ; 233   ;
-;     -- Dedicated logic registers            ; 233   ;
+; Total registers                             ; 245   ;
+;     -- Dedicated logic registers            ; 245   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 82    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 230   ;
-; Total fan-out                               ; 4062  ;
-; Average fan-out                             ; 2.80  ;
+; Maximum fan-out                             ; 246   ;
+; Total fan-out                               ; 3916  ;
+; Average fan-out                             ; 2.79  ;
 +---------------------------------------------+-------+
 
 
@@ -329,29 +328,26 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                      ; 1052 (0)          ; 233 (36)     ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |top                                                                                                                        ;              ;
+; |top                                      ; 996 (0)           ; 245 (34)     ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |top                                                                                                                        ;              ;
 ;    |BCDtoSevenSegment:gamesBCD|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:gamesBCD                                                                                             ;              ;
 ;    |BCDtoSevenSegment:roundBCD|           ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:roundBCD                                                                                             ;              ;
-;    |BCDtoSevenSegment:znarlyBCD|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:znarlyBCD                                                                                            ;              ;
-;    |BCDtoSevenSegment:zoodBCD|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:zoodBCD                                                                                              ;              ;
-;    |Lab5:labBox|                          ; 110 (3)           ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox                                                                                                            ;              ;
+;    |BCDtoSevenSegment:znarlyBCD|          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:znarlyBCD                                                                                            ;              ;
+;    |BCDtoSevenSegment:zoodBCD|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:zoodBCD                                                                                              ;              ;
+;    |Lab5:labBox|                          ; 80 (3)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox                                                                                                            ;              ;
+;       |change:comb_21|                    ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|change:comb_21                                                                                             ;              ;
+;       |change:comb_22|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|change:comb_22                                                                                             ;              ;
 ;       |counter:roundCounter|              ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|counter:roundCounter                                                                                       ;              ;
-;       |gameCounter:gameCount|             ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameCounter:gameCount                                                                                      ;              ;
-;       |gameFSM:game|                      ; 9 (9)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameFSM:game                                                                                               ;              ;
+;       |gameCounter:gameCount|             ; 17 (17)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameCounter:gameCount                                                                                      ;              ;
+;       |gameFSM:game|                      ; 11 (11)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameFSM:game                                                                                               ;              ;
 ;       |gradeFSM:grade|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gradeFSM:grade                                                                                             ;              ;
-;       |guessChecking:guessCheck|          ; 63 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck                                                                                   ;              ;
-;          |checkForZnarly:checkZnarly|     ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly                                                        ;              ;
-;             |MagComp:slice0|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice0                                         ;              ;
-;             |MagComp:slice1|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice1                                         ;              ;
-;             |MagComp:slice2|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice2                                         ;              ;
-;             |MagComp:slice3|              ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3                                         ;              ;
-;          |checkForZood:checkForZood|      ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood                                                         ;              ;
-;          |count4bits:cnt1|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bits:cnt1                                                                   ;              ;
+;       |guessChecking:guessCheck|          ; 15 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck                                                                                   ;              ;
+;          |checkForZnarly:checkZnarly|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly                                                        ;              ;
 ;          |count4bits:cnt2|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bits:cnt2                                                                   ;              ;
+;          |count4bitsZood:cnt1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bitsZood:cnt1                                                               ;              ;
 ;       |loadMasterPattern:loadMaster|      ; 13 (5)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|loadMasterPattern:loadMaster                                                                               ;              ;
 ;          |Register:mastPatt|              ; 8 (8)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt                                                             ;              ;
-;       |myCoinFSM:mydesign|                ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|myCoinFSM:mydesign                                                                                         ;              ;
-;    |mastermindVGA:comb_143|               ; 909 (218)         ; 168 (144)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143                                                                                                 ;              ;
+;       |myCoinFSM:mydesign|                ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|myCoinFSM:mydesign                                                                                         ;              ;
+;    |mastermindVGA:comb_143|               ; 886 (199)         ; 168 (144)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143                                                                                                 ;              ;
 ;       |drawNumber:numDrawer|              ; 248 (66)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawNumber:numDrawer                                                                            ;              ;
 ;          |offset_check:segCheckX0|        ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX0                                                    ;              ;
 ;          |offset_check:segCheckX1|        ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX1                                                    ;              ;
@@ -368,7 +364,7 @@ applicable agreement for further details.
 ;          |offset_check:squareCheckX|      ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckX                                                 ;              ;
 ;          |offset_check:squareCheckY|      ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:squareCheckY                                                 ;              ;
 ;          |offset_check:topStick|          ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawShape:shapeDrawer|offset_check:topStick                                                     ;              ;
-;       |drawZnarlyZood:zzDrawer|           ; 61 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer                                                                         ;              ;
+;       |drawZnarlyZood:zzDrawer|           ; 62 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer                                                                         ;              ;
 ;          |offset_check:squareCheckX2|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX2                                              ;              ;
 ;          |offset_check:squareCheckX3|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckX3                                              ;              ;
 ;          |offset_check:squareCheckY1|     ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|offset_check:squareCheckY1                                              ;              ;
@@ -387,10 +383,10 @@ applicable agreement for further details.
 ;          |multcore:mult_core|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|lpm_mult:Mult3|multcore:mult_core                                                               ;              ;
 ;       |range_check:gameFieldX|            ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|range_check:gameFieldX                                                                          ;              ;
 ;       |range_check:gameFieldY|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|range_check:gameFieldY                                                                          ;              ;
-;       |registerAZ:numGamesReg|            ; 4 (4)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|registerAZ:numGamesReg                                                                          ;              ;
-;       |vga:vgaCounter|                    ; 46 (13)           ; 21 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|vga:vgaCounter                                                                                  ;              ;
+;       |registerAZ:numGamesReg|            ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|registerAZ:numGamesReg                                                                          ;              ;
+;       |vga:vgaCounter|                    ; 45 (13)           ; 21 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|vga:vgaCounter                                                                                  ;              ;
 ;          |simple_counter:col_counter|     ; 11 (11)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|vga:vgaCounter|simple_counter:col_counter                                                       ;              ;
-;          |simple_counter:row_counter|     ; 22 (22)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter                                                       ;              ;
+;          |simple_counter:row_counter|     ; 21 (21)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter                                                       ;              ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -407,16 +403,17 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------+
-; State Machine - |top|Lab5:labBox|gameFSM:game|state                                      ;
-+--------------------+-------------+-----------------+--------------------+----------------+
-; Name               ; state.Guess ; state.LoadShape ; state.StartingGame ; state.WaitGame ;
-+--------------------+-------------+-----------------+--------------------+----------------+
-; state.WaitGame     ; 0           ; 0               ; 0                  ; 0              ;
-; state.StartingGame ; 0           ; 0               ; 1                  ; 1              ;
-; state.LoadShape    ; 0           ; 1               ; 0                  ; 1              ;
-; state.Guess        ; 1           ; 0               ; 0                  ; 1              ;
-+--------------------+-------------+-----------------+--------------------+----------------+
++-----------------------------------------------------------------------------------------------------------+
+; State Machine - |top|Lab5:labBox|gameFSM:game|state                                                       ;
++--------------------+-------------+-----------------+--------------------+----------------+----------------+
+; Name               ; state.Guess ; state.LoadShape ; state.StartingGame ; state.WaitGame ; state.Starting ;
++--------------------+-------------+-----------------+--------------------+----------------+----------------+
+; state.WaitGame     ; 0           ; 0               ; 0                  ; 0              ; 0              ;
+; state.StartingGame ; 0           ; 0               ; 1                  ; 1              ; 0              ;
+; state.LoadShape    ; 0           ; 1               ; 0                  ; 1              ; 0              ;
+; state.Guess        ; 1           ; 0               ; 0                  ; 1              ; 0              ;
+; state.Starting     ; 0           ; 0               ; 0                  ; 1              ; 1              ;
++--------------------+-------------+-----------------+--------------------+----------------+----------------+
 
 
 +------------------------------------------------------------+
@@ -435,14 +432,6 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------+----------------------------------------------------+
 ; Register name                          ; Reason for Removal                                 ;
 +----------------------------------------+----------------------------------------------------+
-; mastermindVGA:comb_143|memZood[7][3]   ; Merged with mastermindVGA:comb_143|memZnarly[7][3] ;
-; mastermindVGA:comb_143|memZood[6][3]   ; Merged with mastermindVGA:comb_143|memZnarly[6][3] ;
-; mastermindVGA:comb_143|memZood[5][3]   ; Merged with mastermindVGA:comb_143|memZnarly[5][3] ;
-; mastermindVGA:comb_143|memZood[4][3]   ; Merged with mastermindVGA:comb_143|memZnarly[4][3] ;
-; mastermindVGA:comb_143|memZood[3][3]   ; Merged with mastermindVGA:comb_143|memZnarly[3][3] ;
-; mastermindVGA:comb_143|memZood[2][3]   ; Merged with mastermindVGA:comb_143|memZnarly[2][3] ;
-; mastermindVGA:comb_143|memZood[1][3]   ; Merged with mastermindVGA:comb_143|memZnarly[1][3] ;
-; mastermindVGA:comb_143|memZood[0][3]   ; Merged with mastermindVGA:comb_143|memZnarly[0][3] ;
 ; mastermindVGA:comb_143|memZnarly[7][3] ; Stuck at GND due to stuck port data_in             ;
 ; mastermindVGA:comb_143|memZnarly[6][3] ; Stuck at GND due to stuck port data_in             ;
 ; mastermindVGA:comb_143|memZnarly[5][3] ; Stuck at GND due to stuck port data_in             ;
@@ -451,6 +440,14 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; mastermindVGA:comb_143|memZnarly[2][3] ; Stuck at GND due to stuck port data_in             ;
 ; mastermindVGA:comb_143|memZnarly[1][3] ; Stuck at GND due to stuck port data_in             ;
 ; mastermindVGA:comb_143|memZnarly[0][3] ; Stuck at GND due to stuck port data_in             ;
+; mastermindVGA:comb_143|memZood[7][0]   ; Merged with mastermindVGA:comb_143|memZnarly[7][0] ;
+; mastermindVGA:comb_143|memZood[6][0]   ; Merged with mastermindVGA:comb_143|memZnarly[6][0] ;
+; mastermindVGA:comb_143|memZood[5][0]   ; Merged with mastermindVGA:comb_143|memZnarly[5][0] ;
+; mastermindVGA:comb_143|memZood[4][0]   ; Merged with mastermindVGA:comb_143|memZnarly[4][0] ;
+; mastermindVGA:comb_143|memZood[3][0]   ; Merged with mastermindVGA:comb_143|memZnarly[3][0] ;
+; mastermindVGA:comb_143|memZood[2][0]   ; Merged with mastermindVGA:comb_143|memZnarly[2][0] ;
+; mastermindVGA:comb_143|memZood[1][0]   ; Merged with mastermindVGA:comb_143|memZnarly[1][0] ;
+; mastermindVGA:comb_143|memZood[0][0]   ; Merged with mastermindVGA:comb_143|memZnarly[0][0] ;
 ; Lab5:labBox|gradeFSM:grade|state~3     ; Lost fanout                                        ;
 ; Lab5:labBox|gameFSM:game|state~2       ; Lost fanout                                        ;
 ; Lab5:labBox|gameFSM:game|state~3       ; Lost fanout                                        ;
@@ -463,12 +460,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 233   ;
+; Total registers                              ; 245   ;
 ; Number of registers using Synchronous Clear  ; 15    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 220   ;
+; Number of registers using Asynchronous Clear ; 222   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 169   ;
+; Number of registers using Clock Enable       ; 165   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -478,35 +475,48 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|registerAZ:numGamesReg|Q[0]                    ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter|Q[3] ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[6][2][2]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZood[6][2]                                  ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[5][2][1]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZood[5][1]                                  ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[4][3][0]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZood[4][2]                                  ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[3][1][2]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZood[3][2]                                  ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[2][3][0]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZnarly[2][1]                                ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[7][2][0]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZood[7][2]                                  ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[0][0][0]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZnarly[0][0]                                ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|memGuess[1][0][2]                              ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top|mastermindVGA:comb_143|memZood[1][1]                                  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter|Q[6] ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|Lab5:labBox|gameCounter:gameCount|Q[1]                                ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[9]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[11]      ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[8]       ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[4]       ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[2]       ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|Mux37                                          ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[5]       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[0]       ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|Mux32                                          ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|color[8]               ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|VGA_B[2]                                       ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |top|mastermindVGA:comb_143|VGA_R[1]                                       ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |top|mastermindVGA:comb_143|VGA_G[0]                                       ;
 ; 36:1               ; 3 bits    ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|shapeSel[1]                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_20 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; W              ; 4     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_21 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; W              ; 12    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_22 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; W              ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------+
@@ -536,46 +546,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------------------------------+
 ; WIDTH          ; 12    ; Signed Integer                                                                 ;
 +----------------+-------+--------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice2 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice1 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice0 ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -990,7 +960,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult3 ;
+; Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult2 ;
 +------------------------------------------------+--------------+------------------------+
 ; Parameter Name                                 ; Value        ; Type                   ;
 +------------------------------------------------+--------------+------------------------+
@@ -1025,7 +995,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult2 ;
+; Parameter Settings for Inferred Entity Instance: mastermindVGA:comb_143|lpm_mult:Mult3 ;
 +------------------------------------------------+--------------+------------------------+
 ; Parameter Name                                 ; Value        ; Type                   ;
 +------------------------------------------------+--------------+------------------------+
@@ -1065,7 +1035,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                  ; Value                                 ;
 +---------------------------------------+---------------------------------------+
 ; Number of entity instances            ; 2                                     ;
-; Entity Instance                       ; mastermindVGA:comb_143|lpm_mult:Mult3 ;
+; Entity Instance                       ; mastermindVGA:comb_143|lpm_mult:Mult2 ;
 ;     -- LPM_WIDTHA                     ; 4                                     ;
 ;     -- LPM_WIDTHB                     ; 6                                     ;
 ;     -- LPM_WIDTHP                     ; 10                                    ;
@@ -1076,7 +1046,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                  ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                    ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                    ;
-; Entity Instance                       ; mastermindVGA:comb_143|lpm_mult:Mult2 ;
+; Entity Instance                       ; mastermindVGA:comb_143|lpm_mult:Mult3 ;
 ;     -- LPM_WIDTHA                     ; 4                                     ;
 ;     -- LPM_WIDTHB                     ; 6                                     ;
 ;     -- LPM_WIDTHP                     ; 10                                    ;
@@ -1496,55 +1466,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice0"                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; AltB ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; AgtB ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "mastermindVGA:comb_143"     ;
++----------------------+-------+----------+--------------+
+; Port                 ; Type  ; Severity ; Details      ;
++----------------------+-------+----------+--------------+
+; displayMasterPattern ; Input ; Info     ; Stuck at VCC ;
++----------------------+-------+----------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice1"                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; AltB ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; AgtB ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice2"                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; AltB ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; AgtB ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3"                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; AltB ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; AgtB ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood"                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Zood ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------+
 ; Port Connectivity Checks: "Lab5:labBox|counter:roundCounter" ;
-+-------+-------+----------+-----------------------------------+
-; Port  ; Type  ; Severity ; Details                           ;
-+-------+-------+----------+-----------------------------------+
-; D     ; Input ; Info     ; Stuck at GND                      ;
-; up    ; Input ; Info     ; Stuck at VCC                      ;
-; clear ; Input ; Info     ; Stuck at GND                      ;
-+-------+-------+----------+-----------------------------------+
++------+-------+----------+------------------------------------+
+; Port ; Type  ; Severity ; Details                            ;
++------+-------+----------+------------------------------------+
+; D    ; Input ; Info     ; Stuck at GND                       ;
+; up   ; Input ; Info     ; Stuck at VCC                       ;
+; load ; Input ; Info     ; Stuck at GND                       ;
++------+-------+----------+------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -1557,13 +1505,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------+
 
 
-+------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|myCoinFSM:mydesign" ;
-+--------+--------+----------+-------------------------------+
-; Port   ; Type   ; Severity ; Details                       ;
-+--------+--------+----------+-------------------------------+
-; credit ; Output ; Info     ; Explicitly unconnected        ;
-+--------+--------+----------+-------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab5:labBox|change:comb_22"                                                                                                                                                     ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D    ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (1 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab5:labBox|change:comb_20"                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; change ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab5:labBox"                                                                                        ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                 ; Type   ; Severity ; Details                                                                             ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; displayMasterPattern ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -1581,28 +1547,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Fri Apr  6 18:27:33 2018
+    Info: Processing started: Sat Apr  7 01:11:41 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5 -c top
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 2 entities, in source file lab4.sv
     Info (12023): Found entity 1: dFlipFlop
     Info (12023): Found entity 2: myCoinFSM
-Warning (10275): Verilog HDL Module Instantiation warning at Lab5.sv(203): ignored dangling comma in List of Port Connections
-Warning (10275): Verilog HDL Module Instantiation warning at Lab5.sv(204): ignored dangling comma in List of Port Connections
-Warning (10275): Verilog HDL Module Instantiation warning at Lab5.sv(205): ignored dangling comma in List of Port Connections
-Warning (10275): Verilog HDL Module Instantiation warning at Lab5.sv(206): ignored dangling comma in List of Port Connections
-Info (12021): Found 11 design units, including 11 entities, in source file Lab5.sv
+Info (12021): Found 13 design units, including 13 entities, in source file Lab5.sv
     Info (12023): Found entity 1: Lab5
-    Info (12023): Found entity 2: CoinAccept
+    Info (12023): Found entity 2: change
     Info (12023): Found entity 3: gameCounter
-    Info (12023): Found entity 4: loadMasterPattern
-    Info (12023): Found entity 5: guessChecking
-    Info (12023): Found entity 6: count4bits
-    Info (12023): Found entity 7: checkForZnarly
-    Info (12023): Found entity 8: checkForZood
-    Info (12023): Found entity 9: sliceInput
-    Info (12023): Found entity 10: gameFSM
-    Info (12023): Found entity 11: gradeFSM
+    Info (12023): Found entity 4: roundCounter
+    Info (12023): Found entity 5: loadMasterPattern
+    Info (12023): Found entity 6: guessChecking
+    Info (12023): Found entity 7: count4bits
+    Info (12023): Found entity 8: count4bitsZood
+    Info (12023): Found entity 9: checkForZnarly
+    Info (12023): Found entity 10: checkForZood
+    Info (12023): Found entity 11: sliceInput
+    Info (12023): Found entity 12: gameFSM
+    Info (12023): Found entity 13: gradeFSM
 Info (12021): Found 9 design units, including 9 entities, in source file library.sv
     Info (12023): Found entity 1: MagComp
     Info (12023): Found entity 2: Adder
@@ -1627,24 +1591,28 @@ Info (12021): Found 9 design units, including 9 entities, in source file masterm
     Info (12023): Found entity 9: registerAZ
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
     Info (12023): Found entity 1: top
+Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(42): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(43): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at Lab5.sv(44): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at top.sv(81): instance has no name
 Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at top.sv(44): object "VGADisplayMasterPattern" assigned a value but never read
 Warning (10034): Output port "LEDG[-1]" at top.sv(6) has no driver
 Info (12128): Elaborating entity "Lab5" for hierarchy "Lab5:labBox"
 Info (12128): Elaborating entity "gameFSM" for hierarchy "Lab5:labBox|gameFSM:game"
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(307): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(312): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(317): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(322): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(332): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(346): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(352): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(358): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "gradeFSM" for hierarchy "Lab5:labBox|gradeFSM:grade"
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(349): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(386): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_20"
+Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_21"
+Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_22"
 Info (12128): Elaborating entity "myCoinFSM" for hierarchy "Lab5:labBox|myCoinFSM:mydesign"
-Warning (10230): Verilog HDL assignment warning at lab4.sv(98): truncated value with size 4 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at lab4.sv(99): truncated value with size 4 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at lab4.sv(102): truncated value with size 4 to match size of target (1)
 Info (12128): Elaborating entity "gameCounter" for hierarchy "Lab5:labBox|gameCounter:gameCount"
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(104): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(108): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(96): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(99): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "counter" for hierarchy "Lab5:labBox|counter:roundCounter"
 Warning (10230): Verilog HDL assignment warning at library.sv(95): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at library.sv(97): truncated value with size 32 to match size of target (4)
@@ -1653,9 +1621,9 @@ Info (12128): Elaborating entity "Register" for hierarchy "Lab5:labBox|loadMaste
 Info (12128): Elaborating entity "sliceInput" for hierarchy "Lab5:labBox|loadMasterPattern:loadMaster|sliceInput:slice"
 Info (12128): Elaborating entity "guessChecking" for hierarchy "Lab5:labBox|guessChecking:guessCheck"
 Info (12128): Elaborating entity "checkForZnarly" for hierarchy "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly"
-Info (12128): Elaborating entity "MagComp" for hierarchy "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3"
 Info (12128): Elaborating entity "checkForZood" for hierarchy "Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood"
-Info (12128): Elaborating entity "count4bits" for hierarchy "Lab5:labBox|guessChecking:guessCheck|count4bits:cnt1"
+Info (12128): Elaborating entity "count4bitsZood" for hierarchy "Lab5:labBox|guessChecking:guessCheck|count4bitsZood:cnt1"
+Info (12128): Elaborating entity "count4bits" for hierarchy "Lab5:labBox|guessChecking:guessCheck|count4bits:cnt2"
 Warning (12125): Using design file BCDtoSevenSegment.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: BCDtoSevenSegment
 Info (12128): Elaborating entity "BCDtoSevenSegment" for hierarchy "BCDtoSevenSegment:znarlyBCD"
@@ -1678,8 +1646,8 @@ Info (12128): Elaborating entity "drawZnarlyZood" for hierarchy "mastermindVGA:c
 Info (278001): Inferred 4 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mastermindVGA:comb_143|Div1"
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "mastermindVGA:comb_143|Div0"
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mastermindVGA:comb_143|Mult3"
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mastermindVGA:comb_143|Mult2"
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "mastermindVGA:comb_143|Mult3"
 Info (12130): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_divide:Div1"
 Info (12133): Instantiated megafunction "mastermindVGA:comb_143|lpm_divide:Div1" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHN" = "10"
@@ -1696,8 +1664,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_7pc
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
     Info (12023): Found entity 1: add_sub_8pc
-Info (12130): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3"
-Info (12133): Instantiated megafunction "mastermindVGA:comb_143|lpm_mult:Mult3" with the following parameter:
+Info (12130): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2"
+Info (12133): Instantiated megafunction "mastermindVGA:comb_143|lpm_mult:Mult2" with the following parameter:
     Info (12134): Parameter "LPM_WIDTHA" = "4"
     Info (12134): Parameter "LPM_WIDTHB" = "6"
     Info (12134): Parameter "LPM_WIDTHP" = "10"
@@ -1707,29 +1675,31 @@ Info (12133): Instantiated megafunction "mastermindVGA:comb_143|lpm_mult:Mult3" 
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12131): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3|multcore:mult_core", which is child of megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3"
-Info (12131): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3"
-Info (12131): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3|altshift:external_latency_ffs", which is child of megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult3"
-Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12131): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2|multcore:mult_core", which is child of megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2"
+Info (12131): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2"
+Info (12131): Elaborated megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2|altshift:external_latency_ffs", which is child of megafunction instantiation "mastermindVGA:comb_143|lpm_mult:Mult2"
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
     Warning (13410): Pin "LEDG[-1]" is stuck at GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[12]"
     Warning (15610): No output dependent on input pin "SW[13]"
     Warning (15610): No output dependent on input pin "SW[14]"
-Info (21057): Implemented 1326 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "SW[15]"
+Info (21057): Implemented 1284 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 59 output pins
-    Info (21061): Implemented 1244 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 691 megabytes
-    Info: Processing ended: Fri Apr  6 18:27:37 2018
+    Info (21061): Implemented 1202 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 694 megabytes
+    Info: Processing ended: Sat Apr  7 01:11:45 2018
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
@@ -1737,6 +1707,6 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 32 warnin
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/output_files/top.map.smsg.
+The suppressed messages can be found in /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/output_files/top.map.smsg.
 
 

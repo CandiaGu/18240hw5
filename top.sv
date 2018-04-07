@@ -76,7 +76,7 @@ module top
     ClearGame,
     // master patterns
     LabtoVGAMasterPattern,
-    VGADisplayMasterPattern,
+    1'b1,
     // other
     reset);
 

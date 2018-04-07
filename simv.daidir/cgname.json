@@ -1,7 +1,12 @@
 {
-    "shift_register": [
-        "shift_register",
-        "JPGqC",
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
         "module"
     ],
     "Subtracter": [
@@ -9,14 +14,19 @@
         "pcAkE",
         "module"
     ],
-    "std": [
-        "std",
-        "reYIK",
-        "module"
-    ],
     "dFlipFlop": [
         "dFlipFlop",
         "fhqgw",
+        "module"
+    ],
+    "Mux2to1": [
+        "Mux2to1",
+        "wxUbx",
+        "module"
+    ],
+    "testLab5": [
+        "testLab5",
+        "RB1yB",
         "module"
     ],
     "Adder": [
@@ -29,24 +39,14 @@
         "UxyT3",
         "module"
     ],
-    "Mux2to1": [
-        "Mux2to1",
-        "wxUbx",
+    "shift_register": [
+        "shift_register",
+        "JPGqC",
         "module"
     ],
     "Decoder": [
         "Decoder",
         "t8TcA",
-        "module"
-    ],
-    "testLab5": [
-        "testLab5",
-        "RB1yB",
-        "module"
-    ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
         "module"
     ]
 }

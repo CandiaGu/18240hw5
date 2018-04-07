@@ -14,7 +14,7 @@ SW[11] => SW1[11].DATAIN
 SW[12] => ~NO_FANOUT~
 SW[13] => ~NO_FANOUT~
 SW[14] => ~NO_FANOUT~
-SW[15] => SW1[15].DATAIN
+SW[15] => ~NO_FANOUT~
 SW[16] => SW1[16].DATAIN
 SW[17] => SW1[17].DATAIN
 KEY[0] => reset.IN2
@@ -87,19 +87,19 @@ VGA_HS <= mastermindVGA:comb_143.port8
 CoinValue[0] => CoinValue[0].IN1
 CoinValue[1] => CoinValue[1].IN1
 CoinInserted => CoinInserted.IN1
-StartGame => StartGame.IN3
-Guess[0] => Guess[0].IN1
-Guess[1] => Guess[1].IN1
-Guess[2] => Guess[2].IN1
-Guess[3] => Guess[3].IN1
-Guess[4] => Guess[4].IN1
-Guess[5] => Guess[5].IN1
-Guess[6] => Guess[6].IN1
-Guess[7] => Guess[7].IN1
-Guess[8] => Guess[8].IN1
-Guess[9] => Guess[9].IN1
-Guess[10] => Guess[10].IN1
-Guess[11] => Guess[11].IN1
+StartGame => StartGame.IN2
+Guess[0] => Guess[0].IN2
+Guess[1] => Guess[1].IN2
+Guess[2] => Guess[2].IN2
+Guess[3] => Guess[3].IN2
+Guess[4] => Guess[4].IN2
+Guess[5] => Guess[5].IN2
+Guess[6] => Guess[6].IN2
+Guess[7] => Guess[7].IN2
+Guess[8] => Guess[8].IN2
+Guess[9] => Guess[9].IN2
+Guess[10] => Guess[10].IN2
+Guess[11] => Guess[11].IN2
 GradeIt => GradeIt.IN1
 LoadShape[0] => LoadShape[0].IN1
 LoadShape[1] => LoadShape[1].IN1
@@ -107,10 +107,10 @@ LoadShape[2] => LoadShape[2].IN1
 ShapeLocation[0] => ShapeLocation[0].IN1
 ShapeLocation[1] => ShapeLocation[1].IN1
 LoadShapeNow => LoadShapeNow.IN1
-Znarly[0] <= guessChecking:guessCheck.port7
-Znarly[1] <= guessChecking:guessCheck.port7
-Znarly[2] <= guessChecking:guessCheck.port7
-Znarly[3] <= guessChecking:guessCheck.port7
+Znarly[0] <= Znarly[0].DB_MAX_OUTPUT_PORT_TYPE
+Znarly[1] <= Znarly[1].DB_MAX_OUTPUT_PORT_TYPE
+Znarly[2] <= Znarly[2].DB_MAX_OUTPUT_PORT_TYPE
+Znarly[3] <= Znarly[3].DB_MAX_OUTPUT_PORT_TYPE
 Zood[0] <= guessChecking:guessCheck.port8
 Zood[1] <= guessChecking:guessCheck.port8
 Zood[2] <= guessChecking:guessCheck.port8
@@ -125,11 +125,11 @@ NumGames[2] <= NumGames[2].DB_MAX_OUTPUT_PORT_TYPE
 NumGames[3] <= NumGames[3].DB_MAX_OUTPUT_PORT_TYPE
 GameWon <= GameWon.DB_MAX_OUTPUT_PORT_TYPE
 reset => reset.IN4
-clock => clock.IN6
-loadNumGames <= drop.DB_MAX_OUTPUT_PORT_TYPE
-loadGuess <= GradeIt.DB_MAX_OUTPUT_PORT_TYPE
+clock => clock.IN10
+loadNumGames <= change:comb_22.port2
+loadGuess <= loadGuess.DB_MAX_OUTPUT_PORT_TYPE
 loadZnarlyZood <= doneGrading.DB_MAX_OUTPUT_PORT_TYPE
-clearGame <= StartGame.DB_MAX_OUTPUT_PORT_TYPE
+clearGame <= <GND>
 displayMasterPattern <= ongoingGame.DB_MAX_OUTPUT_PORT_TYPE
 masterPatternOut[0] <= masterPattern[0].DB_MAX_OUTPUT_PORT_TYPE
 masterPatternOut[1] <= masterPattern[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -146,6 +146,7 @@ masterPatternOut[11] <= masterPattern[11].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|Lab5:labBox|gameFSM:game
+reset => state.OUTPUTSELECT
 reset => state.OUTPUTSELECT
 reset => state.OUTPUTSELECT
 reset => state.OUTPUTSELECT
@@ -169,6 +170,7 @@ RoundNumber[2] => LessThan1.IN6
 RoundNumber[3] => LessThan1.IN5
 ongoingGame <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
 loadingShape <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+gameStarting <= gameStarting.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|Lab5:labBox|gradeFSM:grade
@@ -181,6 +183,69 @@ GradeIt => state.DATAA
 doneGrading <= doneGrading.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top|Lab5:labBox|change:comb_20
+clock => Q[0].CLK
+clock => Q[1].CLK
+clock => Q[2].CLK
+clock => Q[3].CLK
+D[0] => Equal0.IN3
+D[0] => Q[0].DATAIN
+D[1] => Equal0.IN2
+D[1] => Q[1].DATAIN
+D[2] => Equal0.IN1
+D[2] => Q[2].DATAIN
+D[3] => Equal0.IN0
+D[3] => Q[3].DATAIN
+change <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|Lab5:labBox|change:comb_21
+clock => Q[0].CLK
+clock => Q[1].CLK
+clock => Q[2].CLK
+clock => Q[3].CLK
+clock => Q[4].CLK
+clock => Q[5].CLK
+clock => Q[6].CLK
+clock => Q[7].CLK
+clock => Q[8].CLK
+clock => Q[9].CLK
+clock => Q[10].CLK
+clock => Q[11].CLK
+D[0] => Equal0.IN11
+D[0] => Q[0].DATAIN
+D[1] => Equal0.IN10
+D[1] => Q[1].DATAIN
+D[2] => Equal0.IN9
+D[2] => Q[2].DATAIN
+D[3] => Equal0.IN8
+D[3] => Q[3].DATAIN
+D[4] => Equal0.IN7
+D[4] => Q[4].DATAIN
+D[5] => Equal0.IN6
+D[5] => Q[5].DATAIN
+D[6] => Equal0.IN5
+D[6] => Q[6].DATAIN
+D[7] => Equal0.IN4
+D[7] => Q[7].DATAIN
+D[8] => Equal0.IN3
+D[8] => Q[8].DATAIN
+D[9] => Equal0.IN2
+D[9] => Q[9].DATAIN
+D[10] => Equal0.IN1
+D[10] => Q[10].DATAIN
+D[11] => Equal0.IN0
+D[11] => Q[11].DATAIN
+change <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|Lab5:labBox|change:comb_22
+clock => Q[0].CLK
+D[0] => change.IN1
+D[0] => Q[0].DATAIN
+change <= change.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top|Lab5:labBox|myCoinFSM:mydesign
 CoinValue[0] => Equal0.IN0
 CoinValue[0] => Equal1.IN1
@@ -188,19 +253,27 @@ CoinValue[0] => Equal2.IN1
 CoinValue[1] => Equal0.IN1
 CoinValue[1] => Equal1.IN0
 CoinValue[1] => Equal2.IN0
-drop <= state[2].DB_MAX_OUTPUT_PORT_TYPE
-credit[0] <= state[0].DB_MAX_OUTPUT_PORT_TYPE
-credit[1] <= state[1].DB_MAX_OUTPUT_PORT_TYPE
-credit[2] <= <GND>
-credit[3] <= <GND>
+drop <= drop.DB_MAX_OUTPUT_PORT_TYPE
 clock => state[0].CLK
 clock => state[1].CLK
 clock => state[2].CLK
 clock => state[3].CLK
-reset_N => state.OUTPUTSELECT
-reset_N => state.OUTPUTSELECT
-reset_N => state.OUTPUTSELECT
-reset_N => state.OUTPUTSELECT
+reset_N => state[0].ACLR
+reset_N => state[1].ACLR
+reset_N => state[2].ACLR
+reset_N => state[3].ACLR
+coinInserted => always1.IN1
+coinInserted => always1.IN1
+coinInserted => always1.IN1
+coinInserted => Selector0.IN12
+coinInserted => Selector0.IN13
+coinInserted => Selector0.IN14
+coinInserted => Selector0.IN15
+coinInserted => Selector0.IN16
+coinInserted => Selector0.IN17
+coinInserted => Selector0.IN18
+coinInserted => Selector0.IN19
+coinInserted => drop.DATAB
 
 
 |top|Lab5:labBox|gameCounter:gameCount
@@ -216,10 +289,10 @@ en => Q[0]~reg0.ENA
 en => Q[3]~reg0.ENA
 en => Q[2]~reg0.ENA
 en => Q[1]~reg0.ENA
-clear => Q[0]~reg0.ACLR
-clear => Q[1]~reg0.ACLR
-clear => Q[2]~reg0.ACLR
-clear => Q[3]~reg0.ACLR
+reset => Q[0]~reg0.ACLR
+reset => Q[1]~reg0.ACLR
+reset => Q[2]~reg0.ACLR
+reset => Q[3]~reg0.ACLR
 load => Q.OUTPUTSELECT
 load => Q.OUTPUTSELECT
 load => Q.OUTPUTSELECT
@@ -411,8 +484,8 @@ out0[2] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|Lab5:labBox|guessChecking:guessCheck
-ongoingGame => en.IN0
-areRoundsLeft => en.IN1
+ongoingGame => ongoingGame.IN1
+areRoundsLeft => en.IN0
 loadingShape => en.IN1
 clock => clock.IN1
 doneGrading => ~NO_FANOUT~
@@ -440,14 +513,14 @@ masterPattern[8] => masterPattern[8].IN2
 masterPattern[9] => masterPattern[9].IN2
 masterPattern[10] => masterPattern[10].IN2
 masterPattern[11] => masterPattern[11].IN2
-ZnarlyCount[0] <= count4bits:cnt2.port1
-ZnarlyCount[1] <= count4bits:cnt2.port1
-ZnarlyCount[2] <= count4bits:cnt2.port1
-ZnarlyCount[3] <= count4bits:cnt2.port1
-ZoodCount[0] <= count4bits:cnt1.port1
-ZoodCount[1] <= count4bits:cnt1.port1
-ZoodCount[2] <= count4bits:cnt1.port1
-ZoodCount[3] <= count4bits:cnt1.port1
+ZnarlyCount[0] <= ZnarlyCount[0].DB_MAX_OUTPUT_PORT_TYPE
+ZnarlyCount[1] <= ZnarlyCount[1].DB_MAX_OUTPUT_PORT_TYPE
+ZnarlyCount[2] <= ZnarlyCount[2].DB_MAX_OUTPUT_PORT_TYPE
+ZnarlyCount[3] <= ZnarlyCount[3].DB_MAX_OUTPUT_PORT_TYPE
+ZoodCount[0] <= count4bitsZood:cnt1.port2
+ZoodCount[1] <= count4bitsZood:cnt1.port2
+ZoodCount[2] <= count4bitsZood:cnt1.port2
+ZoodCount[3] <= count4bitsZood:cnt1.port2
 GameWon <= GameWon.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -476,10 +549,11 @@ Guess[8] => Guess[8].IN1
 Guess[9] => Guess[9].IN1
 Guess[10] => Guess[10].IN1
 Guess[11] => Guess[11].IN1
-Znarly[0] <= MagComp:slice0.port3
-Znarly[1] <= MagComp:slice1.port3
-Znarly[2] <= MagComp:slice2.port3
-Znarly[3] <= MagComp:slice3.port3
+Znarly[0] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+Znarly[1] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
+Znarly[2] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+Znarly[3] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+en => ~NO_FANOUT~
 
 
 |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|sliceInput:masterSlice
@@ -534,102 +608,6 @@ out1[2] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
 out0[0] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
 out0[1] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
 out0[2] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice3
-A[0] => LessThan0.IN3
-A[0] => Equal0.IN2
-A[0] => LessThan1.IN3
-A[1] => LessThan0.IN2
-A[1] => Equal0.IN1
-A[1] => LessThan1.IN2
-A[2] => LessThan0.IN1
-A[2] => Equal0.IN0
-A[2] => LessThan1.IN1
-B[0] => LessThan0.IN6
-B[0] => Equal0.IN5
-B[0] => LessThan1.IN6
-B[1] => LessThan0.IN5
-B[1] => Equal0.IN4
-B[1] => LessThan1.IN5
-B[2] => LessThan0.IN4
-B[2] => Equal0.IN3
-B[2] => LessThan1.IN4
-AltB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-AgtB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice2
-A[0] => LessThan0.IN3
-A[0] => Equal0.IN2
-A[0] => LessThan1.IN3
-A[1] => LessThan0.IN2
-A[1] => Equal0.IN1
-A[1] => LessThan1.IN2
-A[2] => LessThan0.IN1
-A[2] => Equal0.IN0
-A[2] => LessThan1.IN1
-B[0] => LessThan0.IN6
-B[0] => Equal0.IN5
-B[0] => LessThan1.IN6
-B[1] => LessThan0.IN5
-B[1] => Equal0.IN4
-B[1] => LessThan1.IN5
-B[2] => LessThan0.IN4
-B[2] => Equal0.IN3
-B[2] => LessThan1.IN4
-AltB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-AgtB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice1
-A[0] => LessThan0.IN3
-A[0] => Equal0.IN2
-A[0] => LessThan1.IN3
-A[1] => LessThan0.IN2
-A[1] => Equal0.IN1
-A[1] => LessThan1.IN2
-A[2] => LessThan0.IN1
-A[2] => Equal0.IN0
-A[2] => LessThan1.IN1
-B[0] => LessThan0.IN6
-B[0] => Equal0.IN5
-B[0] => LessThan1.IN6
-B[1] => LessThan0.IN5
-B[1] => Equal0.IN4
-B[1] => LessThan1.IN5
-B[2] => LessThan0.IN4
-B[2] => Equal0.IN3
-B[2] => LessThan1.IN4
-AltB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-AgtB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|MagComp:slice0
-A[0] => LessThan0.IN3
-A[0] => Equal0.IN2
-A[0] => LessThan1.IN3
-A[1] => LessThan0.IN2
-A[1] => Equal0.IN1
-A[1] => LessThan1.IN2
-A[2] => LessThan0.IN1
-A[2] => Equal0.IN0
-A[2] => LessThan1.IN1
-B[0] => LessThan0.IN6
-B[0] => Equal0.IN5
-B[0] => LessThan1.IN6
-B[1] => LessThan0.IN5
-B[1] => Equal0.IN4
-B[1] => LessThan1.IN5
-B[2] => LessThan0.IN4
-B[2] => Equal0.IN3
-B[2] => LessThan1.IN4
-AltB <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
-AeqB <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-AgtB <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood
@@ -718,15 +696,19 @@ out0[1] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
 out0[2] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Lab5:labBox|guessChecking:guessCheck|count4bits:cnt1
+|top|Lab5:labBox|guessChecking:guessCheck|count4bitsZood:cnt1
 in[0] => Add2.IN6
 in[1] => Add1.IN4
 in[2] => Add0.IN2
 in[3] => Add0.IN1
-out[0] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
-out[3] <= Add2.DB_MAX_OUTPUT_PORT_TYPE
+ZnarlyCount[0] => Add3.IN8
+ZnarlyCount[1] => Add3.IN7
+ZnarlyCount[2] => Add3.IN6
+ZnarlyCount[3] => Add3.IN5
+out[0] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Add3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|Lab5:labBox|guessChecking:guessCheck|count4bits:cnt2

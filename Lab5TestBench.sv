@@ -172,19 +172,15 @@ module testLab5();
 		@(posedge clock);
 		@(posedge clock);
 		@(posedge clock);
+		@(posedge clock);
+		@(posedge clock);
+		@(posedge clock);
+		@(posedge clock);
 		CoinInserted = 0;
 		@(posedge clock);
-		CoinValue = 2'b10;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
 		@(posedge clock);
 		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
+
 
 
 		// @(posedge clock);

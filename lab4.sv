@@ -38,53 +38,53 @@ module myCoinFSM(
 
 	always_comb begin
 		case (state)
-			state0: if (CoinValue == 2'b01) nextState = wstate1;
-					else if (CoinValue == 2'b10) nextState = wstate3;
-					else if (CoinValue == 2'b11) nextState = wstate5;
+			state0: if (CoinValue == 2'b01 && coinInserted) nextState = wstate1;
+					else if (CoinValue == 2'b10 && coinInserted) nextState = wstate3;
+					else if (CoinValue == 2'b11 && coinInserted) nextState = wstate5;
 					else nextState = wstate0;
-			state1: if (CoinValue == 2'b01) nextState = wstate2;
-					else if (CoinValue == 2'b10) nextState = wstate4;
-					else if (CoinValue == 2'b11) nextState = wstate6;
+			state1: if (CoinValue == 2'b01 && coinInserted) nextState = wstate2;
+					else if (CoinValue == 2'b10 && coinInserted) nextState = wstate4;
+					else if (CoinValue == 2'b11 && coinInserted) nextState = wstate6;
 					else nextState = wstate1;
-			state2: if (CoinValue == 2'b01) nextState = wstate3;
-					else if (CoinValue == 2'b10) nextState = wstate5;
-					else if (CoinValue == 2'b11) nextState = wstate7;
+			state2: if (CoinValue == 2'b01 && coinInserted) nextState = wstate3;
+					else if (CoinValue == 2'b10 && coinInserted) nextState = wstate5;
+					else if (CoinValue == 2'b11 && coinInserted) nextState = wstate7;
 					else nextState = wstate2;
-			state3: if (CoinValue == 2'b01) nextState = wstate4;
-					else if (CoinValue == 2'b10) nextState = wstate6;
-					else if (CoinValue == 2'b11) nextState = wstate4;
+			state3: if (CoinValue == 2'b01 && coinInserted) nextState = wstate4;
+					else if (CoinValue == 2'b10 && coinInserted) nextState = wstate6;
+					else if (CoinValue == 2'b11 && coinInserted) nextState = wstate4;
 					else nextState = wstate3;
-			state4: if (CoinValue == 2'b01) nextState = wstate1;
-					else if (CoinValue == 2'b10) nextState = wstate3;
-					else if (CoinValue == 2'b11) nextState = wstate5;
-					else nextState = wstate4;
-			state5: if (CoinValue == 2'b01) nextState = wstate2;
-					else if (CoinValue == 2'b10) nextState = wstate4;
-					else if (CoinValue == 2'b11) nextState = wstate6;
-					else nextState = wstate5;
-			state6: if (CoinValue == 2'b01) nextState = wstate3;
-					else if (CoinValue == 2'b10) nextState = wstate5;
-					else if (CoinValue == 2'b11) nextState = wstate7;
-					else nextState = wstate6;
-			state7: if (CoinValue == 2'b01) nextState = wstate4;
-					else if (CoinValue == 2'b10) nextState = wstate6;
-					else if (CoinValue == 2'b11) nextState = wstate4;
-					else nextState = wstate7;
-			wstate0: if (coinInserted) nextState = state0;
+			state4: //if (CoinValue == 2'b01 && coinInserted) nextState = wstate1;
+					//else if (CoinValue == 2'b10 && coinInserted) nextState = wstate3;
+					//else if (CoinValue == 2'b11 && coinInserted) nextState = wstate5;
+					nextState = state0;
+			state5: //if (CoinValue == 2'b01 && coinInserted) nextState = wstate2;
+					//else if (CoinValue == 2'b10 && coinInserted) nextState = wstate4;
+					//else if (CoinValue == 2'b11 && coinInserted) nextState = wstate6;
+					nextState = state1;
+			state6: //if (CoinValue == 2'b01 && coinInserted) nextState = wstate3;
+					//else if (CoinValue == 2'b10 && coinInserted) nextState = wstate5;
+					//else if (CoinValue == 2'b11 && coinInserted) nextState = wstate7;
+					nextState = state2;
+			state7: //if (CoinValue == 2'b01 && coinInserted) nextState = wstate4;
+					//else if (CoinValue == 2'b10 && coinInserted) nextState = wstate6;
+					//else if (CoinValue == 2'b11 && coinInserted) nextState = wstate4;
+					nextState = state3;
+			wstate0: if (!coinInserted) nextState = state0;
 				 else nextState = wstate0;
-			wstate1: if (coinInserted) nextState = state1;
+			wstate1: if (!coinInserted) nextState = state1;
 				 else nextState = wstate1;
-			wstate2: if (coinInserted) nextState = state2;
+			wstate2: if (!coinInserted) nextState = state2;
 				 else nextState = wstate2;
-			wstate3: if (coinInserted) nextState = state3;
+			wstate3: if (!coinInserted) nextState = state3;
 				 else nextState = wstate3;
-			wstate4: if (coinInserted) nextState = state4;
+			wstate4: if (!coinInserted) nextState = state4;
 				 else nextState = wstate4;
-			wstate5: if (coinInserted) nextState = state5;
+			wstate5: if (!coinInserted) nextState = state5;
 				 else nextState = wstate5;
-			wstate6: if (coinInserted) nextState = state6;
+			wstate6: if (!coinInserted) nextState = state6;
 				 else nextState = wstate6;
-			wstate7: if (coinInserted) nextState = state7;
+			wstate7: if (!coinInserted) nextState = state7;
 				 else nextState = wstate7;
 
 		endcase
@@ -95,8 +95,8 @@ module myCoinFSM(
 	always_comb 
 	begin
 		//$monitor("credit: %b, drop; %b", credit, drop);
-		if (coinInserted) 
-			drop = state[2];
+		if (state>=4'b1100) 
+			drop = !coinInserted;
 		else
 			drop = 0;
 	end 
@@ -104,17 +104,3 @@ module myCoinFSM(
 endmodule: myCoinFSM 
 
 
-// module top();
-
-//   logic drop;
-//   logic [3:0] credit;
-//   logic [1:0] coin;
-//   logic clock, reset_N;
-
-//   // myStructuralFSM mydesign(coin, drop, credit, clock, reset_N);
-//   // fsmtestbench tester(drop, mydesign.q2, mydesign.q1,
-//   // 				mydesign.q0, credit, coin, clock, reset_N);
-//   myEnumeratedFSM mydesign(coin, drop, credit, clock, reset_N);
-//   // fsmtestbench tester(drop, mydesign.state[2], mydesign.state[1],
-//   // 				mydesign.state[0], credit, coin, clock, reset_N);
-// endmodule: top

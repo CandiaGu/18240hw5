@@ -1,0 +1,49 @@
+{
+    "Modules": {
+        "dFlipFlop": {},
+        "Subtracter": {},
+        "...MASTER...": {},
+        "std": {},
+        "Mux2to1": {},
+        "testLab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 19
+        },
+        "Adder": {},
+        "Multiplexer": {},
+        "shift_register": {},
+        "Decoder": {}
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 10180,
+            "mode": 4,
+            "archive": "archive.125/_196336_archive_1.a"
+        },
+        "RB1yB_d": {
+            "mod": "testLab5",
+            "out": "RB1yB_d.o",
+            "bytes": 58703,
+            "mode": 4,
+            "archive": "archive.125/_196336_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.125/_196336_archive_1.a",
+            "size": 68883,
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    10180
+                ],
+                [
+                    "RB1yB_d.o",
+                    58703
+                ]
+            ]
+        }
+    ]
+}
