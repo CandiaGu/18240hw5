@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Sat Apr  7 01:11:45 2018
+Sat Apr  7 18:49:00 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -19,9 +19,9 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_20
- 15. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_21
- 16. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_22
+ 14. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_21
+ 15. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_22
+ 16. Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_23
  17. Parameter Settings for User Entity Instance: Lab5:labBox|gameCounter:gameCount
  18. Parameter Settings for User Entity Instance: Lab5:labBox|counter:roundCounter
  19. Parameter Settings for User Entity Instance: Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt
@@ -103,8 +103,8 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
  95. Port Connectivity Checks: "Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood"
  96. Port Connectivity Checks: "Lab5:labBox|counter:roundCounter"
  97. Port Connectivity Checks: "Lab5:labBox|gameCounter:gameCount"
- 98. Port Connectivity Checks: "Lab5:labBox|change:comb_22"
- 99. Port Connectivity Checks: "Lab5:labBox|change:comb_20"
+ 98. Port Connectivity Checks: "Lab5:labBox|change:comb_23"
+ 99. Port Connectivity Checks: "Lab5:labBox|change:comb_21"
 100. Port Connectivity Checks: "Lab5:labBox"
 101. Elapsed Time Per Partition
 102. Analysis & Synthesis Messages
@@ -134,15 +134,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                   ;
 +------------------------------------+-------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr  7 01:11:45 2018     ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr  7 18:49:00 2018     ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; top                                       ;
 ; Top-level Entity Name              ; top                                       ;
 ; Family                             ; Cyclone IV E                              ;
-; Total logic elements               ; 1,197                                     ;
-;     Total combinational functions  ; 996                                       ;
-;     Dedicated logic registers      ; 245                                       ;
-; Total registers                    ; 245                                       ;
+; Total logic elements               ; 1,192                                     ;
+;     Total combinational functions  ; 992                                       ;
+;     Dedicated logic registers      ; 244                                       ;
+; Total registers                    ; 244                                       ;
 ; Total pins                         ; 82                                        ;
 ; Total virtual pins                 ; 0                                         ;
 ; Total memory bits                  ; 0                                         ;
@@ -260,21 +260,21 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                             ; Library ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------------------------+---------+
-; lab4.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/lab4.sv                                ;         ;
-; Lab5.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/Lab5.sv                                ;         ;
-; library.sv                       ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/library.sv                             ;         ;
-; mastermindVGA.sv                 ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/mastermindVGA.sv                       ;         ;
-; top.sv                           ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/top.sv                                 ;         ;
-; BCDtoSevenSegment.sv             ; yes             ; Auto-Found SystemVerilog HDL File  ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/BCDtoSevenSegment.sv                   ;         ;
+; lab4.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/lab4.sv                        ;         ;
+; Lab5.sv                          ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/Lab5.sv                        ;         ;
+; library.sv                       ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/library.sv                     ;         ;
+; mastermindVGA.sv                 ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/mastermindVGA.sv               ;         ;
+; top.sv                           ; yes             ; User SystemVerilog HDL File        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/top.sv                         ;         ;
+; BCDtoSevenSegment.sv             ; yes             ; Auto-Found SystemVerilog HDL File  ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/BCDtoSevenSegment.sv           ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
 ; aglobal121.inc                   ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/aglobal121.inc      ;         ;
-; db/lpm_divide_uim.tdf            ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/lpm_divide_uim.tdf                  ;         ;
-; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/sign_div_unsign_mlh.tdf             ;         ;
-; db/alt_u_div_07f.tdf             ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/alt_u_div_07f.tdf                   ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/add_sub_7pc.tdf                     ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/db/add_sub_8pc.tdf                     ;         ;
+; db/lpm_divide_uim.tdf            ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/lpm_divide_uim.tdf          ;         ;
+; db/sign_div_unsign_mlh.tdf       ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/sign_div_unsign_mlh.tdf     ;         ;
+; db/alt_u_div_07f.tdf             ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/alt_u_div_07f.tdf           ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/add_sub_7pc.tdf             ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction        ; /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/db/add_sub_8pc.tdf             ;         ;
 ; lpm_mult.tdf                     ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/lpm_mult.tdf        ;         ;
 ; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
 ; multcore.inc                     ; yes             ; Megafunction                       ; /afs/ece/support/altera/release/12.1/quartus/libraries/megafunctions/multcore.inc        ;         ;
@@ -299,27 +299,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 1,197 ;
+; Estimated Total logic elements              ; 1,192 ;
 ;                                             ;       ;
-; Total combinational functions               ; 996   ;
+; Total combinational functions               ; 992   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 320   ;
-;     -- 3 input functions                    ; 306   ;
-;     -- <=2 input functions                  ; 370   ;
+;     -- 4 input functions                    ; 300   ;
+;     -- 3 input functions                    ; 314   ;
+;     -- <=2 input functions                  ; 378   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 548   ;
+;     -- normal mode                          ; 544   ;
 ;     -- arithmetic mode                      ; 448   ;
 ;                                             ;       ;
-; Total registers                             ; 245   ;
-;     -- Dedicated logic registers            ; 245   ;
+; Total registers                             ; 244   ;
+;     -- Dedicated logic registers            ; 244   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 82    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out                             ; 246   ;
-; Total fan-out                               ; 3916  ;
-; Average fan-out                             ; 2.79  ;
+; Maximum fan-out                             ; 245   ;
+; Total fan-out                               ; 3876  ;
+; Average fan-out                             ; 2.77  ;
 +---------------------------------------------+-------+
 
 
@@ -328,26 +328,26 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top                                      ; 996 (0)           ; 245 (34)     ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |top                                                                                                                        ;              ;
+; |top                                      ; 992 (0)           ; 244 (34)     ; 0           ; 0            ; 0       ; 0         ; 82   ; 0            ; |top                                                                                                                        ;              ;
 ;    |BCDtoSevenSegment:gamesBCD|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:gamesBCD                                                                                             ;              ;
 ;    |BCDtoSevenSegment:roundBCD|           ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:roundBCD                                                                                             ;              ;
-;    |BCDtoSevenSegment:znarlyBCD|          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:znarlyBCD                                                                                            ;              ;
+;    |BCDtoSevenSegment:znarlyBCD|          ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:znarlyBCD                                                                                            ;              ;
 ;    |BCDtoSevenSegment:zoodBCD|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|BCDtoSevenSegment:zoodBCD                                                                                              ;              ;
-;    |Lab5:labBox|                          ; 80 (3)            ; 43 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox                                                                                                            ;              ;
-;       |change:comb_21|                    ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|change:comb_21                                                                                             ;              ;
-;       |change:comb_22|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|change:comb_22                                                                                             ;              ;
-;       |counter:roundCounter|              ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|counter:roundCounter                                                                                       ;              ;
-;       |gameCounter:gameCount|             ; 17 (17)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameCounter:gameCount                                                                                      ;              ;
-;       |gameFSM:game|                      ; 11 (11)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameFSM:game                                                                                               ;              ;
+;    |Lab5:labBox|                          ; 75 (3)            ; 42 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox                                                                                                            ;              ;
+;       |change:comb_22|                    ; 7 (7)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|change:comb_22                                                                                             ;              ;
+;       |change:comb_23|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|change:comb_23                                                                                             ;              ;
+;       |counter:roundCounter|              ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|counter:roundCounter                                                                                       ;              ;
+;       |gameCounter:gameCount|             ; 6 (6)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameCounter:gameCount                                                                                      ;              ;
+;       |gameFSM:game|                      ; 10 (10)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gameFSM:game                                                                                               ;              ;
 ;       |gradeFSM:grade|                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|gradeFSM:grade                                                                                             ;              ;
-;       |guessChecking:guessCheck|          ; 15 (3)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck                                                                                   ;              ;
+;       |guessChecking:guessCheck|          ; 23 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck                                                                                   ;              ;
 ;          |checkForZnarly:checkZnarly|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly                                                        ;              ;
-;          |count4bits:cnt2|                ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bits:cnt2                                                                   ;              ;
-;          |count4bitsZood:cnt1|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bitsZood:cnt1                                                               ;              ;
+;          |count4bits:cnt2|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bits:cnt2                                                                   ;              ;
+;          |count4bitsZood:cnt1|            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|guessChecking:guessCheck|count4bitsZood:cnt1                                                               ;              ;
 ;       |loadMasterPattern:loadMaster|      ; 13 (5)            ; 12 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|loadMasterPattern:loadMaster                                                                               ;              ;
 ;          |Register:mastPatt|              ; 8 (8)             ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt                                                             ;              ;
 ;       |myCoinFSM:mydesign|                ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Lab5:labBox|myCoinFSM:mydesign                                                                                         ;              ;
-;    |mastermindVGA:comb_143|               ; 886 (199)         ; 168 (144)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143                                                                                                 ;              ;
+;    |mastermindVGA:comb_143|               ; 885 (198)         ; 168 (144)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143                                                                                                 ;              ;
 ;       |drawNumber:numDrawer|              ; 248 (66)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawNumber:numDrawer                                                                            ;              ;
 ;          |offset_check:segCheckX0|        ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX0                                                    ;              ;
 ;          |offset_check:segCheckX1|        ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|mastermindVGA:comb_143|drawNumber:numDrawer|offset_check:segCheckX1                                                    ;              ;
@@ -421,7 +421,7 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------+---+
 ; Logic Cell Name                                        ;   ;
 +--------------------------------------------------------+---+
-; Lab5:labBox|guessChecking:guessCheck|GameWon~0         ;   ;
+; Lab5:labBox|gameFSM:game|Selector4~0                   ;   ;
 ; Number of logic cells representing combinational loops ; 1 ;
 +--------------------------------------------------------+---+
 Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -451,7 +451,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; Lab5:labBox|gradeFSM:grade|state~3     ; Lost fanout                                        ;
 ; Lab5:labBox|gameFSM:game|state~2       ; Lost fanout                                        ;
 ; Lab5:labBox|gameFSM:game|state~3       ; Lost fanout                                        ;
-; Total Number of Removed Registers = 19 ;                                                    ;
+; Lab5:labBox|gameCounter:gameCount|Q[3] ; Stuck at GND due to stuck port data_in             ;
+; Total Number of Removed Registers = 20 ;                                                    ;
 +----------------------------------------+----------------------------------------------------+
 
 
@@ -460,12 +461,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 245   ;
-; Number of registers using Synchronous Clear  ; 15    ;
+; Total registers                              ; 244   ;
+; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 222   ;
+; Number of registers using Asynchronous Clear ; 221   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 165   ;
+; Number of registers using Clock Enable       ; 166   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -477,12 +478,12 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |top|mastermindVGA:comb_143|vga:vgaCounter|simple_counter:row_counter|Q[6] ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |top|Lab5:labBox|gameCounter:gameCount|Q[1]                                ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[11]      ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[8]       ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[5]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[9]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[7]       ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 3 LEs                ; 6 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[3]       ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top|Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt|Q[0]       ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|Mux32                                          ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|color[8]               ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|Mux35                                          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |top|mastermindVGA:comb_143|drawZnarlyZood:zzDrawer|color[16]              ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|VGA_B[2]                                       ;
 ; 11:1               ; 2 bits    ; 14 LEs        ; 12 LEs               ; 2 LEs                  ; No         ; |top|mastermindVGA:comb_143|VGA_G[0]                                       ;
 ; 36:1               ; 3 bits    ; 72 LEs        ; 72 LEs               ; 0 LEs                  ; No         ; |top|mastermindVGA:comb_143|shapeSel[1]                                    ;
@@ -490,7 +491,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_20 ;
+; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_21 ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
@@ -500,7 +501,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_21 ;
+; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_22 ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
@@ -510,7 +511,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_22 ;
+; Parameter Settings for User Entity Instance: Lab5:labBox|change:comb_23 ;
 +----------------+-------+------------------------------------------------+
 ; Parameter Name ; Value ; Type                                           ;
 +----------------+-------+------------------------------------------------+
@@ -1506,7 +1507,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|change:comb_22"                                                                                                                                                     ;
+; Port Connectivity Checks: "Lab5:labBox|change:comb_23"                                                                                                                                                     ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                                                          ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1515,7 +1516,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Lab5:labBox|change:comb_20"                                                           ;
+; Port Connectivity Checks: "Lab5:labBox|change:comb_21"                                                           ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port   ; Type   ; Severity ; Details                                                                             ;
 +--------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1547,7 +1548,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Full Version
-    Info: Processing started: Sat Apr  7 01:11:41 2018
+    Info: Processing started: Sat Apr  7 18:48:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab5 -c top
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 2 entities, in source file lab4.sv
@@ -1599,20 +1600,21 @@ Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top.sv(44): object "VGADisplayMasterPattern" assigned a value but never read
 Warning (10034): Output port "LEDG[-1]" at top.sv(6) has no driver
 Info (12128): Elaborating entity "Lab5" for hierarchy "Lab5:labBox"
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(29): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "gameFSM" for hierarchy "Lab5:labBox|gameFSM:game"
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(332): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(346): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(352): truncated value with size 32 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(358): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(334): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(348): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(354): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(360): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "gradeFSM" for hierarchy "Lab5:labBox|gradeFSM:grade"
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(386): truncated value with size 32 to match size of target (1)
-Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_20"
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(388): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_21"
 Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_22"
+Info (12128): Elaborating entity "change" for hierarchy "Lab5:labBox|change:comb_23"
 Info (12128): Elaborating entity "myCoinFSM" for hierarchy "Lab5:labBox|myCoinFSM:mydesign"
 Info (12128): Elaborating entity "gameCounter" for hierarchy "Lab5:labBox|gameCounter:gameCount"
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(96): truncated value with size 32 to match size of target (4)
-Warning (10230): Verilog HDL assignment warning at Lab5.sv(99): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(98): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(101): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "counter" for hierarchy "Lab5:labBox|counter:roundCounter"
 Warning (10230): Verilog HDL assignment warning at library.sv(95): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at library.sv(97): truncated value with size 32 to match size of target (4)
@@ -1620,7 +1622,9 @@ Info (12128): Elaborating entity "loadMasterPattern" for hierarchy "Lab5:labBox|
 Info (12128): Elaborating entity "Register" for hierarchy "Lab5:labBox|loadMasterPattern:loadMaster|Register:mastPatt"
 Info (12128): Elaborating entity "sliceInput" for hierarchy "Lab5:labBox|loadMasterPattern:loadMaster|sliceInput:slice"
 Info (12128): Elaborating entity "guessChecking" for hierarchy "Lab5:labBox|guessChecking:guessCheck"
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(193): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "checkForZnarly" for hierarchy "Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly"
+Warning (10230): Verilog HDL assignment warning at Lab5.sv(233): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "checkForZood" for hierarchy "Lab5:labBox|guessChecking:guessCheck|checkForZood:checkForZood"
 Info (12128): Elaborating entity "count4bitsZood" for hierarchy "Lab5:labBox|guessChecking:guessCheck|count4bitsZood:cnt1"
 Info (12128): Elaborating entity "count4bits" for hierarchy "Lab5:labBox|guessChecking:guessCheck|count4bits:cnt2"
@@ -1685,7 +1689,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/output_files/top.map.smsg
+Info (144001): Generated suppressed messages file /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/output_files/top.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
@@ -1693,13 +1697,13 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[13]"
     Warning (15610): No output dependent on input pin "SW[14]"
     Warning (15610): No output dependent on input pin "SW[15]"
-Info (21057): Implemented 1284 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1280 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 59 output pins
-    Info (21061): Implemented 1202 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 694 megabytes
-    Info: Processing ended: Sat Apr  7 01:11:45 2018
+    Info (21061): Implemented 1198 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 34 warnings
+    Info: Peak virtual memory: 691 megabytes
+    Info: Processing ended: Sat Apr  7 18:49:00 2018
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
@@ -1707,6 +1711,6 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 31 warnin
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/output_files/top.map.smsg.
+The suppressed messages can be found in /afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/output_files/top.map.smsg.
 
 

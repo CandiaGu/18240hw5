@@ -25,9 +25,9 @@ module Lab5
   logic [11:0] masterPattern;
   logic masterLoaded;
 
-  always_comb begin
-	loadGuess = !loadingShape & guessChange;
-  end
+  
+  assign loadGuess = (!loadingShape && guessChange) ? 1 : 0;
+  
   assign loadZnarlyZood = doneGrading;
   assign masterPatternOut = masterPattern; //masterPatternOut will go to the VGA
   assign displayMasterPattern = ongoingGame; //connect displayMasterPattern out to ongoingGame logic
@@ -43,11 +43,13 @@ module Lab5
   change #(12) (clock, Guess, guessChange);
   change #(1) (clock, NumGames, loadNumGames);
   
-  myCoinFSM mydesign(CoinValue, drop,clock, ~reset, CoinInserted );
+  myCoinFSM mydesign(CoinValue, drop,clock, ~reset, CoinInserted ); //input  logic  [1:0] CoinValue, output logic drop, input  logic clock, reset_N, coinInserted);   
+
 	
   logic gameStarting;
 
   gameCounter # (4) gameCount (4'b0, !ongoingGame, drop | gameStarting, reset, 1'b0, clock, NumGames);//en => drop
+
   counter # (4) roundCounter (4'b0, 1'b1, (ongoingGame && doneGrading && !loadingShape), reset, 1'b0, clock, RoundNumber);
 
   loadMasterPattern loadMaster(LoadShape, ShapeLocation, loadingShape, StartGame, clock, masterPattern, masterLoaded);
@@ -188,7 +190,7 @@ checkForZood checkForZood(masterPattern, guess, clock, fakeZood);
 
 always_comb begin
   if(en)
-    GameWon = guess == masterPattern;
+    GameWon = (guess == masterPattern) ? 1 : 0;
 	else
 	 GameWon = 0;
 end
@@ -228,7 +230,7 @@ module checkForZnarly
   sliceInput masterSlice (masterPattern,o3, o2, o1, o0);
   sliceInput guessSlice (Guess, g3, g2, g1, g0);
 
-  assign Znarly = {o3==g3, o2==g2, o1==g1, o0==g0};
+  assign Znarly = (en) ? {o3==g3, o2==g2, o1==g1, o0==g0} : 0;
 
 
   // MagComp #(3) slice3 (g3, o3, , Znarly[3], );

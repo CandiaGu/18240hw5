@@ -126,7 +126,7 @@ NumGames[3] <= NumGames[3].DB_MAX_OUTPUT_PORT_TYPE
 GameWon <= GameWon.DB_MAX_OUTPUT_PORT_TYPE
 reset => reset.IN4
 clock => clock.IN10
-loadNumGames <= change:comb_22.port2
+loadNumGames <= change:comb_23.port2
 loadGuess <= loadGuess.DB_MAX_OUTPUT_PORT_TYPE
 loadZnarlyZood <= doneGrading.DB_MAX_OUTPUT_PORT_TYPE
 clearGame <= <GND>
@@ -183,7 +183,7 @@ GradeIt => state.DATAA
 doneGrading <= doneGrading.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Lab5:labBox|change:comb_20
+|top|Lab5:labBox|change:comb_21
 clock => Q[0].CLK
 clock => Q[1].CLK
 clock => Q[2].CLK
@@ -199,7 +199,7 @@ D[3] => Q[3].DATAIN
 change <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Lab5:labBox|change:comb_21
+|top|Lab5:labBox|change:comb_22
 clock => Q[0].CLK
 clock => Q[1].CLK
 clock => Q[2].CLK
@@ -239,7 +239,7 @@ D[11] => Q[11].DATAIN
 change <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|Lab5:labBox|change:comb_22
+|top|Lab5:labBox|change:comb_23
 clock => Q[0].CLK
 D[0] => change.IN1
 D[0] => Q[0].DATAIN
@@ -549,11 +549,14 @@ Guess[8] => Guess[8].IN1
 Guess[9] => Guess[9].IN1
 Guess[10] => Guess[10].IN1
 Guess[11] => Guess[11].IN1
-Znarly[0] <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
-Znarly[1] <= Equal2.DB_MAX_OUTPUT_PORT_TYPE
-Znarly[2] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-Znarly[3] <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-en => ~NO_FANOUT~
+Znarly[0] <= Znarly.DB_MAX_OUTPUT_PORT_TYPE
+Znarly[1] <= Znarly.DB_MAX_OUTPUT_PORT_TYPE
+Znarly[2] <= Znarly.DB_MAX_OUTPUT_PORT_TYPE
+Znarly[3] <= Znarly.DB_MAX_OUTPUT_PORT_TYPE
+en => Znarly.OUTPUTSELECT
+en => Znarly.OUTPUTSELECT
+en => Znarly.OUTPUTSELECT
+en => Znarly.OUTPUTSELECT
 
 
 |top|Lab5:labBox|guessChecking:guessCheck|checkForZnarly:checkZnarly|sliceInput:masterSlice
