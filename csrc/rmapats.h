@@ -1927,6 +1927,9 @@ void  hsM_13_0 (UB  * pcode, scalar  val);
 void  hsM_14_0 (UB  * pcode, scalar  val);
 void  hsM_15_0 (UB  * pcode, scalar  val);
 void  hsM_16_0 (UB  * pcode, scalar  val);
+void  hsM_17_0 (UB  * pcode, scalar  val);
+void  hsM_18_0 (UB  * pcode, scalar  val);
+void  hsM_19_0 (UB  * pcode, scalar  val);
 void  hsG_0 (struct dummyq_struct * I1008, EBLK  * I1009, U  I714);
 #ifdef __cplusplus
 }

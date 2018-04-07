@@ -1,102 +1,134 @@
 {
-    "PEModules": [],
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 77852
-    },
     "MlibObjs": {},
     "PrevCompiledModules": {
-        "shift_register": {
-            "JPGqC_d": {
-                "mod": "shift_register",
-                "bytes": 8817,
+        "dFlipFlop": {
+            "fhqgw_d": {
+                "bytes": 7159,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
-                "out": "JPGqC_d.o"
-            }
-        },
-        "Adder": {
-            "xUt1z_d": {
-                "mod": "Adder",
-                "bytes": 9360,
-                "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
-                "out": "xUt1z_d.o"
+                "mod": "dFlipFlop",
+                "archive": "archive.101/_prev_archive_1.a",
+                "out": "fhqgw_d.o"
             }
         },
         "Multiplexer": {
             "UxyT3_d": {
-                "mod": "Multiplexer",
-                "bytes": 7264,
+                "bytes": 6470,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
+                "mod": "Multiplexer",
+                "archive": "archive.101/_prev_archive_1.a",
                 "out": "UxyT3_d.o"
+            }
+        },
+        "Adder": {
+            "xUt1z_d": {
+                "bytes": 8467,
+                "mode": 4,
+                "mod": "Adder",
+                "archive": "archive.101/_prev_archive_1.a",
+                "out": "xUt1z_d.o"
             }
         },
         "Decoder": {
             "t8TcA_d": {
-                "mod": "Decoder",
-                "bytes": 8661,
+                "bytes": 7887,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
+                "mod": "Decoder",
+                "archive": "archive.101/_prev_archive_1.a",
                 "out": "t8TcA_d.o"
+            }
+        },
+        "myCoinFSM": {
+            "DV7Y3_d": {
+                "bytes": 15623,
+                "mode": 4,
+                "mod": "myCoinFSM",
+                "out": "DV7Y3_d.o",
+                "archive": "archive.101/_184880_archive_1.a"
             }
         },
         "Mux2to1": {
             "wxUbx_d": {
-                "mod": "Mux2to1",
-                "bytes": 8056,
+                "bytes": 6924,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
+                "mod": "Mux2to1",
+                "archive": "archive.101/_prev_archive_1.a",
                 "out": "wxUbx_d.o"
+            }
+        },
+        "CoinAccept": {
+            "IW7Uy_d": {
+                "bytes": 11149,
+                "mode": 4,
+                "mod": "CoinAccept",
+                "out": "IW7Uy_d.o",
+                "archive": "archive.101/_prev_archive_1.a"
             }
         },
         "std": {
             "reYIK_d": {
-                "mod": "std",
-                "bytes": 34314,
+                "bytes": 29004,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
+                "mod": "std",
+                "archive": "archive.101/_prev_archive_1.a",
                 "out": "reYIK_d.o"
+            }
+        },
+        "Lab5": {
+            "KkqfR_d": {
+                "bytes": 41876,
+                "mode": 4,
+                "mod": "Lab5",
+                "out": "KkqfR_d.o",
+                "archive": "archive.101/_prev_archive_1.a"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "mod": "...MASTER...",
-                "bytes": 10467,
-                "out": "amcQw_d.o",
+                "bytes": 11524,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a"
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "archive": "archive.101/_184880_archive_1.a"
+            }
+        },
+        "testCoinAcceptor": {
+            "MsunM_d": {
+                "bytes": 27379,
+                "mode": 4,
+                "mod": "testCoinAcceptor",
+                "out": "MsunM_d.o",
+                "archive": "archive.101/_prev_archive_1.a"
+            }
+        },
+        "shift_register": {
+            "JPGqC_d": {
+                "bytes": 7714,
+                "mode": 4,
+                "mod": "shift_register",
+                "archive": "archive.101/_prev_archive_1.a",
+                "out": "JPGqC_d.o"
             }
         },
         "Subtracter": {
             "pcAkE_d": {
-                "mod": "Subtracter",
-                "bytes": 7869,
+                "bytes": 6711,
                 "mode": 4,
-                "archive": "archive.79/_27497_archive_1.a",
+                "mod": "Subtracter",
+                "archive": "archive.101/_prev_archive_1.a",
                 "out": "pcAkE_d.o"
             }
         }
     },
-    "CompileStrategy": "fullobj",
-    "stat": {
-        "nMops": 6150
-    },
+    "CurCompileUdps": {},
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "shift_register": [
-            "shift_register",
-            "JPGqC",
-            "module"
-        ],
-        "Adder": [
-            "Adder",
-            "xUt1z",
+        "dFlipFlop": [
+            "dFlipFlop",
+            "fhqgw",
             "module"
         ],
         "Multiplexer": [
@@ -104,14 +136,14 @@
             "UxyT3",
             "module"
         ],
+        "myCoinFSM": [
+            "myCoinFSM",
+            "DV7Y3",
+            "module"
+        ],
         "Mux2to1": [
             "Mux2to1",
             "wxUbx",
-            "module"
-        ],
-        "Lab5": [
-            "Lab5",
-            "KkqfR",
             "module"
         ],
         "Decoder": [
@@ -119,9 +151,34 @@
             "t8TcA",
             "module"
         ],
+        "Adder": [
+            "Adder",
+            "xUt1z",
+            "module"
+        ],
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
+            "module"
+        ],
         "Subtracter": [
             "Subtracter",
             "pcAkE",
+            "module"
+        ],
+        "Lab5": [
+            "Lab5",
+            "KkqfR",
+            "module"
+        ],
+        "CoinAccept": [
+            "CoinAccept",
+            "IW7Uy",
+            "module"
+        ],
+        "testCoinAcceptor": [
+            "testCoinAcceptor",
+            "MsunM",
             "module"
         ],
         "...MASTER...": [
@@ -130,32 +187,33 @@
             "module"
         ]
     },
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 77432
+    },
     "LVLData": [
         "SIM"
     ],
-    "CurCompileUdps": {},
-    "CurCompileModules": [
-        "...MASTER...",
-        "std",
-        "Adder",
-        "Multiplexer",
-        "Mux2to1",
-        "Decoder",
-        "shift_register",
-        "Subtracter",
-        "Lab5"
-    ],
-    "CompileProcesses": [
-        "cgproc.27497.json"
-    ],
+    "stat": {
+        "nMops": 886
+    },
     "Misc": {
-        "daidir_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/simv.daidir",
-        "cwd": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5",
+        "archive_dir": "archive.101",
+        "cwd": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir",
         "csrc": "csrc",
-        "archive_dir": "archive.79",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/svnathan/Private/18240/Lab5/18240hw5/csrc",
         "daidir": "simv.daidir",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/csrc",
         "default_output_dir": "csrc"
     },
-    "CompileStatus": "Successful"
+    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "CurCompileModules": [
+        "...MASTER...",
+        "myCoinFSM"
+    ],
+    "CompileStatus": "Successful",
+    "CompileProcesses": [
+        "cgproc.184880.json"
+    ]
 }

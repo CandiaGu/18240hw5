@@ -13,10 +13,9 @@ endmodule: dFlipFlop
 
 
 module myCoinFSM(   
-	input  logic  [1:0] CoinValue,   
-	output logic       drop,  
-	output logic [3:0] credit,  
-	input  logic       clock, reset_N);   
+	input  logic  [1:0] CoinValue,
+	output logic       drop,    
+	input  logic       clock, reset_N, coinInserted);   
 
 	// interconnect wires.  Add more if needed
 	enum logic [3:0] {state0 = 4'b0000, state1 = 4'b0001, state2 = 4'b0010,
@@ -29,9 +28,10 @@ module myCoinFSM(
 	always @(posedge clock, negedge reset_N)
     	if (reset_N == 0)
     	  	state <= state0;      
-    	else       
+    	else begin
     		state <= nextState;
 
+    	end
 	// Next state logic goes here: combinational logic that   
 	// drives next state (d0, etc) based upon input coin and   
 	// the current state (q0, q1, etc).
@@ -70,21 +70,21 @@ module myCoinFSM(
 					else if (CoinValue == 2'b10) nextState = wstate6;
 					else if (CoinValue == 2'b11) nextState = wstate4;
 					else nextState = wstate7;
-			wstate0: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state0;
+			wstate0: if (coinInserted) nextState = state0;
 				 else nextState = wstate0;
-			wstate1: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state1;
+			wstate1: if (coinInserted) nextState = state1;
 				 else nextState = wstate1;
-			wstate2: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state2;
+			wstate2: if (coinInserted) nextState = state2;
 				 else nextState = wstate2;
-			wstate3: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state3;
+			wstate3: if (coinInserted) nextState = state3;
 				 else nextState = wstate3;
-			wstate4: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state4;
+			wstate4: if (coinInserted) nextState = state4;
 				 else nextState = wstate4;
-			wstate5: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state5;
+			wstate5: if (coinInserted) nextState = state5;
 				 else nextState = wstate5;
-			wstate6: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state6;
+			wstate6: if (coinInserted) nextState = state6;
 				 else nextState = wstate6;
-			wstate7: if (CoinValue != 2'b01 && CoinValue != 2'b10 && CoinValue != 2'b11) nextState = state7;
+			wstate7: if (coinInserted) nextState = state7;
 				 else nextState = wstate7;
 
 		endcase
@@ -95,10 +95,6 @@ module myCoinFSM(
 	always_comb 
 	begin
 		//$monitor("credit: %b, drop; %b", credit, drop);
-		credit[0] = state[0];
-		credit[1] = state[1];
-		credit[2] = 0; 
-		credit[3] = 0;
 		drop = state[2];
 	end 
 

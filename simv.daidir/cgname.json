@@ -1,14 +1,4 @@
 {
-    "std": [
-        "std",
-        "reYIK",
-        "module"
-    ],
-    "Subtracter": [
-        "Subtracter",
-        "pcAkE",
-        "module"
-    ],
     "Lab5": [
         "Lab5",
         "KkqfR",
@@ -19,14 +9,44 @@
         "xUt1z",
         "module"
     ],
-    "Multiplexer": [
-        "Multiplexer",
-        "UxyT3",
+    "Subtracter": [
+        "Subtracter",
+        "pcAkE",
+        "module"
+    ],
+    "std": [
+        "std",
+        "reYIK",
+        "module"
+    ],
+    "dFlipFlop": [
+        "dFlipFlop",
+        "fhqgw",
         "module"
     ],
     "Mux2to1": [
         "Mux2to1",
         "wxUbx",
+        "module"
+    ],
+    "Multiplexer": [
+        "Multiplexer",
+        "UxyT3",
+        "module"
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module"
+    ],
+    "testCoinAcceptor": [
+        "testCoinAcceptor",
+        "MsunM",
+        "module"
+    ],
+    "myCoinFSM": [
+        "myCoinFSM",
+        "DV7Y3",
         "module"
     ],
     "Decoder": [
@@ -39,9 +59,9 @@
         "JPGqC",
         "module"
     ],
-    "...MASTER...": [
-        "SIM",
-        "amcQw",
+    "CoinAccept": [
+        "CoinAccept",
+        "IW7Uy",
         "module"
     ]
 }

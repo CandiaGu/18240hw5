@@ -37,7 +37,7 @@ module Lab5
 
 
 
-  myCoinFSM mydesign(CoinValue, drop,, reset, CoinInserted);
+  myCoinFSM mydesign(CoinValue, drop,, CoinInserted, ~reset );
 
 
   gameCounter # (4) gameCount (4'd0, !ongoingGame, drop, reset, 1'b0, clock, NumGames);//en => drop
@@ -60,7 +60,7 @@ module CoinAccept
 
   logic [3:0] value;
   always_comb begin
-    $monitor("CoinValue %b, CoinInserted %b, Drop %b reset %b input %b", value, CoinInserted, Drop, reset, in);
+    //$monitor("CoinValue %b, CoinInserted %b, Drop %b reset %b input %b", value, CoinInserted, Drop, reset, in);
     unique case (CoinValue)
       2'b01: value = 3'b001;
       2'b10: value = 3'b011;

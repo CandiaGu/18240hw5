@@ -1,0 +1,94 @@
+{
+    "ObjArchives": [
+        {
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11524
+                ],
+                [
+                    "DV7Y3_d.o",
+                    15623
+                ],
+                [
+                    "KkqfR_d.o",
+                    41876
+                ],
+                [
+                    "IW7Uy_d.o",
+                    11149
+                ],
+                [
+                    "MsunM_d.o",
+                    27379
+                ]
+            ],
+            "archive": "archive.102/_185211_archive_1.a",
+            "size": 107551
+        }
+    ],
+    "Modules": {
+        "testCoinAcceptor": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "...MASTER...": {},
+        "myCoinFSM": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "Lab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "Adder": {},
+        "Subtracter": {},
+        "std": {},
+        "dFlipFlop": {},
+        "Mux2to1": {},
+        "Multiplexer": {},
+        "Decoder": {},
+        "shift_register": {},
+        "CoinAccept": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "archive": "archive.102/_185211_archive_1.a",
+            "out": "amcQw_d.o",
+            "bytes": 11524,
+            "mode": 4
+        },
+        "DV7Y3_d": {
+            "mod": "myCoinFSM",
+            "archive": "archive.102/_185211_archive_1.a",
+            "out": "DV7Y3_d.o",
+            "bytes": 15623,
+            "mode": 4
+        },
+        "KkqfR_d": {
+            "mod": "Lab5",
+            "archive": "archive.102/_185211_archive_1.a",
+            "out": "KkqfR_d.o",
+            "bytes": 41876,
+            "mode": 4
+        },
+        "IW7Uy_d": {
+            "mod": "CoinAccept",
+            "archive": "archive.102/_185211_archive_1.a",
+            "out": "IW7Uy_d.o",
+            "bytes": 11149,
+            "mode": 4
+        },
+        "MsunM_d": {
+            "mod": "testCoinAcceptor",
+            "archive": "archive.102/_185211_archive_1.a",
+            "out": "MsunM_d.o",
+            "bytes": 27379,
+            "mode": 4
+        }
+    }
+}
