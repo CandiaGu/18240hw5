@@ -70,21 +70,21 @@ module myCoinFSM(
 					else if (CoinValue == 2'b10) nextState = wstate6;
 					else if (CoinValue == 2'b11) nextState = wstate4;
 					else nextState = wstate7;
-			wstate0: if (coinInserted) nextState = state0;
+			wstate0: if (!coinInserted) nextState = state0;
 				 else nextState = wstate0;
-			wstate1: if (coinInserted) nextState = state1;
+			wstate1: if (!coinInserted) nextState = state1;
 				 else nextState = wstate1;
-			wstate2: if (coinInserted) nextState = state2;
+			wstate2: if (!coinInserted) nextState = state2;
 				 else nextState = wstate2;
-			wstate3: if (coinInserted) nextState = state3;
+			wstate3: if (!coinInserted) nextState = state3;
 				 else nextState = wstate3;
-			wstate4: if (coinInserted) nextState = state4;
+			wstate4: if (!coinInserted) nextState = state4;
 				 else nextState = wstate4;
-			wstate5: if (coinInserted) nextState = state5;
+			wstate5: if (!coinInserted) nextState = state5;
 				 else nextState = wstate5;
-			wstate6: if (coinInserted) nextState = state6;
+			wstate6: if (!coinInserted) nextState = state6;
 				 else nextState = wstate6;
-			wstate7: if (coinInserted) nextState = state7;
+			wstate7: if (!coinInserted) nextState = state7;
 				 else nextState = wstate7;
 
 		endcase

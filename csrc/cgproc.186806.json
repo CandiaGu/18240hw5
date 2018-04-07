@@ -1,0 +1,80 @@
+{
+    "Modules": {
+        "Decoder": {},
+        "...MASTER...": {},
+        "std": {},
+        "dFlipFlop": {},
+        "Mux2to1": {},
+        "myCoinFSM": {
+            "Compiled": "Yes",
+            "Compiled Times": 3
+        },
+        "Multiplexer": {},
+        "Adder": {},
+        "Subtracter": {},
+        "shift_register": {},
+        "CoinAccept": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "Lab5": {
+            "Compiled": "Yes",
+            "Compiled Times": 5
+        },
+        "testCoinAcceptor": {}
+    },
+    "CompUnits": {
+        "KkqfR_d": {
+            "mod": "Lab5",
+            "out": "KkqfR_d.o",
+            "bytes": 41876,
+            "mode": 4,
+            "archive": "archive.106/_186806_archive_1.a"
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "amcQw_d.o",
+            "bytes": 11524,
+            "mode": 4,
+            "archive": "archive.106/_186806_archive_1.a"
+        },
+        "DV7Y3_d": {
+            "mod": "myCoinFSM",
+            "out": "DV7Y3_d.o",
+            "bytes": 15324,
+            "mode": 4,
+            "archive": "archive.106/_186806_archive_1.a"
+        },
+        "IW7Uy_d": {
+            "mod": "CoinAccept",
+            "out": "IW7Uy_d.o",
+            "bytes": 11149,
+            "mode": 4,
+            "archive": "archive.106/_186806_archive_1.a"
+        }
+    },
+    "ObjArchives": [
+        {
+            "size": 79873,
+            "archive": "archive.106/_186806_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    11524
+                ],
+                [
+                    "DV7Y3_d.o",
+                    15324
+                ],
+                [
+                    "KkqfR_d.o",
+                    41876
+                ],
+                [
+                    "IW7Uy_d.o",
+                    11149
+                ]
+            ]
+        }
+    ]
+}

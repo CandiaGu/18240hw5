@@ -1,139 +1,160 @@
 {
+    "Misc": {
+        "default_output_dir": "csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5",
+        "csrc_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/csrc",
+        "csrc": "csrc",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir",
+        "daidir": "simv.daidir",
+        "archive_dir": "archive.105"
+    },
     "MlibObjs": {},
+    "CompileStrategy": "fullobj",
     "PrevCompiledModules": {
-        "dFlipFlop": {
-            "fhqgw_d": {
-                "bytes": 7159,
-                "mode": 4,
-                "mod": "dFlipFlop",
-                "archive": "archive.101/_prev_archive_1.a",
-                "out": "fhqgw_d.o"
-            }
-        },
         "Multiplexer": {
             "UxyT3_d": {
                 "bytes": 6470,
-                "mode": 4,
                 "mod": "Multiplexer",
-                "archive": "archive.101/_prev_archive_1.a",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
                 "out": "UxyT3_d.o"
             }
         },
         "Adder": {
             "xUt1z_d": {
                 "bytes": 8467,
-                "mode": 4,
                 "mod": "Adder",
-                "archive": "archive.101/_prev_archive_1.a",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
                 "out": "xUt1z_d.o"
             }
         },
         "Decoder": {
             "t8TcA_d": {
                 "bytes": 7887,
-                "mode": 4,
                 "mod": "Decoder",
-                "archive": "archive.101/_prev_archive_1.a",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
                 "out": "t8TcA_d.o"
-            }
-        },
-        "myCoinFSM": {
-            "DV7Y3_d": {
-                "bytes": 15623,
-                "mode": 4,
-                "mod": "myCoinFSM",
-                "out": "DV7Y3_d.o",
-                "archive": "archive.101/_184880_archive_1.a"
-            }
-        },
-        "Mux2to1": {
-            "wxUbx_d": {
-                "bytes": 6924,
-                "mode": 4,
-                "mod": "Mux2to1",
-                "archive": "archive.101/_prev_archive_1.a",
-                "out": "wxUbx_d.o"
             }
         },
         "CoinAccept": {
             "IW7Uy_d": {
                 "bytes": 11149,
-                "mode": 4,
                 "mod": "CoinAccept",
                 "out": "IW7Uy_d.o",
-                "archive": "archive.101/_prev_archive_1.a"
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a"
+            }
+        },
+        "Mux2to1": {
+            "wxUbx_d": {
+                "bytes": 6924,
+                "mod": "Mux2to1",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
+                "out": "wxUbx_d.o"
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 11524,
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4,
+                "archive": "archive.105/_186458_archive_1.a"
+            }
+        },
+        "myCoinFSM": {
+            "DV7Y3_d": {
+                "bytes": 15623,
+                "mod": "myCoinFSM",
+                "out": "DV7Y3_d.o",
+                "mode": 4,
+                "archive": "archive.105/_186458_archive_1.a"
+            }
+        },
+        "Subtracter": {
+            "pcAkE_d": {
+                "bytes": 6711,
+                "mod": "Subtracter",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
+                "out": "pcAkE_d.o"
+            }
+        },
+        "shift_register": {
+            "JPGqC_d": {
+                "bytes": 7714,
+                "mod": "shift_register",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
+                "out": "JPGqC_d.o"
             }
         },
         "std": {
             "reYIK_d": {
                 "bytes": 29004,
-                "mode": 4,
                 "mod": "std",
-                "archive": "archive.101/_prev_archive_1.a",
+                "mode": 4,
+                "archive": "archive.105/_prev_archive_1.a",
                 "out": "reYIK_d.o"
             }
         },
         "Lab5": {
             "KkqfR_d": {
                 "bytes": 41876,
-                "mode": 4,
                 "mod": "Lab5",
                 "out": "KkqfR_d.o",
-                "archive": "archive.101/_prev_archive_1.a"
-            }
-        },
-        "...MASTER...": {
-            "amcQw_d": {
-                "bytes": 11524,
                 "mode": 4,
-                "mod": "...MASTER...",
-                "out": "amcQw_d.o",
-                "archive": "archive.101/_184880_archive_1.a"
+                "archive": "archive.105/_186458_archive_1.a"
             }
         },
         "testCoinAcceptor": {
             "MsunM_d": {
-                "bytes": 27379,
-                "mode": 4,
+                "bytes": 15622,
                 "mod": "testCoinAcceptor",
                 "out": "MsunM_d.o",
-                "archive": "archive.101/_prev_archive_1.a"
+                "mode": 4,
+                "archive": "archive.105/_186458_archive_1.a"
             }
         },
-        "shift_register": {
-            "JPGqC_d": {
-                "bytes": 7714,
+        "dFlipFlop": {
+            "fhqgw_d": {
+                "bytes": 7159,
+                "mod": "dFlipFlop",
                 "mode": 4,
-                "mod": "shift_register",
-                "archive": "archive.101/_prev_archive_1.a",
-                "out": "JPGqC_d.o"
-            }
-        },
-        "Subtracter": {
-            "pcAkE_d": {
-                "bytes": 6711,
-                "mode": 4,
-                "mod": "Subtracter",
-                "archive": "archive.101/_prev_archive_1.a",
-                "out": "pcAkE_d.o"
+                "archive": "archive.105/_prev_archive_1.a",
+                "out": "fhqgw_d.o"
             }
         }
     },
-    "CurCompileUdps": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 77934
+    },
     "NameTable": {
+        "Subtracter": [
+            "Subtracter",
+            "pcAkE",
+            "module"
+        ],
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "dFlipFlop": [
-            "dFlipFlop",
-            "fhqgw",
+        "shift_register": [
+            "shift_register",
+            "JPGqC",
             "module"
         ],
-        "Multiplexer": [
-            "Multiplexer",
-            "UxyT3",
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
             "module"
         ],
         "myCoinFSM": [
@@ -141,9 +162,9 @@
             "DV7Y3",
             "module"
         ],
-        "Mux2to1": [
-            "Mux2to1",
-            "wxUbx",
+        "dFlipFlop": [
+            "dFlipFlop",
+            "fhqgw",
             "module"
         ],
         "Decoder": [
@@ -156,19 +177,9 @@
             "xUt1z",
             "module"
         ],
-        "shift_register": [
-            "shift_register",
-            "JPGqC",
-            "module"
-        ],
-        "Subtracter": [
-            "Subtracter",
-            "pcAkE",
-            "module"
-        ],
-        "Lab5": [
-            "Lab5",
-            "KkqfR",
+        "Multiplexer": [
+            "Multiplexer",
+            "UxyT3",
             "module"
         ],
         "CoinAccept": [
@@ -176,44 +187,35 @@
             "IW7Uy",
             "module"
         ],
+        "Mux2to1": [
+            "Mux2to1",
+            "wxUbx",
+            "module"
+        ],
+        "Lab5": [
+            "Lab5",
+            "KkqfR",
+            "module"
+        ],
         "testCoinAcceptor": [
             "testCoinAcceptor",
             "MsunM",
             "module"
-        ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
         ]
     },
-    "SIMBData": {
-        "out": "amcQwB.o",
-        "bytes": 77432
-    },
-    "LVLData": [
-        "SIM"
-    ],
-    "stat": {
-        "nMops": 886
-    },
-    "Misc": {
-        "archive_dir": "archive.101",
-        "cwd": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/simv.daidir",
-        "csrc": "csrc",
-        "daidir": "simv.daidir",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/cdgu/Private/18240/Labs/Lab5/csrc",
-        "default_output_dir": "csrc"
-    },
-    "CompileStrategy": "fullobj",
-    "PEModules": [],
+    "CurCompileUdps": {},
     "CurCompileModules": [
         "...MASTER...",
-        "myCoinFSM"
+        "myCoinFSM",
+        "Lab5",
+        "testCoinAcceptor"
     ],
-    "CompileStatus": "Successful",
+    "PEModules": [],
     "CompileProcesses": [
-        "cgproc.184880.json"
-    ]
+        "cgproc.186458.json"
+    ],
+    "stat": {
+        "nMops": 5570
+    },
+    "CompileStatus": "Successful"
 }

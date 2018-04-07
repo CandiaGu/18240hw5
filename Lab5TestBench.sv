@@ -19,7 +19,7 @@ module testCoinAcceptor();
 	end 
 
 	initial begin
-		$monitor("CoinValue:%b, CoinInserted:%b, Drop: %b, reset: %b", CoinValue, CoinInserted, Drop, reset_n);
+		$monitor("CoinValue:%b, CoinInserted:%b, Drop: %b, reset: %b, state: %b", CoinValue, CoinInserted, Drop, reset_n, accept.state);
 		//initialize values
 		CoinValue <= 2'b0; CoinInserted <= 1'b0;
 
@@ -27,76 +27,89 @@ module testCoinAcceptor();
 		CoinValue <= 2'b01;
 		CoinInserted <= 1;
 		@(posedge clock);
-		CoinInserted <= 1;
-		@(posedge clock);
-		CoinInserted <= 1;
-		@(posedge clock);
-		CoinInserted <= 1;
-		@(posedge clock);
-		CoinInserted <= 1;
-
-		@(posedge clock);
-		CoinInserted <= 0;
-
 		@(posedge clock);
 		@(posedge clock);
 		@(posedge clock);
-		CoinValue = 2'b10;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
-
-		@(posedge clock);
-		@(posedge clock);
-				@(posedge clock);
-		CoinValue = 2'b11;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
-
 		@(posedge clock);
 		@(posedge clock);
 		@(posedge clock);
-		CoinValue = 2'b01;
-		CoinInserted = 1;
 		@(posedge clock);
-		CoinInserted = 0;
-
 		@(posedge clock);
 		@(posedge clock);
 
-		@(posedge clock);
-		CoinValue = 2'b01;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
+		// CoinInserted <= 1;
+		// @(posedge clock);
+		// CoinInserted <= 1;
+		// @(posedge clock);
+		// CoinInserted <= 1;
+		// @(posedge clock);
+		// CoinInserted <= 1;
 
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		CoinValue = 2'b01;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
+		// @(posedge clock);
+		// CoinInserted <= 0;
 
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		CoinValue = 2'b01;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
+		// @(posedge clock);
+		// @(posedge clock);
+		// @(posedge clock);
+		// CoinValue = 2'b10;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
 
-		@(posedge clock);
-		@(posedge clock);
-		@(posedge clock);
-		CoinValue = 2'b01;
-		CoinInserted = 1;
-		@(posedge clock);
-		CoinInserted = 0;
 
-		@(posedge clock);
-		@(posedge clock);
+
+		// @(posedge clock);
+		// @(posedge clock);
+		// 		@(posedge clock);
+		// CoinValue = 2'b11;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+
+		// @(posedge clock);
+		// @(posedge clock);
+		// @(posedge clock);
+		// CoinValue = 2'b01;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+		// @(posedge clock);
+		// @(posedge clock);
+
+		// @(posedge clock);
+		// CoinValue = 2'b01;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+		// @(posedge clock);
+		// @(posedge clock);
+		// @(posedge clock);
+		// CoinValue = 2'b01;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+		// @(posedge clock);
+		// @(posedge clock);
+		// @(posedge clock);
+		// CoinValue = 2'b01;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+		// @(posedge clock);
+		// @(posedge clock);
+		// @(posedge clock);
+		// CoinValue = 2'b01;
+		// CoinInserted = 1;
+		// @(posedge clock);
+		// CoinInserted = 0;
+
+		// @(posedge clock);
+		// @(posedge clock);
 
 		$finish;
 
