@@ -67,7 +67,7 @@ module change
 	output logic change
 );
 	
-	assign change = D != Q;
+	assign change = (D != Q) ? 1 : 0;
 	logic [W - 1:0] Q;
 	
 	always_ff @(posedge clock) begin
