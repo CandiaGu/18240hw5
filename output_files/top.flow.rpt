@@ -1,5 +1,5 @@
 Flow report for top
-Sat Apr  7 18:49:34 2018
+Sun Apr  8 00:15:01 2018
 Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Full Version
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; Flow Summary                                                                   ;
 +------------------------------------+-------------------------------------------+
-; Flow Status                        ; Successful - Sat Apr  7 18:49:34 2018     ;
+; Flow Status                        ; Successful - Sun Apr  8 00:15:01 2018     ;
 ; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Full Version ;
 ; Revision Name                      ; top                                       ;
 ; Top-level Entity Name              ; top                                       ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/07/2018 18:48:57 ;
+; Start date & time ; 04/08/2018 00:14:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top                 ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 0.152314133710899      ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 0.152316086308539      ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL) ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                     ; --            ; --          ; --             ;
@@ -92,11 +92,11 @@ applicable agreement for further details.
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 683 MB              ; 00:00:03                           ;
-; Fitter                    ; 00:00:17     ; 2.1                     ; 1069 MB             ; 00:00:24                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 632 MB              ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 728 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:17     ; 2.4                     ; 1065 MB             ; 00:00:25                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 632 MB              ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 732 MB              ; 00:00:03                           ;
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 799 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:36                           ;
+; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:37                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

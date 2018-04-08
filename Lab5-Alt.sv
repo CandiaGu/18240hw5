@@ -35,7 +35,14 @@ module Lab5
   assign clearGame = 0;//StartGame; //Since StartGame refreshes the game, we can use it for the clearGame signal
     
   gameFSM game(reset, clock, StartGame, LoadShapeNow, masterLoaded, GameWon, NumGames, RoundNumber, ongoingGame, loadingShape, gameStarting);
-  gradeFSM grade(reset, clock, GradeIt, doneGrading);
+
+  /*module gameFSM
+  (input logic reset, clock, 
+  input logic startGame, masterLoaded, gradeIt, finishedGrading,
+  input logic [2:0] ZnarlyCount,
+  input logic [3:0] NumGames, RoundNumber,
+  output logic startLoadMasterPattern, startLoadPlayerGuess,
+  output logic gradeGuess, GameWon, decrementNumGames); */
 
   logic circle, triangle, pent;
 
@@ -59,23 +66,62 @@ module Lab5
 endmodule: Lab5
 
 
-module change 
-#(parameter W = 3)
-(
-	input  logic clock,
-	input  logic [W - 1: 0] D,
-	output logic change
-);
-	
-	assign change = (D != Q) ? 1 : 0;
-	logic [W - 1:0] Q;
-	
-	always_ff @(posedge clock) begin
-		Q <= D;
+module gameFSM
+  (input logic reset, clock, 
+  input logic startGame, masterLoaded, gradeIt, finishedGrading,
+  input logic [2:0] ZnarlyCount,
+  input logic [3:0] NumGames, RoundNumber,
+  output logic startLoadMasterPattern, startLoadPlayerGuess,
+  output logic gradeGuess, GameWon, decrementNumGames);
+
+  enum logic [1:0] {Waiting = 2'b00, LoadingMaster = 2'b01, PlayerGuess = 2'b10, Grading = 2'b11} state, nextState;
+
+  always_ff @(posedge clock)
+    if (reset) state <= Waiting;
+    else state <= nextState;
+
+  always_comb
+  unique case(state)
+    Waiting:
+	begin
+	  nextState = (startGame && NumGames > 0) ? LoadingMaster : Waiting;
+	  startLoadMasterPattern = (startGame && NumGames > 0) ? 1 : 0;
+	  startLoadPlayerGuess = 0;
+	  gradeGuess = 0;
+	  GameWon = 0;
+	  decrementNumGames = 0;
 	end
+	LoadingMaster:
+	begin
+	  nextState = (masterLoaded) ? PlayerGuess : LoadingMaster;
+	  startLoadMasterPattern = (masterLoaded) ? 0 : 1;
+	  startLoadPlayerGuess = masterLoaded;
+	  gradeGuess = 0;
+	  GameWon = 0;
+	  decrementNumGames = 0;
+	end
+	PlayerGuess:
+	begin
+	  nextState = (gradeIt) ? Grading : PlayerGuess;
+	  startLoadMasterPattern = 0;
+	  startLoadPlayerGuess = (gradeIt) ? 0 : 1;
+	  gradeGuess = (gradeIt) ? 1 : 0;
+	  GameWon = 0;
+	  decrementNumGames = 0;
+	end
+	Grading:
+	begin
+	  nextState = (finishedGrading) ? Waiting : Grading;
+	  startLoadMasterPattern = 0;
+	  startLoadPlayerGuess = 0;
+	  gradeGuess = (gradeIt) 0;
+	  GameWon = (ZnarlyCount == 4) ? 1 : 0;
+	  decrementNumGames = 1;
+	end
+  endcase
 
-endmodule
-
+    
+endmodule: gameFSM
 
 module gameCounter
   # (parameter WIDTH = 30)
@@ -313,83 +359,6 @@ module sliceInput
 endmodule: sliceInput
 
 
-
-module gameFSM
-  (input logic reset, clock, 
-  input logic startGame, loadShapeNow, allShapesLoaded, gameWon,
-  input logic [3:0] NumGames, RoundNumber,
-  output logic ongoingGame, loadingShape, gameStarting);
-
-  enum logic [2:0] {WaitGame = 3'b000, StartingGame = 3'b001, LoadShape = 3'b010, Guess = 3'b011, Starting = 3'b100} state, nextState;
-
-  always_ff @(posedge clock)
-    if (reset) state <= WaitGame;
-    else state <= nextState;
-
-  always_comb
-  unique case(state)
-    WaitGame: 
-      begin
-      nextState = (NumGames > 0 && startGame) ? Starting : WaitGame;
-      ongoingGame = (NumGames > 0 && startGame) ? 1: 0; 
-  	   loadingShape = 0;
-      gameStarting = 0;
-      end
-    Starting:
-      begin
-      nextState = StartingGame;
-		ongoingGame = 1;
-		loadingShape = 0;
-      gameStarting = 1;
-      end
-    StartingGame:
-      begin
-      nextState = (loadShapeNow) ? LoadShape : StartingGame;
-      ongoingGame = 1; loadingShape = (loadShapeNow) ? 1 : 0;
-		gameStarting = 0;
-      end
-    LoadShape:
-      begin
-      nextState = (allShapesLoaded) ? Guess : LoadShape;
-      ongoingGame = 1; loadingShape = (allShapesLoaded) ? 0 : 1;
-		gameStarting = 0;
-      end
-    Guess:
-      begin
-      nextState = (gameWon || RoundNumber >= 8) ?  WaitGame : Guess;
-      ongoingGame = (gameWon || RoundNumber >= 8) ? 0 : 1; loadingShape = 0;
-		gameStarting = 0;
-      end
-  endcase
-
-    
-endmodule: gameFSM
-
-module gradeFSM
-  (input logic reset, clock, GradeIt,
-  output logic doneGrading);
-
-  enum logic [1:0] {notGraded = 2'b10, grading = 2'b11} state, nextState;
-
-  always_ff @(posedge clock)
-  if (reset) state <= notGraded;
-    else state <= nextState;
-
-  always_comb
-  unique case(state)
-    notGraded:
-    begin
-      nextState = (GradeIt) ? grading : notGraded;
-      doneGrading = 0;
-    end 
-    grading: 
-    begin
-    nextState = (GradeIt) ? grading: notGraded;
-    doneGrading = (GradeIt) ? 0 : 1;
-    end
-  endcase
-
-endmodule: gradeFSM
 
 
     
