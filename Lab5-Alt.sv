@@ -111,7 +111,7 @@ module gameFSM
 	end
 	Grading:
 	begin
-	  nextState = (finishedGrading) ? Waiting : Grading;
+	  nextState = (!finishedGrading) ? Grading : (ZnarlyCount == 4 || RoundNumber < 8) ? Waiting : PlayerGuess;
 	  startLoadMasterPattern = 0;
 	  startLoadPlayerGuess = 0;
 	  gradeGuess = (gradeIt) 0;
